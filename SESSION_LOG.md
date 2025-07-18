@@ -25,17 +25,20 @@ Wir stehen am absoluten Anfang von Phase 1 und sind bereit, mit dem ersten inhal
 - [ ] **Phase 4: Fortgeschrittene Themen & Best Practices**
 - [ ] **Phase 5: Bewerbungsphase & Portfolio-Projekte**
 
-**3. Unser beschlossenes Vorgehen (Die 3-Phasen-Lernstrategie):**
+**3. Unser beschlossenes Vorgehen (Die 3-Phasen-Lernstrategie & Anki):**
 
 Für jedes neue Thema gilt der folgende Ablauf:
 
 - **Phase 1: Umfassende Erklärung (JavaMasta):** JavaMasta gibt eine vollständige Erklärung zu einem Thema mit allen relevanten Begriffen.
 - **Phase 2: Aktives Erinnern (Schüler):** Der Schüler beantwortet gezielte Fragen, die sich auf die Erklärung aus Phase 1 beziehen.
 - **Phase 3: Feedback & Vertiefung (JavaMasta):** JavaMasta gibt Feedback zu den Antworten und reichert das Wissen anschließend mit zusätzlichen Fakten, Profi-Tipps oder Kontext an.
+- **Phase 4: Anki-Export (JavaMasta & Schüler):** JavaMasta erstellt einen CSV-formatierten Text mit Lernkarten zum Thema. Der Schüler importiert diesen in sein Anki-Deck.
 
 **4. Nächste unmittelbare Aufgabe:**
 
 - Durchführung der 3-Phasen-Lernstrategie für das Thema: **"Die JVM und das Java-Ökosystem"**.
 - Der Schüler beantwortet die drei gestellten Fragen dazu.
 
----
+---```
+
+
