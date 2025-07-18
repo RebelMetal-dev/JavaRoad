@@ -33,7 +33,7 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse nach neues
 ## Kontakt
 
 Du möchtest dich vernetzen? Hier findest du mich:
-- [**LinkedIn:**](www.linkedin.com/in/christoph-breddin-735b1b2a7) 
+- [**LinkedIn:**](https://www.linkedin.com/in/christoph-breddin-735b1b2a7) 
 - [**GitHub:**](https://github.com/RebelMetal-dev)
 
 *Hinweis: Dieses Repository wird kontinuierlich aktualisiert, um meinen Lernfortschritt widerzuspiegeln.*
