@@ -9,8 +9,13 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 **1. Letztes abgeschlossenes Thema:**
 
 - **MEILENSTEIN 1 ABGESCHLOSSEN: Java-Grundlagen & OOP-Wiederholung.**
-- **Meilenstein 2, Thema 1 ABGESCHLOSSEN: Das Java Collections Framework.** (inkl. Anki & Skript)
-- **Meilenstein 2, Thema 2 ABGESCHLOSSEN: Einfache Dateiein- und -ausgabe.** (inkl. Anki & Skript)
+- **MEILENSTEIN 2 ABGESCHLOSSEN: Kern-APIs (Collections, I/O).**
+  - Thema "Java Collections Framework" (inkl. Anki & Skript) abgeschlossen.
+  - Thema "Einfache Dateiein- und -ausgabe" (inkl. Anki & Skript) abgeschlossen.
+- **Meilenstein 3, Theorie-Phase ABGESCHLOSSEN: Java 8+ Features.**
+  - Thema "Lambdas & Funktionale Interfaces" (inkl. Anki & Skript) abgeschlossen.
+  - Thema "Java Stream API" (inkl. Anki & Skript) abgeschlossen.
+  - Thema "Optional<T>" (inkl. Anki & Skript) abgeschlossen.
 
 **2. Aktueller Stand der Roadmap:**
 
@@ -26,15 +31,12 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 **3. Unser beschlossenes Vorgehen (Die 3-Phasen-Lernstrategie & Anki):**
 ... (Dieser Abschnitt bleibt unverändert) ...
 
-**4. Nächste unmittelbare Aufgabe:**
+**4. Prozess für Lern-Skripte (FINAL):**
+... (Dieser Abschnitt bleibt unverändert) ...
 
-- Abschluss des Themas **"Lambda-Ausdrücke & Funktionale Interfaces"**.
-- **Startpunkt:** Phase 4 - Erstellung des Anki-Exports.
+**5. Nächste unmittelbare Aufgabe:**
 
-**5. Prozess für Lern-Skripte (FINAL):**
-- **Zeitpunkt:** Nachdem Phase 3 (Feedback & Vertiefung) für ein Thema abgeschlossen ist.
-- **Ablauf:**
-  1. JavaMasta erstellt den **vollständigen Markdown-Text**, der sowohl die ursprüngliche Erklärung (Phase 1) als auch die "Profi-Tipps" (aus Phase 3) enthält.
-  2. Der Schüler erstellt eine entsprechende `.md`-Datei im `Lernskripte`-Ordner, fügt den Inhalt ein und committet die Datei.
+- Durchführung des **Abschluss-Quiz** für den Meilenstein "Java 8+ Features".
+- Im Anschluss: Durchführung der **praktischen Programmieraufgabe** zu diesem Meilenstein.
 
 ---
