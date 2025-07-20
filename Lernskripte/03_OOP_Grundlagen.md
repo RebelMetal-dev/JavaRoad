@@ -31,9 +31,6 @@ public class Person {
 
     
 
-IGNORE_WHEN_COPYING_START
-Use code with caution. Markdown
-IGNORE_WHEN_COPYING_END
 Modern (mit Records, seit Java 16)
 
 Für einfache, unveränderliche (immutable) Daten-Trägerklassen gibt es eine extrem kurze und sichere Schreibweise: Records. Der Compiler generiert für uns automatisch private final Attribute, einen öffentlichen Konstruktor, Getter (ohne get-Präfix), equals(), hashCode() und toString(). Dies ist der moderne Weg für reine Datenklassen.
@@ -50,9 +47,7 @@ System.out.println(person.name()); // Moderner Getter: person.name() statt perso
 
     
 
-IGNORE_WHEN_COPYING_START
-Use code with caution. Java
-IGNORE_WHEN_COPYING_END
+
 2. Vererbung (Inheritance)
 
 Konzept: Eine Klasse (Subklasse/Kindklasse) kann die Attribute und Methoden einer anderen Klasse (Superklasse/Elternklasse) erben und wiederverwenden. Es entsteht eine "ist-ein"-Beziehung (z.B. ein Auto ist ein Fahrzeug).
@@ -73,9 +68,7 @@ class Auto extends Fahrzeug { // Auto erbt von Fahrzeug
 
     
 
-IGNORE_WHEN_COPYING_START
-Use code with caution. Java
-IGNORE_WHEN_COPYING_END
+
 Moderne Einschränkung (mit sealed, seit Java 17)
 
 Klassisch konnte jede öffentliche Klasse von einer (nicht als final markierten) Klasse erben. Moderne sealed Klassen erlauben es einer Superklasse, exakt festzulegen, welche Klassen von ihr erben dürfen. Das macht Vererbungshierarchien sicherer und vorhersagbarer.
@@ -87,9 +80,7 @@ public sealed class Fahrzeug permits Auto, LKW { /* ... */ }
 
     
 
-IGNORE_WHEN_COPYING_START
-Use code with caution. Java
-IGNORE_WHEN_COPYING_END
+
 3. Polymorphie (Polymorphism)
 
 Konzept: "Vielgestaltigkeit". Es bedeutet, dass ein Objekt viele Formen annehmen kann. Eine Variable vom Typ der Superklasse kann auf ein Objekt einer ihrer Subklassen verweisen. Beim Methodenaufruf wird dann dynamisch zur Laufzeit entschieden, welche überschriebene Methode (die der Subklasse) ausgeführt wird.
@@ -101,9 +92,6 @@ meinFahrzeug.hupen(); // Gibt "Möp Möp!" aus, weil die Methode von Auto aufger
 
     
 
-IGNORE_WHEN_COPYING_START
-Use code with caution. Java
-IGNORE_WHEN_COPYING_END
 Moderne Vereinfachung (Pattern Matching für instanceof, seit Java 16)
 
 Klassisch musste man oft prüfen, ob ein Objekt ein bestimmter Typ ist (instanceof), und es dann manuell in diesen Typ umwandeln (casten). Das war umständlich und fehleranfällig.
@@ -123,9 +111,6 @@ if (meinFahrzeug instanceof Auto meinAuto) { // Check und Zuweisung in einem Sch
 
     
 
-IGNORE_WHEN_COPYING_START
-Use code with caution. Java
-IGNORE_WHEN_COPYING_END
 4. Abstraktion (Abstraction)
 
 Konzept: Verstecken der komplexen Implementierungsdetails und das Zeigen einer vereinfachten, wesentlichen Schnittstelle nach außen. Abstraktion wird in Java hauptsächlich durch abstrakte Klassen und Interfaces erreicht.
