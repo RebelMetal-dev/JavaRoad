@@ -4,7 +4,7 @@ public class Buch {
     private String titel;
     private String autor;
     private String isbn;
-    private int seitenzahl;
+    private int seitenzahl = 0;
 
     /** Parametriesierter Konstruktor initialisiert neue Buch-Objekte */
     public Buch (String titel,String autor,String isbn) {
@@ -12,23 +12,33 @@ public class Buch {
         this.autor=autor;
         this.isbn=isbn;
     }
-    /** Gibt den Titel des Buches zurück */
+    /** Gibt den Titel des Buches zurück
+     * @return  Der Titel des Buches.
+     * */
     public String getTitel() {
         return titel;
     }
-    /** Gibt den Autor des Buches zurück */
+    /** Gibt den Autor des Buches zurück
+     * @return  Der Autor des Buches.
+     * */
     public String getAutor() {
         return autor;
     }
-    /** Gibt die ISBN des Buches zurück */
+    /** Gibt die ISBN des Buches zurück
+     * @return  Die ISBN des Buches.
+     * */
     public String getIsbn() {
         return isbn;
     }
-    /** Gibt die Seitenzahl des Buches zurück */
+    /** Gibt die Seitenzahl des Buches zurück
+     * @return  Die Seitenzahl des Buches.
+     * */
     public int getSeitenzahl() {
         return seitenzahl;
     }
-    /** Setzt die Seitenzahl des Buches und überpüft die Gültigkeit der Eingabe, bei ungültigkeit wird eine Fehlermeldung geworfen. */
+    /** Setzt die Seitenzahl des Buches und überpüft die Gültigkeit der Eingabe, bei ungültigkeit wird eine Fehlermeldung geworfen.
+     * @param seitenzahl Die neue Seitenzahl
+     * */
     public void setSeitenzahl(int seitenzahl) {
 
         if (seitenzahl <= 0) {
