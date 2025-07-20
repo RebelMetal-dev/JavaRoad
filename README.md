@@ -22,7 +22,7 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse nach neues
 
 ### Phase 1 - Grundlagen
 
-- [OOP-Grundlagen-Beispiele](./Phase1_Grundlagen/OOP_Beispiele/)
+- [**Projekt 1: Buch/Bibliothek (Kapselung)**](./src/main/java/de/rebelmetal/javaroad/library)
 - [Java 8+ Features](./Phase1_Grundlagen/Java8_Features/)
 - [Collections-Vergleich](./Phase1_Grundlagen/Collections_Vergleich/)
 
