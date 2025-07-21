@@ -20,30 +20,44 @@ import java.util.List;
 
 public class Datenverarbeitung {
 
+    /**
+     * Der Einstiegspunkt der Anwendung.
+     * Demonstriert die Stream-Operationen anhand einer festen Liste von Städten.
+     *
+     * @param args Kommandozeilenargumente (werden in dieser Übung nicht verwendet).
+     */
+
     public static void main(String[] args) {
 
-
+        // -- SETUP: Erstellen unserer Beispieldaten --
         List<String> staedte = List.of("Berlin", "München", "Hamburg", "Köln", "Frankfurt", "Bremen");
+
+        // -- AUFGABE 1: Filtern --
+        // Wir erstellen einen Stream aus der Liste, filtern alle Elemente heraus,
+        // die nicht mit "B" beginnen, und sammeln das Ergebnis in einer neuen Liste.
         List<String> bStaedte = staedte.stream()
-                .filter(stadt ->stadt.startsWith("B"))
-                .toList();
+                .filter(stadt -> stadt.startsWith("B"))
+                .toList(); // .toList() ist eine moderne, kurze Alternative zu .collect(Collectors.toList())
         System.out.println("Städte, die mit 'B' beginnen: " + bStaedte);
 
 
+        // -- AUFGABE 2: Transformieren (Mapping) --
+        // Wir erstellen einen Stream, wandeln jeden Stadt-String in seine Länge (einen Integer) um
+        // und sammeln diese Längen in einer neuen Liste von Integers.
         List<Integer> namenLaengen = staedte.stream()
                 .map(String::length)
-                  .toList();
+                .toList();
         System.out.println("Längen der Stadtnamen: " + namenLaengen);
 
 
+        // -- AUFGABE 3: Filtern und Transformieren kombiniert --
+        // Wir verketten die Operationen: Zuerst filtern wir die langen Namen,
+        // DANN wandeln wir die verbleibenden Elemente in Großbuchstaben um
+        // und sammeln das Endergebnis in einer neuen Liste.
         List<String> langeStaedteGross = staedte.stream()
-                .filter(stadt -> stadt.length()>6)
-                .map(String::toUpperCase
-                )
+                .filter(stadt -> stadt.length() > 6)
+                .map(String::toUpperCase)
                 .toList();
         System.out.println("Lange Städtenamen in Großbuchstaben: " + langeStaedteGross);
-
-
-
     }
 }
