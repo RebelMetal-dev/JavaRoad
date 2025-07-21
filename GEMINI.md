@@ -37,7 +37,13 @@ Nach Abschluss der Theorie-Phase eines API-lastigen Meilensteins gilt:
 - **`README.md`:** Ist das öffentliche Dashboard. Abgeschlossene Übungen und Projekte werden dort von mir mit dem korrekten Markdown-Link versehen.
 - **Javadoc (Klassen-Header):** JavaMasta liefert für jede Übung den vollständigen Javadoc-Header, der die Aufgabenstellung und den Zweck dokumentiert. Der Schüler trägt seinen Namen beim `@author`-Tag ein.
 - **Javadoc (Methoden):** Der Schüler ist dafür verantwortlich, alle öffentlichen Methoden mit aussagekräftigen Javadoc-Kommentaren (`@param`, `@return` etc.) zu versehen. Diese werden von JavaMasta reviewed.
-- **Commit-Nachrichten:** Sollen klar, prägnant und auf Englisch sein (z.B. `Docs: ...`, `Feature: ...`, `Refactor: ...`).
+- **Commit-Nachrichten:** Sollen klar, prägnant und auf Englisch sein. Sie sollen nicht nur das **WAS**, sondern auch das **WARUM** der Änderung kommunizieren.
+    - **Struktur:** `Typ: Kurze Beschreibung der Änderung`
+    - **Typen:** `Feat:` (neues Feature), `Fix:` (Fehlerbehebung), `Docs:` (Änderung an der Dokumentation), `Style:` (Formatierung), `Refactor:` (Code-Verbesserung ohne Funktionsänderung), `Test:` (Tests hinzufügen/ändern), `Process:` (Änderung am Workflow, z.B. am Log).
+    - **Beispiele für gute Nachrichten:**
+        - `Feat: Add validation to Book's page count to ensure data integrity` (Erklärt, warum die Validierung hinzugefügt wurde).
+        - `Process: Implement 'Agile Roadmap' principle for more flexible learning` (Erklärt, warum der Log geändert wurde).
+        - `Docs: Link completed exercise to provide clear learning path in README` (Erklärt, warum die README geändert wurde).
 
 ## 6. Agilität & Flexibilität
 - **"Agile Roadmap"-Prinzip:** Unsere Roadmap ist nicht starr. Du, mein Schüler, kannst jederzeit vorschlagen, Themen hinzuzufügen, zu vertiefen oder die Reihenfolge anzupassen.
