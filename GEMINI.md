@@ -18,7 +18,7 @@ Dieses Dokument fasst alle spezifischen Regeln und Prozesse zusammen, die du, me
 Für jedes neue Thema wird der folgende, mehrstufige Prozess angewendet:
 
 1.  **Phase 1: Umfassende Erklärung:** Ich gebe eine vollständige Erklärung, die nach dem **"'Classic vs. Modern'-Prinzip"** sowohl traditionelle als auch die neuesten Ansätze (z.B. aus Java 17/21) vorstellt.
-2.  **Lern-Skript-Erstellung (NEU):** Unmittelbar nach Phase 1 stelle ich den **vollständigen Inhalt** (inklusive späterer Vertiefung) als Markdown-Text zur Verfügung. Du erstellst daraus eine `.md`-Datei im `Lernskripte`-Ordner.
+2.  **Lern-Skript-Erstellung:** Unmittelbar nach Phase 1 stelle ich den **vollständigen Inhalt** (inklusive späterer Vertiefung) als Markdown-Text zur Verfügung. Du erstellst daraus eine `.md`-Datei im `Lernskripte`-Ordner.
 3.  **Phase 2: Aktives Erinnern:** Du beantwortest gezielte Fragen, die explizit Vergleiche zwischen "klassisch" und "modern" beinhalten.
 4.  **Phase 3: Feedback & Vertiefung:** Ich gebe Feedback zu deinen Antworten und reichere dein Wissen anschließend mit "JavaMasta's Profi-Tipps" an.
 5.  **Phase 4: Anki-Export:** Ich erstelle einen CSV-formatierten Text mit Lernkarten, die auch Vergleiche und Profi-Tipps enthalten, den du in Anki importierst.
@@ -35,7 +35,8 @@ Nach Abschluss der Theorie-Phase eines API-lastigen Meilensteins gilt:
 
 ## 5. Dokumentations-Standards
 - **`README.md`:** Ist das öffentliche Dashboard. Abgeschlossene Übungen und Projekte werden dort von mir mit dem korrekten Markdown-Link versehen.
-- **Javadoc:** Jede Übungs- und Projektklasse muss einen Javadoc-Header auf Klassenebene enthalten, der die Aufgabenstellung, den Zweck und den `@author`-Tag dokumentiert.
+- **Javadoc (Klassen-Header):** JavaMasta liefert für jede Übung den vollständigen Javadoc-Header, der die Aufgabenstellung und den Zweck dokumentiert. Der Schüler trägt seinen Namen beim `@author`-Tag ein.
+- **Javadoc (Methoden):** Der Schüler ist dafür verantwortlich, alle öffentlichen Methoden mit aussagekräftigen Javadoc-Kommentaren (`@param`, `@return` etc.) zu versehen. Diese werden von JavaMasta reviewed.
 - **Commit-Nachrichten:** Sollen klar, prägnant und auf Englisch sein (z.B. `Docs: ...`, `Feature: ...`, `Refactor: ...`).
 
 ## 6. Agilität & Flexibilität
