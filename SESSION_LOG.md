@@ -7,13 +7,11 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 ### **Sitzung vom: 18.07.2025**
 
 **1. Letztes abgeschlossenes Thema:**
-
 - **MEILENSTEIN 1 ABGESCHLOSSEN: Java-Grundlagen & OOP-Wiederholung.**
 - **MEILENSTEIN 2 ABGESCHLOSSEN: Kern-APIs (Collections, I/O).**
 - **Meilenstein 3, Theorie-Phase ABGESCHLOSSEN: Java 8+ Features.**
 
 **2. Aktueller Stand der Roadmap:**
-
 - [x] **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
   - [x] *Meilenstein: Java-Grundlagen & OOP-Wiederholung*
   - [x] *Meilenstein: Kern-APIs (Collections, I/O)*
@@ -30,13 +28,18 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 ... (Dieser Abschnitt bleibt unverändert) ...
 
 **5. Nächste unmittelbare Aufgabe:**
-- Durchführung der großen Wiederholung zu Meilenstein 2 & 3.
-- Im Anschluss: Durchführung des Abschluss-Quiz zu Meilenstein 2 (Collections & I/O).
+- **Diagnose abgeschlossen:** Quiz zu Meilenstein 3 hat gezeigt, dass praktische Anwendung gefestigt werden muss.
+- **Startpunkt:** Durchführung der neuen **Phase 5: "Praktische Übungen"** für Java 8+ Features.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
-- Die Roadmap ist ein lebendiges Dokument.
-- Der Schüler kann jederzeit vorschlagen, Themen hinzuzufügen, zu vertiefen oder die Reihenfolge anzupassen.
-- Wir besprechen den Vorschlag und integrieren beschlossene Änderungen in den `SESSION_LOG`.
-- Der grundlegende Lernprozess wird auf alle neuen oder vertieften Themen angewendet.
+... (Dieser Abschnitt bleibt unverändert) ...
 
----
+**7. Prozess für API-lastige Meilensteine (FINAL - Der "Üben & Anwenden"-Workflow):**
+- Nach der Theorie-Phase (1-4) und dem Diagnose-Quiz folgt:
+- **Phase 5 ("Praktische Übungen"):**
+  - JavaMasta stellt kleine bis mittlere, fokussierte Programmieraufgaben.
+  - Der Schüler implementiert diese in einem dedizierten Paket innerhalb des `Uebungen`-Ordners.
+  - Jede Übung wird auf GitHub gepusht und in der `README.md` verlinkt.
+  - JavaMasta führt eine Code-Review auf GitHub durch.
+- **Phase 6 ("Portfolio-Projekt"):**
+  - Im Anschluss folgt eine größere, zusammenhängende Aufgabe, die die geübten Konzepte kombiniert und für das GitHub-Portfolio bestimmt ist.
