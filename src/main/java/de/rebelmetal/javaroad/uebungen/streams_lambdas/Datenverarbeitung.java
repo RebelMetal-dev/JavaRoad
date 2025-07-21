@@ -1,6 +1,6 @@
 package de.rebelmetal.javaroad.uebungen.streams_lambdas;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 /**
  * Praktische Übung 1 zu den Java 8+ Features: Streams & Lambdas.
@@ -38,7 +38,8 @@ public class Datenverarbeitung {
 
         List<String> langeStaedteGross = staedte.stream()
                 .filter(stadt -> stadt.length()>6)
-                .map(String::toUpperCase)
+                .map(String::toUpperCase
+                )
                 .toList();
         System.out.println("Lange Städtenamen in Großbuchstaben: " + langeStaedteGross);
 
