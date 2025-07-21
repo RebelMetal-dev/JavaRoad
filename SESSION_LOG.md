@@ -6,11 +6,13 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 
 ### **Sitzung vom: 18.07.2025**
 
-**1. Letztes abgeschlossenes Thema:**
+*1. Letztes abgeschlossenes Thema:**
 
 - **MEILENSTEIN 1 ABGESCHLOSSEN: Java-Grundlagen & OOP-Wiederholung.**
 - **MEILENSTEIN 2 ABGESCHLOSSEN: Kern-APIs (Collections, I/O).**
 - **Meilenstein 3, Theorie-Phase ABGESCHLOSSEN: Java 8+ Features.**
+- **Prozess-Finalisierung:** Alle Projekt-Workflows (`GEMINI.md`, `SESSION_LOG.md`) wurden finalisiert und dokumentiert.
+- **Übung 1 (Java 8+): "Grundlagen von Streams"** abgeschlossen, reviewed und in der `README.md` verlinkt.
 
 **2. Aktueller Stand der Roadmap:**
 
@@ -41,8 +43,7 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Diagnose abgeschlossen:** Quiz zu Meilenstein 3 hat gezeigt, dass praktische Anwendung gefestigt werden muss.
-- **Startpunkt:** Durchführung der **Phase 5: "Praktische Übungen"** für Java 8+ Features.
+- **Startpunkt:** Durchführung der **zweiten praktischen Übung** zu den Java 8+ Features, um das Wissen weiter zu festigen.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
