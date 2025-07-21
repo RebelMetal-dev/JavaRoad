@@ -35,7 +35,7 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 *Hier dokumentiere ich meinen Lernfortschritt durch kleinere, fokussierte Übungsaufgaben zu spezifischen Themen. Jede Übung stellt einen Meilenstein in meinem Lernprozess dar.*
 
 ### Meilenstein 3: Java 8+ Features
-- *(Weitere Übungen folgen hier)*
+- [Übung 1: Grundlagen von Streams (filter, map)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_lambdas/Datenverarbeitung.java)
 
 ---
 
