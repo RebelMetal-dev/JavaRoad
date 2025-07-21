@@ -29,14 +29,11 @@ public class Person {
     }
 }
 
-    
-
 Modern (mit Records, seit Java 16)
 
 Für einfache, unveränderliche (immutable) Daten-Trägerklassen gibt es eine extrem kurze und sichere Schreibweise: Records. Der Compiler generiert für uns automatisch private final Attribute, einen öffentlichen Konstruktor, Getter (ohne get-Präfix), equals(), hashCode() und toString(). Dies ist der moderne Weg für reine Datenklassen.
 Generated java
-
-      
+ 
 // Modern für unveränderliche Daten
 public record PersonRecord(String name, int alter) {}
 
@@ -46,6 +43,8 @@ System.out.println(person.name()); // Moderner Getter: person.name() statt perso
 // person.name = "Peter"; // Funktioniert nicht, da Records unveränderlich sind!
 
     
+
+
 
 
 2. Vererbung (Inheritance)
@@ -66,9 +65,6 @@ class Auto extends Fahrzeug { // Auto erbt von Fahrzeug
     public void hupen() { System.out.println("Möp Möp!"); } // Überschreibt die Methode
 }
 
-    
-
-
 Moderne Einschränkung (mit sealed, seit Java 17)
 
 Klassisch konnte jede öffentliche Klasse von einer (nicht als final markierten) Klasse erben. Moderne sealed Klassen erlauben es einer Superklasse, exakt festzulegen, welche Klassen von ihr erben dürfen. Das macht Vererbungshierarchien sicherer und vorhersagbarer.
@@ -81,23 +77,23 @@ public sealed class Fahrzeug permits Auto, LKW { /* ... */ }
     
 
 
+
+
+
 3. Polymorphie (Polymorphism)
 
 Konzept: "Vielgestaltigkeit". Es bedeutet, dass ein Objekt viele Formen annehmen kann. Eine Variable vom Typ der Superklasse kann auf ein Objekt einer ihrer Subklassen verweisen. Beim Methodenaufruf wird dann dynamisch zur Laufzeit entschieden, welche überschriebene Methode (die der Subklasse) ausgeführt wird.
 Generated java
-
-      
+     
 Fahrzeug meinFahrzeug = new Auto(); // Polymorphie! Variable ist vom Typ Fahrzeug, Objekt ist vom Typ Auto.
 meinFahrzeug.hupen(); // Gibt "Möp Möp!" aus, weil die Methode von Auto aufgerufen wird.
-
-    
+ 
 
 Moderne Vereinfachung (Pattern Matching für instanceof, seit Java 16)
 
 Klassisch musste man oft prüfen, ob ein Objekt ein bestimmter Typ ist (instanceof), und es dann manuell in diesen Typ umwandeln (casten). Das war umständlich und fehleranfällig.
 Generated java
-
-      
+ 
 // Klassisch
 if (meinFahrzeug instanceof Auto) {
     Auto meinAuto = (Auto) meinFahrzeug; // Manueller Cast nötig
@@ -111,6 +107,9 @@ if (meinFahrzeug instanceof Auto meinAuto) { // Check und Zuweisung in einem Sch
 
     
 
+
+
+    
 4. Abstraktion (Abstraction)
 
 Konzept: Verstecken der komplexen Implementierungsdetails und das Zeigen einer vereinfachten, wesentlichen Schnittstelle nach außen. Abstraktion wird in Java hauptsächlich durch abstrakte Klassen und Interfaces erreicht.

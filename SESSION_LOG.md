@@ -10,12 +10,7 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 
 - **MEILENSTEIN 1 ABGESCHLOSSEN: Java-Grundlagen & OOP-Wiederholung.**
 - **MEILENSTEIN 2 ABGESCHLOSSEN: Kern-APIs (Collections, I/O).**
-  - Thema "Java Collections Framework" (inkl. Anki & Skript) abgeschlossen.
-  - Thema "Einfache Dateiein- und -ausgabe" (inkl. Anki & Skript) abgeschlossen.
 - **Meilenstein 3, Theorie-Phase ABGESCHLOSSEN: Java 8+ Features.**
-  - Thema "Lambdas & Funktionale Interfaces" (inkl. Anki & Skript) abgeschlossen.
-  - Thema "Java Stream API" (inkl. Anki & Skript) abgeschlossen.
-  - Thema "Optional<T>" (inkl. Anki & Skript) abgeschlossen.
 
 **2. Aktueller Stand der Roadmap:**
 
@@ -35,8 +30,13 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 ... (Dieser Abschnitt bleibt unverändert) ...
 
 **5. Nächste unmittelbare Aufgabe:**
+- Durchführung der großen Wiederholung zu Meilenstein 2 & 3.
+- Im Anschluss: Durchführung des Abschluss-Quiz zu Meilenstein 2 (Collections & I/O).
 
-- Durchführung des **Abschluss-Quiz** für den Meilenstein "Java 8+ Features".
-- Im Anschluss: Durchführung der **praktischen Programmieraufgabe** zu diesem Meilenstein.
+**6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
+- Die Roadmap ist ein lebendiges Dokument.
+- Der Schüler kann jederzeit vorschlagen, Themen hinzuzufügen, zu vertiefen oder die Reihenfolge anzupassen.
+- Wir besprechen den Vorschlag und integrieren beschlossene Änderungen in den `SESSION_LOG`.
+- Der grundlegende Lernprozess wird auf alle neuen oder vertieften Themen angewendet.
 
 ---
