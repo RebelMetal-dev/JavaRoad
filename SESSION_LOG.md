@@ -19,7 +19,14 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 
 - [x] **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
   - [x] *Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung*
-  - [ ] *Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter* <-- **WIR SIND HIER**
+  - [ ] *Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)* <-- **WIR SIND HIER**
+    - [ ] Thema 1: `static` vs. Instanz
+    - [ ] Thema 2: Zugriffsmodifikatoren (`public`, `private`, `protected`, `default`)
+    - [ ] Thema 3: Konstruktoren, `this` und `super`
+    - [ ] Thema 4: `final`
+    - [ ] Thema 5: Die `Object`-Klasse (`equals`, `hashCode`, `toString`)
+    - [ ] Thema 6: `abstract class` vs. `interface`
+    - [ ] Thema 7: Methoden-Überladung vs. -Überschreidung
   - [ ] *Meilenstein 2: Kern-APIs (Collections, I/O)*
   - [ ] *Meilenstein 3: Java 8+ Features (Streams, Lambdas, Optional)*
 - [ ] **Phase 2: Build-Tools, Testing & Datenbanken**
@@ -45,7 +52,7 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Plan-Anpassung:** Wir haben einen neuen, fundamentalen Meilenstein 1.5 eingeschoben, um Kern-Schlüsselwörter zu festigen.
+- **Plan-Anpassung:** Wir haben ein umfassendes "Fundament-Bootcamp" (Meilenstein 1.5) eingeschoben, um die Kernmechaniken von Java zu meistern.
 - **Startpunkt:** Beginn mit dem ersten Thema des neuen Meilensteins: **"`static` (Felder, Methoden) vs. Instanz-Mitglieder"**.
 - Durchführung unseres vollen Lernprozesses für dieses Thema.
 
