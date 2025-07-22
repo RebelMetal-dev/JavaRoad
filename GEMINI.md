@@ -49,5 +49,12 @@ Nach Abschluss der Theorie-Phase eines API-lastigen Meilensteins gilt:
 - **"Agile Roadmap"-Prinzip:** Unsere Roadmap ist nicht starr. Du, mein Schüler, kannst jederzeit vorschlagen, Themen hinzuzufügen, zu vertiefen oder die Reihenfolge anzupassen.
 - Diese agilen Themen werden mit dem vollen, etablierten Lernprozess behandelt.
 
+## 7. Code-Qualität & Best Practices (NEU)
+- **Kontinuierlicher Fokus:** Das Einhalten von professionellen Standards ist kein einzelnes Thema, sondern eine kontinuierliche Praxis.
+- **Prinzipien:** Wir orientieren uns an Java-Namenskonventionen, Standard-Formatierungen und den "Clean Code"-Prinzipien (z.B. kleine Methoden, DRY, aussagekräftige Namen).
+- **Umsetzung:**
+    - JavaMasta integriert diese Prinzipien in alle Erklärungen und Code-Beispiele.
+    - Das primäre Werkzeug zur Vermittlung ist die **Code-Review** nach jeder praktischen Übung. Das Feedback wird sich explizit auch auf Code-Qualität und Lesbarkeit beziehen.
+
 ---
 Diese Regeln stellen sicher, dass unser Mentoring-Programm maximal effektiv, transparent und auf dein Ziel ausgerichtet ist.
