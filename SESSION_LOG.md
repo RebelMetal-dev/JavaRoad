@@ -52,9 +52,9 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Plan-Anpassung:** Wir haben ein umfassendes "Fundament-Bootcamp" (Meilenstein 1.5) eingeschoben, um die Kernmechaniken von Java zu meistern.
-- **Startpunkt:** Beginn mit dem ersten Thema des neuen Meilensteins: **"`static` (Felder, Methoden) vs. Instanz-Mitglieder"**.
-- Durchführung unseres vollen Lernprozesses für dieses Thema.
+- **Finaler Neustart des "Fundament-Bootcamps" (Meilenstein 1.5).**
+- **Grund:** Wir wenden ab sofort unseren finalen, perfektionierten **"Multi-Use-Case"-Ansatz** für alle Erklärungen an, um ein tieferes, praxisorientiertes Verständnis zu gewährleisten.
+- **Startpunkt:** Beginn mit dem ersten Thema: **"`static` vs. Instanz-Mitglieder"** nach dem neuen Prozess.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
