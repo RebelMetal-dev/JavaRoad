@@ -22,11 +22,6 @@ Dieses Dokument dient als persönlicher "Style Guide" und als Referenz für die 
   }
 
     
-
-IGNORE_WHEN_COPYING_START
-Use code with caution. Markdown
-IGNORE_WHEN_COPYING_END
-
     Leerzeichen: Sinnvoller Einsatz um Operatoren (a + b statt a+b) zur Verbesserung der Lesbarkeit.
 
 3. "Clean Code" Best Practices (Die Philosophie)
