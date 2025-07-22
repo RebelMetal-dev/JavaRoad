@@ -11,6 +11,10 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 ## Lern-Roadmap Übersicht
 
 - [x] **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
+    - [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung
+    - [ ] Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (`static`, `final`, `abstract` etc.)
+    - [ ] Meilenstein 2: Kern-APIs (Collections, I/O)
+    - [ ] Meilenstein 3: Java 8+ Features (Streams, Lambdas, Optional)
 - [ ] **Phase 2: Build-Tools, Testing & Datenbanken**
 - [ ] **Phase 3: Spring Framework & APIs**
 - [ ] **Phase 4: Fortgeschrittene Themen & Best Practices**

@@ -14,12 +14,14 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 - **Prozess-Finalisierung:** Alle Projekt-Workflows (`GEMINI.md`, `SESSION_LOG.md`) wurden finalisiert und dokumentiert.
 - **Übung 1 (Java 8+): "Grundlagen von Streams"** abgeschlossen, reviewed und in der `README.md` verlinkt.
 
-**2. Aktueller Stand der Roadmap:**
+
+**2. Aktueller Stand der Roadmap (NEU STRUKTURIERT):**
 
 - [x] **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
-  - [x] *Meilenstein: Java-Grundlagen & OOP-Wiederholung*
-  - [x] *Meilenstein: Kern-APIs (Collections, I/O)*
-  - [ ] *Meilenstein: Java 8+ Features (Streams, Lambdas, Optional)* <-- **WIR SIND HIER**
+  - [x] *Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung*
+  - [ ] *Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter* <-- **WIR SIND HIER**
+  - [ ] *Meilenstein 2: Kern-APIs (Collections, I/O)*
+  - [ ] *Meilenstein 3: Java 8+ Features (Streams, Lambdas, Optional)*
 - [ ] **Phase 2: Build-Tools, Testing & Datenbanken**
 - [ ] **Phase 3: Spring Framework & APIs**
 - [ ] **Phase 4: Fortgeschrittene Themen & Best Practices**
@@ -43,7 +45,9 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Startpunkt:** Durchführung der **zweiten praktischen Übung** zu den Java 8+ Features, um das Wissen weiter zu festigen.
+- **Plan-Anpassung:** Wir haben einen neuen, fundamentalen Meilenstein 1.5 eingeschoben, um Kern-Schlüsselwörter zu festigen.
+- **Startpunkt:** Beginn mit dem ersten Thema des neuen Meilensteins: **"`static` (Felder, Methoden) vs. Instanz-Mitglieder"**.
+- Durchführung unseres vollen Lernprozesses für dieses Thema.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
