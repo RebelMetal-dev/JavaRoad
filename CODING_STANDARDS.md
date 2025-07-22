@@ -21,7 +21,7 @@ Dieses Dokument dient als persönlicher "Style Guide" und als Referenz für die 
       // ...
   }
 
-    
+
     Leerzeichen: Sinnvoller Einsatz um Operatoren (a + b statt a+b) zur Verbesserung der Lesbarkeit.
 
 3. "Clean Code" Best Practices (Die Philosophie)
