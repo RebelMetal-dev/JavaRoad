@@ -54,8 +54,10 @@ Für jedes neue Thema gilt der folgende Ablauf:
 **5. Nächste unmittelbare Aufgabe:**
 
 - **Finaler Neustart des "Fundament-Bootcamps" (Meilenstein 1.5).**
-- **Grund:** Wir wenden ab sofort unseren finalen, von dir entworfenen, integrativen Lernprozess an.
-- **Startpunkt:** Beginn mit dem ersten Thema: **"`static` vs. Instanz-Mitglieder"**, beginnend mit **Phase 1: Theorie & Praxisbeispiele**.
+- **Grund:** Wir wenden ab sofort unseren finalen, von dir entworfenen **Goldstandard-Lernprozess** an.
+- **Startpunkt:** Beginn mit dem ersten Thema: **"`static` vs. Instanz-Mitglieder"**.
+- **Aktueller Stand:** Phase 1 (Theorie & Praxisbeispiele) wurde vollständig erklärt. Das Lern-Skript wurde erstellt.
+- **Nächster Schritt:** Phase 2 (Diagnose-Quiz) zu diesem Thema.
 
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**

@@ -14,17 +14,21 @@ Dieses Dokument fasst alle spezifischen Regeln und Prozesse zusammen, die du, me
 - **Session-Start ("Handshake-Protokoll"):** Jede neue Session beginnt damit, dass du den Inhalt der `SESSION_LOG.md` in den Chat postest. Ich bestätige den Startpunkt.
 - **Session-Ende ("Abschluss-Protokoll"):** Wenn du "Session beendet" schreibst, erstelle ich den finalen `SESSION_LOG`-Eintrag für den Tag und gebe dir die `git`-Befehle zur Sicherung.
 
-## 3. Der Kern-Lernprozess (FINAL)
+## 3. Der Kern-Lernprozess (GOLDSTANDARD)
 
 ### A) Pro THEMA innerhalb eines Meilensteins:
-1.  **Phase 1 (Theorie & Praxisbeispiele):** JavaMasta erklärt das Thema nach dem **"Multi-Use-Case"-Prinzip** mit 2-3 praxisnahen Code-Beispielen.
+1.  **Phase 1 (Theorie & Praxisbeispiele):**
+    - **Teil 1 (Grundlegende Analogie):** JavaMasta gibt eine ausführliche, bildliche Erklärung, um das mentale Modell und das "Warum" eines Konzepts zu schaffen (der "alte Stil").
+    - **Teil 2 (Multi-Use-Cases):** Unmittelbar danach demonstriert JavaMasta die Anwendung anhand von 2-3 praxisnahen Code-Beispielen, um das "Wofür" zu zeigen.
+    - **Teil 3 (Vertiefung):** Die Erklärung wird mit "Profi-Tipps" und wichtigen Regeln abgerundet.
 2.  **Phase 2 (Diagnose & Feedback):** Ein kurzes Quiz prüft das Verständnis. In einem anschließenden Feedback-Loop werden gezielt Lücken geschlossen.
-3.  **Phase 3 (Dokumentation):** JavaMasta erstellt das Lern-Skript und den Anki-Export.
+3.  **Phase 3 (Dokumentation):**
+    - **Lern-Skript:** JavaMasta erstellt das vollständige Markdown-Skript, das alle drei Teile aus Phase 1 kombiniert.
+    - **Anki-Export:** JavaMasta erstellt den Anki-Export zum Thema.
 
 ### B) Pro MEILENSTEIN als Ganzes:
-1.  **Phase 4 (Praktische Übungen):** Nach Abschluss der Theorie aller Themen eines Meilensteins löst der Schüler 3-5 kleine bis mittlere Übungsaufgaben, um die praktische Anwendung zu trainieren.
-2.  **Phase 5 (Integratives Portfolio-Projekt):** Zum Abschluss jedes Meilensteins folgt eine größere, zusammenhängende Aufgabe, die die gelernten Konzepte in einem realitätsnahen Szenario kombiniert. Dieses Projekt ist das Highlight des Meilensteins im Portfolio.
-
+1.  **Phase 4 (Praktische Übungen):** Nach Abschluss der Theorie aller Themen eines Meilensteins löst der Schüler 3-5 kleine bis mittlere Übungsaufgaben.
+2.  **Phase 5 (Integratives Portfolio-Projekt):** Zum Abschluss jedes Meilensteins folgt eine größere, zusammenhängende Aufgabe.
 ## 4. MEILENSTEIN-Abschluss
 - **Gesamt-Quiz:** Nach Abschluss aller Themen eines Meilensteins folgt ein zusammenfassendes Quiz.
 - **Portfolio-Projekt:** Im Anschluss folgt eine größere, zusammenhängende praktische Aufgabe, die die gelernten Konzepte in einem realitätsnahen Szenario kombiniert und das Highlight des Meilensteins im Portfolio darstellt.
