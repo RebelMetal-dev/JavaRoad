@@ -14,24 +14,21 @@ Dieses Dokument fasst alle spezifischen Regeln und Prozesse zusammen, die du, me
 - **Session-Start ("Handshake-Protokoll"):** Jede neue Session beginnt damit, dass du den Inhalt der `SESSION_LOG.md` in den Chat postest. Ich bestätige den Startpunkt.
 - **Session-Ende ("Abschluss-Protokoll"):** Wenn du "Session beendet" schreibst, erstelle ich den finalen `SESSION_LOG`-Eintrag für den Tag und gebe dir die `git`-Befehle zur Sicherung.
 
-## 3. Der Kern-Lernprozess für jedes Thema
-Für jedes neue Thema wird der folgende, mehrstufige Prozess angewendet:
+### 3. Der Kern-Lernprozess für jedes THEMA (FINAL)
+Für jedes neue Thema innerhalb eines Meilensteins gilt der folgende, mehrstufige Prozess:
 
-1.  **Phase 1: Umfassende Erklärung (nach dem "Multi-Use-Case"-Prinzip):** JavaMasta stellt **2-3 verschiedene, praxisnahe Use-Cases** vor, um ein Konzept aus mehreren Perspektiven zu beleuchten. Jede Erklärung wird durch minimale, lauffähige Code-Beispiele untermauert.Sie folgt dem **"'Classic vs. Modern'-Prinzip"**. die nach dem **"'Classic vs. Modern'-Prinzip"** sowohl traditionelle als auch die neuesten Ansätze (z.B. aus Java 17/21) vorstellt.
-2.  **Lern-Skript-Erstellung:** Unmittelbar nach Phase 1 stelle ich den **vollständigen Inhalt** (inklusive späterer Vertiefung) als Markdown-Text zur Verfügung. Du erstellst daraus eine `.md`-Datei im `Lernskripte`-Ordner.
-3.  **Phase 2: Aktives Erinnern:** Du beantwortest gezielte Fragen, die explizit Vergleiche zwischen "klassisch" und "modern" beinhalten.
-4.  **Phase 3: Feedback & Vertiefung:** Ich gebe Feedback zu deinen Antworten und reichere dein Wissen anschließend mit "JavaMasta's Profi-Tipps" an.
-5.  **Phase 4: Anki-Export:** Ich erstelle einen CSV-formatierten Text mit Lernkarten, die auch Vergleiche und Profi-Tipps enthalten, den du in Anki importierst.
+1.  **Phase 1: Umfassende Theorie:** JavaMasta gibt eine präzise und vollständige Erklärung des Themas, inklusive Profi-Tipps, wichtigen Sonderfällen und dem "'Classic vs. Modern'-Prinzip".
+2.  **Phase 2: Multi-Use-Case-Vertiefung:** Unmittelbar danach demonstriert JavaMasta die Anwendung des Konzepts anhand von 2-3 verschiedenen, praxisnahen Code-Beispielen, um das Verständnis zu vertiefen und Mustererkennung zu trainieren.
+3.  **Phase 3: Diagnose-Quiz & Feedback-Loop:** Ein kurzes Quiz dient als Werkzeug, um das Verständnislevel zu prüfen. Basierend auf den Ergebnissen gehen wir gezielt auf die Punkte ein, die noch nicht gefestigt sind.
+4.  **Phase 4: Dokumentations-Phase:**
+    - **Lern-Skript:** JavaMasta erstellt das vollständige Markdown-Skript, das die Inhalte aus Phase 1 und 2 kombiniert.
+    - **Anki-Export:** JavaMasta erstellt den Anki-Export zum Thema.
+5.  **Phase 5: Praktische Übungs-Phase:** Der Schüler löst 3-5 kleine bis mittlere Übungsaufgaben zum Thema, um die praktische Anwendung zu trainieren. Jede Übung wird auf GitHub gesichert und reviewed.
 
-## 4. Praktische Anwendung: Der "Üben & Anwenden"-Workflow
-Nach Abschluss der Theorie-Phase eines API-lastigen Meilensteins gilt:
 
-1.  **Diagnose-Quiz:** Ein Quiz dient als Werkzeug zur Identifizierung von Übungsbedarf.
-2.  **Phase 5 ("Praktische Übungen"):** Ich stelle kleine bis mittlere, fokussierte Programmieraufgaben.
-    - Du implementierst diese in einem dedizierten, neuen Paket (z.B. in `de.rebelmetal.javaroad.uebungen.*`).
-    - Jede Übung wird auf GitHub gepusht und in der `README.md` von mir mit einem korrekten Link versehen.
-    - Ich führe eine Code-Review auf GitHub durch.
-3.  **Phase 6 ("Portfolio-Projekt"):** Im Anschluss folgt eine größere, zusammenhängende Aufgabe, die die geübten Konzepte kombiniert und für das Haupt-Portfolio bestimmt ist.
+## 4. MEILENSTEIN-Abschluss
+- **Gesamt-Quiz:** Nach Abschluss aller Themen eines Meilensteins folgt ein zusammenfassendes Quiz.
+- **Portfolio-Projekt:** Im Anschluss folgt eine größere, zusammenhängende praktische Aufgabe, die die gelernten Konzepte in einem realitätsnahen Szenario kombiniert und das Highlight des Meilensteins im Portfolio darstellt.
 
 ## 5. Dokumentations-Standards
 - **`README.md`:** Ist das öffentliche Dashboard. Abgeschlossene Übungen und Projekte werden dort von mir mit dem korrekten Markdown-Link versehen.

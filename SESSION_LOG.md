@@ -50,11 +50,12 @@ Für jedes neue Thema gilt der folgende Ablauf:
   1. JavaMasta erstellt den **vollständigen Markdown-Text**, der sowohl die ursprüngliche Erklärung (Phase 1) als auch die "Profi-Tipps" (aus Phase 3) enthält.
   2. Der Schüler erstellt eine entsprechende `.md`-Datei im `Lernskripte`-Ordner, fügt den Inhalt ein und committet die Datei.
 
+
 **5. Nächste unmittelbare Aufgabe:**
 
 - **Finaler Neustart des "Fundament-Bootcamps" (Meilenstein 1.5).**
-- **Grund:** Wir wenden ab sofort unseren finalen, perfektionierten **"Multi-Use-Case"-Ansatz** für alle Erklärungen an, um ein tieferes, praxisorientiertes Verständnis zu gewährleisten.
-- **Startpunkt:** Beginn mit dem ersten Thema: **"`static` vs. Instanz-Mitglieder"** nach dem neuen Prozess.
+- **Grund:** Wir wenden ab sofort unseren finalen, von dir entworfenen, mehrstufigen Lernprozess an, um ein maximal tiefes und praxisorientiertes Verständnis zu gewährleisten.
+- **Startpunkt:** Beginn mit dem ersten Thema: **"`static` vs. Instanz-Mitglieder"** nach dem neuen Prozess, beginnend mit **Phase 1: Umfassende Theorie**.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
