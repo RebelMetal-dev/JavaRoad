@@ -20,13 +20,13 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 - [x] **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
   - [x] *Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung*
   - [ ] *Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)* <-- **WIR SIND HIER**
-    - [ ] Thema 1: `static` vs. Instanz
-    - [ ] Thema 2: Zugriffsmodifikatoren (`public`, `private`, `protected`, `default`)
-    - [ ] Thema 3: Konstruktoren, `this` und `super`
-    - [ ] Thema 4: `final`
-    - [ ] Thema 5: Die `Object`-Klasse (`equals`, `hashCode`, `toString`)
-    - [ ] Thema 6: `abstract class` vs. `interface`
-    - [ ] Thema 7: Methoden-Überladung vs. -Überschreidung
+    - [x] Thema 1: `static` vs. Instanz
+    - [x] Thema 2: Zugriffsmodifikatoren
+    - [x] Thema 3: Konstruktoren, `this` und `super`
+    - [x] Thema 4: `final`
+    - [x] Thema 5: Die `Object`-Klasse
+    - [x] Thema 6: `abstract class` vs. `interface`
+    - [ ] Thema 7: Methoden-Überladung vs. -Überschreidung <-- **NÄCHSTES**
   - [ ] *Meilenstein 2: Kern-APIs (Collections, I/O)*
   - [ ] *Meilenstein 3: Java 8+ Features (Streams, Lambdas, Optional)*
 - [ ] **Phase 2: Build-Tools, Testing & Datenbanken**
@@ -53,11 +53,9 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Finaler Neustart des "Fundament-Bootcamps" (Meilenstein 1.5).**
-- **Grund:** Wir wenden ab sofort unseren finalen, von dir entworfenen **Goldstandard-Lernprozess** an.
-- **Startpunkt:** Beginn mit dem ersten Thema: **"`static` vs. Instanz-Mitglieder"**.
-- **Aktueller Stand:** Phase 1 (Theorie & Praxisbeispiele) wurde vollständig erklärt. Das Lern-Skript wurde erstellt.
-- **Nächster Schritt:** Phase 2 (Diagnose-Quiz) zu diesem Thema.
+- **Fortsetzung des "Fundament-Bootcamps" (Meilenstein 1.5).**
+- **Aktuelles Thema:** "Methoden-Überladung vs. Methoden-Überschreibung".
+- **Startpunkt:** **Neustart** mit der vollständigen **Phase 1: Theorie & Praxisbeispiele** zu diesem Thema.
 
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
