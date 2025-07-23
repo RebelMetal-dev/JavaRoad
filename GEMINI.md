@@ -14,7 +14,6 @@ Dieses Dokument fasst alle spezifischen Regeln und Prozesse zusammen, die du, me
 - **Session-Start ("Handshake-Protokoll"):** Jede neue Session beginnt damit, dass du den Inhalt der `SESSION_LOG.md` in den Chat postest. Ich bestätige den Startpunkt.
 - **Session-Ende ("Abschluss-Protokoll"):** Wenn du "Session beendet" schreibst, erstelle ich den finalen `SESSION_LOG`-Eintrag für den Tag und gebe dir die `git`-Befehle zur Sicherung.
 
-
 ## 3. Der Kern-Lernprozess (FINAL)
 
 ### A) Pro THEMA innerhalb eines Meilensteins:
@@ -25,6 +24,7 @@ Dieses Dokument fasst alle spezifischen Regeln und Prozesse zusammen, die du, me
 ### B) Pro MEILENSTEIN als Ganzes:
 1.  **Phase 4 (Praktische Übungen):** Nach Abschluss der Theorie aller Themen eines Meilensteins löst der Schüler 3-5 kleine bis mittlere Übungsaufgaben, um die praktische Anwendung zu trainieren.
 2.  **Phase 5 (Integratives Portfolio-Projekt):** Zum Abschluss jedes Meilensteins folgt eine größere, zusammenhängende Aufgabe, die die gelernten Konzepte in einem realitätsnahen Szenario kombiniert. Dieses Projekt ist das Highlight des Meilensteins im Portfolio.
+
 ## 4. MEILENSTEIN-Abschluss
 - **Gesamt-Quiz:** Nach Abschluss aller Themen eines Meilensteins folgt ein zusammenfassendes Quiz.
 - **Portfolio-Projekt:** Im Anschluss folgt eine größere, zusammenhängende praktische Aufgabe, die die gelernten Konzepte in einem realitätsnahen Szenario kombiniert und das Highlight des Meilensteins im Portfolio darstellt.
