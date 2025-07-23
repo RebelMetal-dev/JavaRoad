@@ -14,18 +14,17 @@ Dieses Dokument fasst alle spezifischen Regeln und Prozesse zusammen, die du, me
 - **Session-Start ("Handshake-Protokoll"):** Jede neue Session beginnt damit, dass du den Inhalt der `SESSION_LOG.md` in den Chat postest. Ich bestätige den Startpunkt.
 - **Session-Ende ("Abschluss-Protokoll"):** Wenn du "Session beendet" schreibst, erstelle ich den finalen `SESSION_LOG`-Eintrag für den Tag und gebe dir die `git`-Befehle zur Sicherung.
 
-### 3. Der Kern-Lernprozess für jedes THEMA (FINAL)
-Für jedes neue Thema innerhalb eines Meilensteins gilt der folgende, mehrstufige Prozess:
 
-1.  **Phase 1: Umfassende Theorie:** JavaMasta gibt eine präzise und vollständige Erklärung des Themas, inklusive Profi-Tipps, wichtigen Sonderfällen und dem "'Classic vs. Modern'-Prinzip".
-2.  **Phase 2: Multi-Use-Case-Vertiefung:** Unmittelbar danach demonstriert JavaMasta die Anwendung des Konzepts anhand von 2-3 verschiedenen, praxisnahen Code-Beispielen, um das Verständnis zu vertiefen und Mustererkennung zu trainieren.
-3.  **Phase 3: Diagnose-Quiz & Feedback-Loop:** Ein kurzes Quiz dient als Werkzeug, um das Verständnislevel zu prüfen. Basierend auf den Ergebnissen gehen wir gezielt auf die Punkte ein, die noch nicht gefestigt sind.
-4.  **Phase 4: Dokumentations-Phase:**
-    - **Lern-Skript:** JavaMasta erstellt das vollständige Markdown-Skript, das die Inhalte aus Phase 1 und 2 kombiniert.
-    - **Anki-Export:** JavaMasta erstellt den Anki-Export zum Thema.
-5.  **Phase 5: Praktische Übungs-Phase:** Der Schüler löst 3-5 kleine bis mittlere Übungsaufgaben zum Thema, um die praktische Anwendung zu trainieren. Jede Übung wird auf GitHub gesichert und reviewed.
+## 3. Der Kern-Lernprozess (FINAL)
 
+### A) Pro THEMA innerhalb eines Meilensteins:
+1.  **Phase 1 (Theorie & Praxisbeispiele):** JavaMasta erklärt das Thema nach dem **"Multi-Use-Case"-Prinzip** mit 2-3 praxisnahen Code-Beispielen.
+2.  **Phase 2 (Diagnose & Feedback):** Ein kurzes Quiz prüft das Verständnis. In einem anschließenden Feedback-Loop werden gezielt Lücken geschlossen.
+3.  **Phase 3 (Dokumentation):** JavaMasta erstellt das Lern-Skript und den Anki-Export.
 
+### B) Pro MEILENSTEIN als Ganzes:
+1.  **Phase 4 (Praktische Übungen):** Nach Abschluss der Theorie aller Themen eines Meilensteins löst der Schüler 3-5 kleine bis mittlere Übungsaufgaben, um die praktische Anwendung zu trainieren.
+2.  **Phase 5 (Integratives Portfolio-Projekt):** Zum Abschluss jedes Meilensteins folgt eine größere, zusammenhängende Aufgabe, die die gelernten Konzepte in einem realitätsnahen Szenario kombiniert. Dieses Projekt ist das Highlight des Meilensteins im Portfolio.
 ## 4. MEILENSTEIN-Abschluss
 - **Gesamt-Quiz:** Nach Abschluss aller Themen eines Meilensteins folgt ein zusammenfassendes Quiz.
 - **Portfolio-Projekt:** Im Anschluss folgt eine größere, zusammenhängende praktische Aufgabe, die die gelernten Konzepte in einem realitätsnahen Szenario kombiniert und das Highlight des Meilensteins im Portfolio darstellt.
