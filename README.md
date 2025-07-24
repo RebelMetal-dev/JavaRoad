@@ -1,60 +1,46 @@
 # JavaRoad - Mein Lernpfad zum Junior Java Entwickler
 
-Willkommen zu meinem "JavaRoad"-Repository! Dies ist mein persönliches Lern- und Projektportfolio, das meinen Weg zum Junior Java Entwickler dokumentiert. Hier sammle ich Code-Beispiele, Übungen und kleinere Projekte zu allen relevanten Themen, um meine Fähigkeiten nach neuesten Standards zu schärfen.
+Willkommen zu meinem "JavaRoad"-Repository! Dies ist mein persönliches Lern- und Projektportfolio, das meinen Weg zum Junior Java Entwickler dokumentiert. Hier sammle ich Code-Beispiele, Übungen und Projekte, um meine Fähigkeiten nach neuesten Standards zu schärfen.
 
-## Mein Ziel
+---
+
+## 🎯 Mein Ziel
 
 Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolgreich als Junior Java Entwickler durchzustarten. Dieses Repository dient als transparenter Nachweis meines Lernprozesses und meiner praktischen Fähigkeiten.
 
 ---
 
-## Lern-Roadmap Übersicht
+## 🚀 Portfolio-Projekte
 
-- [x] **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
-  - [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung
-  - [ ] Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)
-  - [ ] Meilenstein 2: Kern-APIs (Collections, I/O)
-  - [ ] Meilenstein 3: Java 8+ Features (Streams, Lambdas, Optional)
-- [ ] **Phase 2: Build-Tools, Testing & Datenbanken**
-- [ ] **Phase 3: Spring Framework & APIs**
-- [ ] **Phase 4: Fortgeschrittene Themen & Best Practices**
-- [ ] **Phase 5: Bewerbungsphase & Portfolio-Projekte**
+*Hier präsentiere ich die größeren, zusammenhängenden Projekte, die mehrere Konzepte kombinieren und die Highlights der jeweiligen Lernphasen darstellen.*
+
+### Phase 1: Java Fundamente & Kernkonzepte
+- **[Integratives Projekt Phase 1: Titel des Projekts]** *(Dieses Projekt wird nach Abschluss aller Übungen zu Meilenstein 1.5 erstellt)*
+  - **Beschreibung:** *(Eine kurze Beschreibung, was das Projekt tut)*
+  - **Demonstrierte Fähigkeiten:** *(OOP, `static`/`final`, Collections, Java 8+ Features, etc.)*
+
+*(Weitere Portfolio-Projekte für zukünftige Phasen folgen hier)*
 
 ---
 
-## Portfolio-Projekte
+## 📚 Detaillierte Lern- und Übungs-Chronik
 
-*Hier verlinke ich zu den größeren, zusammenhängenden Portfolio-Projekten, die mehrere Konzepte kombinieren.*
-
-### Phase 1 - Grundlagen
-
-- [Projekt 1: Buch/Bibliothek (Kapselung)](./src/main/java/de/rebelmetal/javaroad/library)
+*Hier dokumentiere ich meinen Lernfortschritt durch kleinere, fokussierte Übungsaufgaben. Sie zeigen den Weg und die fundamentalen Fähigkeiten, die zu den oben genannten Portfolio-Projekten führen.*
 
 ### Meilenstein 1.5: Java's Kern-Konzepte (Fundament-Bootcamp)
 - [Übung 1: `static` vs. Instanz (`Autofabrik`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/statics/Autofabrik.java)
 - [Übung 2: Vererbung & Abstraktion (`Figuren`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/vererbung/)
 - [Übung 3: Overloading vs. Overriding (`Drucker`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/overloading_vs_overriding/)
 
-*(Weitere Projekte werden hier hinzugefügt, sobald sie abgeschlossen sind)*
-
----
-
-## Detaillierte Lern- und Übungs-Chronik
-
-*Hier dokumentiere ich meinen Lernfortschritt durch kleinere, fokussierte Übungsaufgaben zu spezifischen Themen. Jede Übung stellt einen Meilenstein in meinem Lernprozess dar.*
-
-### Meilenstein 1.5: Java's Kern-Konzepte (Fundament-Bootcamp)
-- [Übung 1: `static` vs. Instanz (`Autofabrik`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/statics/Autofabrik.java)
-
 ### Meilenstein 3: Java 8+ Features
 - [Übung 1: Grundlagen von Streams (filter, map)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_lambdas/Datenverarbeitung.java)
 
+*(Weitere Übungen werden hier hinzugefügt)*
+
 ---
 
-## Kontakt
+## 📞 Kontakt
 
 Du möchtest dich vernetzen? Hier findest du mich:
-- [**LinkedIn:**](https://www.linkedin.com/in/christoph-breddin-735b1b2a7)
-- [**GitHub:**](https://github.com/RebelMetal-dev)
-
-*Hinweis: Dieses Repository wird kontinuierlich aktualisiert, um meinen Lernfortschritt widerzuspiegeln.*```
+- **LinkedIn:** [Mein LinkedIn Profil](https://www.linkedin.com/in/dein-linkedin-profil)
+- **GitHub:** [Mein GitHub Profil](https://github.com/RebelMetal-dev)
