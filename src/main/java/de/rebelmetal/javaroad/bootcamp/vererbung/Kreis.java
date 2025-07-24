@@ -7,7 +7,7 @@ package de.rebelmetal.javaroad.bootcamp.vererbung;
 
 public class Kreis extends Figur {
 
-    private double radius;
+    private final double radius;
 
     /**
      * Konstruktor für ein neues Kreis-Objekt.

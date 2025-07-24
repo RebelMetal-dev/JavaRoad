@@ -5,23 +5,24 @@ package de.rebelmetal.javaroad.bootcamp.vererbung;
  * Erbt von der abstrakten Klasse Figur und implementiert deren Verträge.
  */
 public class Rechteck extends Figur {
-    private double laenge;
-    private double breite;
+    private final double laenge;
+    private final double breite;
 
 
     /**
      * Konstruktor für ein neues Rechteck-Objekt.
-     * Initialisiert ein Rechteck mit einer bestimmten Farbe, Länge und Breite.
+     * Initialisiert ein neues, unveränderliches Rechteck mit einer bestimmten Farbe, Länge und Breite.
+     * Nach der Erstellung sind die Dimensionen unveränderlich.
      *
      * @param farbe Die Farbe des Rechtecks als String (z.B. "rot", "blau").
      * @param laenge Die Länge des Rechtecks. Muss ein positiver Wert sein.
      * @param breite Die Breite des Rechtecks. Muss ein positiver Wert sein.
      */
     public Rechteck (String farbe, double laenge, double breite){
-        super(); // Ruft den Konstruktor der Superklasse auf.
+        super(); // Ruft den Konstruktor der Superklasse auf, um die Figur zu initialisieren.
         this.farbe = farbe;
-        this.laenge = laenge;
-        this.breite = breite;
+        this.laenge = laenge; // Initialisiert die feste Länge.
+        this.breite = breite; // Initialisiert die feste Breite.
     }
 
     /**
