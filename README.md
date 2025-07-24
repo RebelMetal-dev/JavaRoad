@@ -10,6 +10,30 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 
 ---
 
+
+## 🧭 Mein Lernansatz: Agil, MEthodisch & Qualitätsgesichert
+
+
+Ich verfolge keinen starren Lehrplan, sondern einen agilen und zyklischen Lernprozess, der sich an den realen Anforderungen des Arbeitsmarktes für Junior Java Entwickler orientiert. Jeder Meilenstein wird nach einer strukturierten Methode bearbeitet, die auf kontinuierlicher Selbstüberprüfung und praktischer Anwendung basiert. Dieser Lernansatz stützt sich auf zwei Säulen:
+
+1.  **KI-gestütztes Mentoring:** Ich nutze ein von mir konfiguriertes und trainiertes KI-Modell (Google's Gemini 2.5 Pro), das als personalisierter Mentor "JavaMasta" agiert. Dieses Werkzeug dient als Sparringspartner für die Theorie und zur Generierung von praxisnahen Übungsaufgaben.
+2.  **Senior-Level Code Review:** Alle Konzepte, Prozesse und vor allem der von mir geschriebene Code werden regelmäßig von einem erfahrenen Senior Entwickler überprüft, um die Einhaltung von professionellen Standards und Best Practices sicherzustellen.
+
+Dieser duale Ansatz kombiniert die Geschwindigkeit und Verfügbarkeit moderner KI-Werkzeuge mit der Tiefe und praktischen Weisheit menschlicher Expertise.
+
+### Die Methodik im Detail
+
+1.  **Anforderungsanalyse & Roadmap:** Die Lern-Roadmap wurde durch Recherche und im Dialog mit meinem KI-Mentor "JavaMasta" erstellt, um die aktuell gefragtesten Fähigkeiten für Junior-Positionen abzudecken.
+2.  **Wissensstand-Diagnose:** Vor jedem neuen Themenblock wird mein aktueller Kenntnisstand durch ein gezieltes Quiz ermittelt, um den Lernfokus zu schärfen.
+3.  **Theorie & Wissensaufbau:** Das Thema wird durch einen KI-Mentor tiefgehend erklärt und das Wissen in permanenten Artefakten (Lern-Skripten, Anki-Karten) für nachhaltiges Lernen gesichert.
+4.  **Praxis & Wiederholung:** Das theoretische Wissen wird durch eine Reihe kleinerer, fokussierter Programmierübungen gefestigt. Jede Übung wird versioniert und ist hier im Repository einsehbar.
+5.  **Qualitätssicherung & Abschluss:** Jeder Meilenstein endet mit einem zusammenfassenden Gesamt-Quiz und einem größeren, integrativen Portfolio-Projekt, das die erlernten Fähigkeiten in einem praxisnahen Szenario kombiniert.
+
+### Qualitätssicherung
+Um professionelle Standards zu garantieren, wird der gesamte Prozess – und insbesondere der von mir geschriebene Code – regelmäßig von einem erfahrenen Senior Entwickler überprüft.
+
+---
+
 ## 💡 Lern-Roadmap Übersicht
 
 *Dies ist eine interaktive, hierarchische Übersicht meines Fortschritts. Jede Ebene kann aufgeklappt werden, um die Details anzuzeigen.*
