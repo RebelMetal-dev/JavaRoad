@@ -10,6 +10,79 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 
 ---
 
+## 💡 Lern-Roadmap Übersicht
+
+*Dies ist eine interaktive, hierarchische Übersicht meines Fortschritts. Jede Ebene kann aufgeklappt werden, um die Details anzuzeigen.*
+
+<details open>
+<summary><b> [x] Phase 1: Fundamente auffrischen & Java 8+ vertiefen</b></summary>
+<table>
+<tr>
+<td>
+
+<details>
+<summary>     [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung</summary>
+
+
+- [x] Thema: JVM & Java-Ökosystem
+- [x] Thema: Grundlegende Syntax
+
+</details>
+<details>
+<summary>     [x] Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)</summary>
+
+
+- [x] Thema: `static` vs. Instanz
+- [x] Thema: Zugriffsmodifikatoren
+- [x] Thema: Konstruktoren, `this` und `super`
+- [x] Thema: `final`
+- [x] Thema: Die `Object`-Klasse (`equals`, `hashCode`, `toString`)
+- [x] Thema: `abstract class` vs. `interface`
+- [x] Thema: Methoden-Überladung vs. -Überschreidung
+
+</details>
+<details>
+<summary>     [x] Meilenstein 2: Kern-APIs (Collections, I/O)</summary>
+
+
+- [x] Thema: Das Java Collections Framework
+- [x] Thema: Einfache Dateiein- und -ausgabe
+
+</details>
+<details>
+<summary>     [x] Meilenstein 3: Java 8+ Features</summary>
+
+
+- [x] Thema: Lambdas & Funktionale Interfaces
+- [x] Thema: Die Java Stream API
+- [x] Thema: Der `Optional<T>`-Typ
+
+</details>
+
+</td>
+</tr>
+</table>
+</details>
+
+<details>
+<summary><b> [ ] Phase 2: Build-Tools, Testing & Datenbanken</b></summary>
+<table>
+<tr>
+<td>
+
+- [ ] Meilenstein: Maven/Gradle
+- [ ] Meilenstein: JUnit 5 & Mockito
+- [ ] Meilenstein: SQL-Grundlagen & JDBC
+
+</td>
+</tr>
+</table>
+</details>
+
+*(Weitere Phasen folgen)*
+
+---
+
 ## 🚀 Portfolio-Projekte
 
 *Hier präsentiere ich die größeren, zusammenhängenden Projekte, die mehrere Konzepte kombinieren und die Highlights der jeweiligen Lernphasen darstellen.*
