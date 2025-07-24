@@ -18,14 +18,14 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 **2. Aktueller Stand der Roadmap:**
 
 - <details>
-  <summary>► [x] <b>Phase 1: Fundamente auffrischen & Java 8+ vertiefen</b></summary>
+  <summary>► <b>[x] Phase 1: Fundamente auffrischen & Java 8+ vertiefen</b></summary>
 
   - <details>
     <summary>► [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung</summary>
 
     - [x] Thema: JVM & Java-Ökosystem
     - [x] Thema: Grundlegende Syntax
-    
+
   </details>
 
   - <details>
@@ -38,7 +38,7 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
     - [x] Thema: Die `Object`-Klasse (`equals`, `hashCode`, `toString`)
     - [x] Thema: `abstract class` vs. `interface`
     - [x] Thema: Methoden-Überladung vs. -Überschreidung
-    
+
   </details>
 
   - <details>
@@ -46,7 +46,7 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 
     - [x] Thema: Das Java Collections Framework
     - [x] Thema: Einfache Dateiein- und -ausgabe
-    
+
   </details>
 
   - <details>
@@ -55,10 +55,11 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
     - [x] Thema: Lambdas & Funktionale Interfaces
     - [x] Thema: Die Java Stream API
     - [x] Thema: Der `Optional<T>`-Typ
-    
+
   </details>
 
 </details>
+
 
 - [ ] **Phase 2: Build-Tools, Testing & Datenbanken**
 - [ ] **Phase 3: Spring Framework & APIs**
