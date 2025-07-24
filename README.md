@@ -33,6 +33,7 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 ### Meilenstein 1.5: Java's Kern-Konzepte (Fundament-Bootcamp)
 - [Übung 1: `static` vs. Instanz (`Autofabrik`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/statics/Autofabrik.java)
 - [Übung 2: Vererbung & Abstraktion (`Figuren`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/vererbung/)
+- [Übung 3: Overloading vs. Overriding (`Drucker`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/overloading_vs_overriding/)
 
 *(Weitere Projekte werden hier hinzugefügt, sobald sie abgeschlossen sind)*
 
