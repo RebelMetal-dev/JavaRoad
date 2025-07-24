@@ -15,20 +15,46 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 - **Übung 1 (Java 8+): "Grundlagen von Streams"** abgeschlossen, reviewed und in der `README.md` verlinkt.
 
 
-**2. Aktueller Stand der Roadmap (NEU STRUKTURIERT):**
+**2. Aktueller Stand der Roadmap:**
 
-- [x] **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
-  - [x] *Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung*
-  - [ ] *Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)* <-- **WIR SIND HIER**
-    - [x] Thema 1: `static` vs. Instanz
-    - [x] Thema 2: Zugriffsmodifikatoren
-    - [x] Thema 3: Konstruktoren, `this` und `super`
-    - [x] Thema 4: `final`
-    - [x] Thema 5: Die `Object`-Klasse
-    - [x] Thema 6: `abstract class` vs. `interface`
-    - [ ] Thema 7: Methoden-Überladung vs. -Überschreidung <-- **NÄCHSTES**
-  - [ ] *Meilenstein 2: Kern-APIs (Collections, I/O)*
-  - [ ] *Meilenstein 3: Java 8+ Features (Streams, Lambdas, Optional)*
+- <details>
+  <summary>► [x] <b>Phase 1: Fundamente auffrischen & Java 8+ vertiefen</b></summary>
+
+  - <details>
+    <summary>► [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung</summary>
+
+    - [x] Thema: JVM & Java-Ökosystem
+    - [x] Thema: Grundlegende Syntax
+  </details>
+
+  - <details>
+    <summary>► [x] Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)</summary>
+
+    - [x] Thema: `static` vs. Instanz
+    - [x] Thema: Zugriffsmodifikatoren
+    - [x] Thema: Konstruktoren, `this` und `super`
+    - [x] Thema: `final`
+    - [x] Thema: Die `Object`-Klasse (`equals`, `hashCode`, `toString`)
+    - [x] Thema: `abstract class` vs. `interface`
+    - [x] Thema: Methoden-Überladung vs. -Überschreidung
+  </details>
+
+  - <details>
+    <summary>► [x] Meilenstein 2: Kern-APIs (Collections, I/O)</summary>
+
+    - [x] Thema: Das Java Collections Framework
+    - [x] Thema: Einfache Dateiein- und -ausgabe
+  </details>
+
+  - <details>
+    <summary>► [x] Meilenstein 3: Java 8+ Features</summary>
+
+    - [x] Thema: Lambdas & Funktionale Interfaces
+    - [x] Thema: Die Java Stream API
+    - [x] Thema: Der `Optional<T>`-Typ
+  </details>
+</details>
+
 - [ ] **Phase 2: Build-Tools, Testing & Datenbanken**
 - [ ] **Phase 3: Spring Framework & APIs**
 - [ ] **Phase 4: Fortgeschrittene Themen & Best Practices**
@@ -53,9 +79,9 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Fortsetzung des "Fundament-Bootcamps" (Meilenstein 1.5).**
-- **Aktuelles Thema:** "Methoden-Überladung vs. Methoden-Überschreibung".
-- **Startpunkt:** **Neustart** mit der vollständigen **Phase 1: Theorie & Praxisbeispiele** zu diesem Thema.
+- **Abschluss der gesamten Lernphase 1.**
+- **Startpunkt:** Durchführung des **zusammenfassenden Gesamt-Quiz** über alle bisherigen Meilensteine.
+- **Danach:** Das integrative Portfolio-Projekt für Phase 1.
 
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
