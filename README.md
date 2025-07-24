@@ -42,5 +42,5 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 ## 📞 Kontakt
 
 Du möchtest dich vernetzen? Hier findest du mich:
-- **LinkedIn:** [Mein LinkedIn Profil](https://www.linkedin.com/in/dein-linkedin-profil)
+- **LinkedIn:** [Mein LinkedIn Profil](https://www.linkedin.com/in/christoph-breddin-735b1b2a7/)
 - **GitHub:** [Mein GitHub Profil](https://github.com/RebelMetal-dev)
