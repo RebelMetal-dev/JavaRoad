@@ -31,6 +31,7 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 - [Übung 1: `static` vs. Instanz (`Autofabrik`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/statics/Autofabrik.java)
 - [Übung 2: Vererbung & Abstraktion (`Figuren`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/vererbung/)
 - [Übung 3: Overloading vs. Overriding (`Drucker`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/overloading_vs_overriding/)
+- [Übung 4: `equals` & `hashCode` Vertrag (`Buch`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/equals_hashcode/)
 
 ### Meilenstein 3: Java 8+ Features
 - [Übung 1: Grundlagen von Streams (filter, map)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_lambdas/Datenverarbeitung.java)
