@@ -6,65 +6,27 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 
 ### **Sitzung vom: 18.07.2025**
 
-*1. Letztes abgeschlossenes Thema:**
+_Hier ist der letzte abgeschlossene Stand unserer Arbeit._
 
-- **MEILENSTEIN 1 ABGESCHLOSSEN: Java-Grundlagen & OOP-Wiederholung.**
-- **MEILENSTEIN 2 ABGESCHLOSSEN: Kern-APIs (Collections, I/O).**
-- **Meilenstein 3, Theorie-Phase ABGESCHLOSSEN: Java 8+ Features.**
-- **Prozess-Finalisierung:** Alle Projekt-Workflows (`GEMINI.md`, `SESSION_LOG.md`) wurden finalisiert und dokumentiert.
-- **Übung 1 (Java 8+): "Grundlagen von Streams"** abgeschlossen, reviewed und in der `README.md` verlinkt.
-
+---
 
 **2. Aktueller Stand der Roadmap:**
 
-- <details>
-  <summary>► <b>[x] Phase 1: Fundamente auffrischen & Java 8+ vertiefen</b></summary>
-
-  - <details>
-    <summary>► [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung</summary>
-
-    - [x] Thema: JVM & Java-Ökosystem
-    - [x] Thema: Grundlegende Syntax
-
-  </details>
-
-  - <details>
-    <summary>► [x] Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)</summary>
-
-    - [x] Thema: `static` vs. Instanz
-    - [x] Thema: Zugriffsmodifikatoren
-    - [x] Thema: Konstruktoren, `this` und `super`
-    - [x] Thema: `final`
-    - [x] Thema: Die `Object`-Klasse (`equals`, `hashCode`, `toString`)
-    - [x] Thema: `abstract class` vs. `interface`
-    - [x] Thema: Methoden-Überladung vs. -Überschreidung
-
-  </details>
-
-  - <details>
-    <summary>► [x] Meilenstein 2: Kern-APIs (Collections, I/O)</summary>
-
-    - [x] Thema: Das Java Collections Framework
-    - [x] Thema: Einfache Dateiein- und -ausgabe
-
-  </details>
-
-  - <details>
-    <summary>► [x] Meilenstein 3: Java 8+ Features</summary>
-
-    - [x] Thema: Lambdas & Funktionale Interfaces
-    - [x] Thema: Die Java Stream API
-    - [x] Thema: Der `Optional<T>`-Typ
-
-  </details>
-
-</details>
-
-
-- [ ] **Phase 2: Build-Tools, Testing & Datenbanken**
-- [ ] **Phase 3: Spring Framework & APIs**
-- [ ] **Phase 4: Fortgeschrittene Themen & Best Practices**
-- [ ] **Phase 5: Bewerbungsphase & Portfolio-Projekte**
+- **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
+  - [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung
+  - [x] Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)
+  - [x] Meilenstein 2: Kern-APIs (Collections, I/O)
+  - [x] Meilenstein 3: Java 8+ Features
+- **Phase 2: Build-Tools, Testing & Datenbanken**
+  - [ ] Meilenstein: Maven/Gradle
+  - [ ] Meilenstein: JUnit 5 & Mockito
+  - [ ] Meilenstein: SQL-Grundlagen & JDBC
+- **Phase 3: Spring Framework & APIs**
+  - [ ] Meilenstein: Spring Core, Spring Boot, REST-APIs, Spring Data JPA
+- **Phase 4: Fortgeschrittene Themen & Best Practices**
+  - [ ] Meilenstein: Git-Grundlagen, Clean Code, Design Patterns, Docker
+- **Phase 5: Bewerbungsphase & Portfolio-Projekte**
+  - [ ] Meilenstein: Portfolio ausbauen, Lebenslauf optimieren, Interview-Vorbereitung
 
 **3. Unser beschlossenes Vorgehen (Die 3-Phasen-Lernstrategie & Anki):**
 
@@ -88,7 +50,6 @@ Für jedes neue Thema gilt der folgende Ablauf:
 - **Abschluss der gesamten Lernphase 1.**
 - **Startpunkt:** Durchführung des **zusammenfassenden Gesamt-Quiz** über alle bisherigen Meilensteine.
 - **Danach:** Das integrative Portfolio-Projekt für Phase 1.
-
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
