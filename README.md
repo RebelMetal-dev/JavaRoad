@@ -14,7 +14,7 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 ## 🧭 Mein Lernansatz: Agil, MEthodisch & Qualitätsgesichert
 
 
-Ich verfolge keinen starren Lehrplan, sondern einen agilen und zyklischen Lernprozess, der sich an den realen Anforderungen des Arbeitsmarktes für Junior Java Entwickler orientiert. Jeder Meilenstein wird nach einer strukturierten Methode bearbeitet, die auf kontinuierlicher Selbstüberprüfung und praktischer Anwendung basiert. Dieser Lernansatz stützt sich auf zwei Säulen:
+Ich verfolge keinen starren Lehrplan, sondern einen agilen und zyklischen Lernprozess. Jeder Meilenstein wird nach einer strukturierten Methode bearbeitet, die auf kontinuierlicher Selbstüberprüfung und praktischer Anwendung basiert. Dieser Lernansatz stützt sich auf zwei Säulen:
 
 1.  **KI-gestütztes Mentoring:** Ich nutze ein von mir konfiguriertes und trainiertes KI-Modell (Google's Gemini 2.5 Pro), das als personalisierter Mentor "JavaMasta" agiert. Dieses Werkzeug dient als Sparringspartner für die Theorie und zur Generierung von praxisnahen Übungsaufgaben.
 2.  **Senior-Level Code Review:** Alle Konzepte, Prozesse und vor allem der von mir geschriebene Code werden regelmäßig von einem erfahrenen Senior Entwickler überprüft, um die Einhaltung von professionellen Standards und Best Practices sicherzustellen.
