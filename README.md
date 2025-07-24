@@ -10,27 +10,27 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 
 ---
 
-## 💡 Lern-Roadmap Übersicht
+## 🚀 Lern-Roadmap Übersicht
 
 *Dies ist eine interaktive, hierarchische Übersicht meines Fortschritts. Jede Ebene kann aufgeklappt werden, um die Details anzuzeigen.*
 
 <details open>
-<summary><b> [x] Phase 1: Fundamente auffrischen & Java 8+ vertiefen</b></summary>
+<summary><b>► [x] Phase 1: Fundamente auffrischen & Java 8+ vertiefen</b></summary>
 <table>
 <tr>
 <td>
 
 <details>
-<summary>     [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung</summary>
-
+<summary>    ► [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung</summary>
+<br>
 
 - [x] Thema: JVM & Java-Ökosystem
 - [x] Thema: Grundlegende Syntax
 
 </details>
 <details>
-<summary>     [x] Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)</summary>
-
+<summary>    ► [x] Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)</summary>
+<br>
 
 - [x] Thema: `static` vs. Instanz
 - [x] Thema: Zugriffsmodifikatoren
@@ -42,16 +42,16 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 
 </details>
 <details>
-<summary>     [x] Meilenstein 2: Kern-APIs (Collections, I/O)</summary>
-
+<summary>    ► [x] Meilenstein 2: Kern-APIs (Collections, I/O)</summary>
+<br>
 
 - [x] Thema: Das Java Collections Framework
 - [x] Thema: Einfache Dateiein- und -ausgabe
 
 </details>
 <details>
-<summary>     [x] Meilenstein 3: Java 8+ Features</summary>
-
+<summary>    ► [x] Meilenstein 3: Java 8+ Features</summary>
+<br>
 
 - [x] Thema: Lambdas & Funktionale Interfaces
 - [x] Thema: Die Java Stream API
@@ -65,7 +65,7 @@ Schnellstmögliche Auffrischung und Vertiefung meiner Java-Kenntnisse, um erfolg
 </details>
 
 <details>
-<summary><b> [ ] Phase 2: Build-Tools, Testing & Datenbanken</b></summary>
+<summary><b>► [ ] Phase 2: Build-Tools, Testing & Datenbanken</b></summary>
 <table>
 <tr>
 <td>
