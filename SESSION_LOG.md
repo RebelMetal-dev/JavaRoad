@@ -9,7 +9,15 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 _Hier ist der letzte abgeschlossene Stand unserer Arbeit._
 
 ---
+**1. Letztes abgeschlossenes Thema:**
 
+- **MEILENSTEIN 1 ABGESCHLOSSEN: Java-Grundlagen & OOP-Wiederholung.**
+- **MEILENSTEIN 2 ABGESCHLOSSEN: Kern-APIs (Collections, I/O).**
+- **Meilenstein 3, Theorie-Phase ABGESCHLOSSEN: Java 8+ Features.**
+- **Prozess-Finalisierung:** Alle Projekt-Workflows (`GEMINI.md`, etc.) wurden finalisiert.
+- **Übung 1-5 (Bootcamp):** Alle praktischen Übungen zu Meilenstein 1.5 sind abgeschlossen.
+- **README.md Finalisierung:** Die Einleitung und die Roadmap-Struktur wurden finalisiert.
+---
 **2. Aktueller Stand der Roadmap:**
 
 - **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
