@@ -130,6 +130,9 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 - [Übung 3: Overloading vs. Overriding (`Drucker`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/overloading_vs_overriding/)
 - [Übung 4: `equals` & `hashCode` Vertrag (`Buch`)](./src/main/java/de/rebelmetal/javaroad/bootcamp/equals_hashcode/)
 
+### Meilenstein 2: Kern-APIs (Collections & I/O)
+- [Übung 1: Wörterbuch erstellen (`Map` & `BufferedWriter`)](./src/main/java/de/rebelmetal/javaroad/uebungen/collections_io/WoerterbuchManager.java)
+
 ### Meilenstein 3: Java 8+ Features
 - [Übung 1: Grundlagen von Streams (filter, map)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_lambdas/Datenverarbeitung.java)
 
