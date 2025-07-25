@@ -52,11 +52,11 @@ Für jedes neue Thema gilt der folgende Ablauf:
   1. JavaMasta erstellt den **vollständigen Markdown-Text**, der sowohl die ursprüngliche Erklärung (Phase 1) als auch die "Profi-Tipps" (aus Phase 3) enthält.
   2. Der Schüler erstellt eine entsprechende `.md`-Datei im `Lernskripte`-Ordner, fügt den Inhalt ein und committet die Datei.
 
-
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Plan-Anpassung:** Wir führen eine neue **"Praxis-Vertiefungs"-Phase** durch, um die Anwendung der Konzepte aus den Meilensteinen 2 und 3 zu festigen, bevor das Gesamt-Quiz stattfindet.
-- **Startpunkt:** Beginn mit der **praktischen Übung zu Meilenstein 2 (Collections & I/O)**.
+- **Fortsetzung der "Praxis-Vertiefungs"-Phase.**
+- **Startpunkt:** Durchführung der **dritten praktischen Vertiefungs-Übung** zu Meilenstein 3 (Java 8+ Features: Streams & Optional in Kombination).
+- **Danach:** Das zusammenfassende Gesamt-Quiz über alle bisherigen Meilensteine und das integrative Portfolio-Projekt für Phase 1.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
