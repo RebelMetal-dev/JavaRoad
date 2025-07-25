@@ -54,10 +54,8 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 
 **5. Nächste unmittelbare Aufgabe:**
-
-- **Abschluss der gesamten Lernphase 1.**
-- **Startpunkt:** Durchführung des **zusammenfassenden Gesamt-Quiz** über alle bisherigen Meilensteine.
-- **Danach:** Das integrative Portfolio-Projekt für Phase 1.
+- **Plan-Anpassung:** Wir führen eine neue **"Praxis-Vertiefungs"-Phase** ein, um die Anwendung von Kern-APIs und Java 8+ Features in praxisnahen Szenarien zu trainieren.
+- **Startpunkt:** Beginn mit der **ersten Vertiefungs-Übung** zu Collections & Streams.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
