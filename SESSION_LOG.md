@@ -54,8 +54,9 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 
 **5. Nächste unmittelbare Aufgabe:**
-- **Plan-Anpassung:** Wir führen eine neue **"Praxis-Vertiefungs"-Phase** ein, um die Anwendung von Kern-APIs und Java 8+ Features in praxisnahen Szenarien zu trainieren.
-- **Startpunkt:** Beginn mit der **ersten Vertiefungs-Übung** zu Collections & Streams.
+
+- **Plan-Anpassung:** Wir führen eine neue **"Praxis-Vertiefungs"-Phase** durch, um die Anwendung der Konzepte aus den Meilensteinen 2 und 3 zu festigen, bevor das Gesamt-Quiz stattfindet.
+- **Startpunkt:** Beginn mit der **praktischen Übung zu Meilenstein 2 (Collections & I/O)**.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
