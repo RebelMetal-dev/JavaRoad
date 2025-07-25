@@ -1,7 +1,7 @@
 /* package de.rebelmetal.javaroad.uebungen.optional_streams;
 
-import java.util.List;
 import java.util.Optional;
+
 
 /**
  * Praktische Übung 2 zu den Java 8+ Features: Streams & Optional.
