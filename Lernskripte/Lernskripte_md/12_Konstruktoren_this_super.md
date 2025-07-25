@@ -17,7 +17,9 @@
 ### Use Case 1: Der Standard-Konstruktor und Pflichtfelder
 - **Problem:** Sicherstellen, dass ein Objekt immer mit den notwendigen Daten erstellt wird.
 - **Lösung:** Einen eigenen Konstruktor definieren, der diese Daten als Parameter erzwingt.
-- **Die wichtigste Konstruktor-Regel:** Sobald du auch nur **einen eigenen Konstruktor** definierst, **löscht Java den unsichtbaren, parameterlosen Standard-Konstruktor**. Ein Aufruf mit `new MeineKlasse()` führt dann zu einem Compiler-Fehler, wenn nur ein Konstruktor wie `public MeineKlasse(String name)` existiert.
+- **Die wichtigste Konstruktor-Regel:** Sobald du auch nur **einen eigenen Konstruktor** definierst, **löscht Java den unsichtbaren,
+    parameterlosen Standard-Konstruktor**. Ein Aufruf mit `new MeineKlasse()` führt dann zu einem Compiler-Fehler, 
+    wenn nur ein Konstruktor wie `public MeineKlasse(String name)` existiert.
 
 ### Use Case 2: Konstruktor-Überladung und `this()`
 - **Problem:** Mehrere Wege zur Objekterstellung anbieten, ohne Code zu duplizieren.
@@ -33,10 +35,12 @@
 
 ## Teil 3: Wichtige Regeln & Vertiefung (Profi-Tipps)
 
-- **Unsichtbares `super()`:** Wenn in einem Konstruktor weder `this()` noch `super()` explizit aufgerufen wird, fügt der Compiler **automatisch** ein `super();` (Aufruf des parameterlosen Super-Konstruktors) als erste Zeile ein. Hat die Superklasse keinen solchen parameterlosen Konstruktor, führt dies zu einem Compiler-Fehler.
+- **Unsichtbares `super()`:** Wenn in einem Konstruktor weder `this()` noch `super()` explizit aufgerufen wird, fügt der Compiler **automatisch** ein `super();` 
+  (Aufruf des parameterlosen Super-Konstruktors) als erste Zeile ein. Hat die Superklasse keinen solchen parameterlosen Konstruktor, führt dies zu einem Compiler-Fehler.
 
 - **`this` vs. `this()`:** `this` ist eine Referenz auf das Objekt. `this()` ist ein Aufruf an einen anderen Konstruktor derselben Klasse.
 
 - **`super` vs. `super()`:** `super` ist eine Referenz auf das Superklassen-Objekt (z.B. für `super.methode()`). `super()` ist ein Aufruf an einen Superklassen-Konstruktor.
 
-- **Ausführungsreihenfolge bei `this()`:** Bei einem Aufruf wie `new Email("Betreff")` wird zuerst der **aufgerufene** Konstruktor (`Email(String, String)`) vollständig ausgeführt, und erst danach der Rest des **aufrufenden** Konstruktors (`Email(String)`).
+- **Ausführungsreihenfolge bei `this()`:** Bei einem Aufruf wie `new Email("Betreff")` wird zuerst der **aufgerufene** Konstruktor (`Email(String, String)`) vollständig ausgeführt,
+    und erst danach der Rest des **aufrufenden** Konstruktors (`Email(String)`).
