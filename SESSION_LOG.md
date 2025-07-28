@@ -15,8 +15,9 @@ _Hier ist der letzte abgeschlossene Stand unserer Arbeit._
 - **MEILENSTEIN 2 ABGESCHLOSSEN: Kern-APIs (Collections, I/O).**
 - **Meilenstein 3, Theorie-Phase ABGESCHLOSSEN: Java 8+ Features.**
 - **Prozess-Finalisierung:** Alle Projekt-Workflows (`GEMINI.md`, etc.) wurden finalisiert.
-- **Übung 1-5 (Bootcamp):** Alle praktischen Übungen zu Meilenstein 1.5 sind abgeschlossen.
+- **Bootcamp (M1.5):** Alle praktischen Übungen zu Meilenstein 1.5 sind abgeschlossen.
 - **README.md Finalisierung:** Die Einleitung und die Roadmap-Struktur wurden finalisiert.
+- **Strategie-Finalisierung:** Der übergeordnete Lernpfad wurde in zwei Projekte aufgeteilt: `JavaRoad` (Ziel: Top-Tier Junior) und ein geplantes Folgeprojekt `JavaRoad-DeepDive` (Ziel: Mid-Level-Fähigkeiten).
 ---
 **2. Aktueller Stand der Roadmap:**
 
@@ -55,7 +56,7 @@ Für jedes neue Thema gilt der folgende Ablauf:
 **5. Nächste unmittelbare Aufgabe:**
 
 - **Fortsetzung der "Praxis-Vertiefungs"-Phase.**
-- **Startpunkt:** Durchführung der **dritten praktischen Vertiefungs-Übung** zu Meilenstein 3 (Java 8+ Features: Streams & Optional in Kombination).
+- **Startpunkt:** Durchführung der **dritten praktischen Vertiefungs-Übung** zu Meilenstein 3 (Java 8+ Features: Streams & Optional in Kombination, "Analyse von Kundenbestellungen").
 - **Danach:** Das zusammenfassende Gesamt-Quiz über alle bisherigen Meilensteine und das integrative Portfolio-Projekt für Phase 1.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
