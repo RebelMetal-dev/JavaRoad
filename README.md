@@ -135,6 +135,9 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 
 ### Meilenstein 3: Java 8+ Features
 - [Übung 1: Grundlagen von Streams (filter, map)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_lambdas/Datenverarbeitung.java)
+- **Übung 2: Analyse von Kundenbestellungen (`Stream` & `Optional`)**
+  - [Analyse-Logik (`BestellAnalyse.java`)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_optional_vertiefung/BestellAnalyse.java)
+  - [Datenmodell (`Bestellung.java` als Record)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_optional_vertiefung/Bestellung.java)
 
 *(Weitere Übungen werden hier hinzugefügt)*
 
