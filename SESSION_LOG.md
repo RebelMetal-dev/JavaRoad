@@ -55,8 +55,8 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Fortsetzung der "Praxis-Vertiefungs"-Phase.**
-- **Startpunkt:** Durchführung der **dritten praktischen Vertiefungs-Übung** zu Meilenstein 3 (Java 8+ Features: Streams & Optional in Kombination, "Analyse von Kundenbestellungen").
+- **Plan-Anpassung:** Aufgrund des Feedbacks des Schülers wurde eine zusätzliche Wiederholungs-Übung eingeschoben, um die Anwendung von `Stream` und `Optional` weiter zu festigen.
+- **Startpunkt:** Durchführung der **praktischen Wiederholungs-Übung 6: "Mitarbeiter-Suche"**.
 - **Danach:** Das zusammenfassende Gesamt-Quiz über alle bisherigen Meilensteine und das integrative Portfolio-Projekt für Phase 1.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
