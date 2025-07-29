@@ -24,7 +24,6 @@ public class Datenverarbeitung {
      * Der Einstiegspunkt der Anwendung.
      * Demonstriert die Stream-Operationen anhand einer festen Liste von Städten.
      *
-     * @param args Kommandozeilenargumente (werden in dieser Übung nicht verwendet).
      */
 
     public static void main(String[] args) {
