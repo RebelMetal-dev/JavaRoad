@@ -112,9 +112,9 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 *Hier präsentiere ich die größeren, zusammenhängenden Projekte, die mehrere Konzepte kombinieren und die Highlights der jeweiligen Lernphasen darstellen.*
 
 ### Phase 1: Java Fundamente & Kernkonzepte
-- **[Integratives Projekt Phase 1: Titel des Projekts]** *(Dieses Projekt wird nach Abschluss aller Übungen zu Meilenstein 1.5 erstellt)*
-  - **Beschreibung:** *(Eine kurze Beschreibung, was das Projekt tut)*
-  - **Demonstrierte Fähigkeiten:** *(OOP, `static`/`final`, Collections, Java 8+ Features, etc.)*
+- **[Integratives Projekt: Bibliotheks-Verwaltung 1.0](./src/main/java/de/rebelmetal/javaroad/portfolioprojekt/bibliothek/)**
+  - **Beschreibung:** Eine Kommandozeilen-Anwendung zur Verwaltung eines Buchbestands. Das Projekt demonstriert eine saubere 3-Schichten-Architektur (Daten, Logik, Präsentation) und eine professionelle Git-Historie.
+  - **Demonstrierte Fähigkeiten:** OOP (`record`), Collections (`Set`, `List`), Java 8+ Features (`Stream`, `Optional`, `Comparator`), Clean Code, Javadoc, Git Best Practices.
 
 *(Weitere Portfolio-Projekte für zukünftige Phasen folgen hier)*
 
