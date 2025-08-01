@@ -1,7 +1,6 @@
-/* package de.rebelmetal.javaroad.uebungen.optional_streams;
+package de.rebelmetal.javaroad.uebungen.optional_streams;
 
-import java.util.Optional;
-
+import java.util.*;
 
 /**
  * Praktische Übung 2 zu den Java 8+ Features: Streams & Optional.
@@ -16,16 +15,21 @@ import java.util.Optional;
  *    die Produktdetails oder eine "Nicht gefunden"-Meldung aus.
  *
  * @author Christoph Breddin
- * @version 1.0
+ * @version 1.0 */
 
 public class Produktsuche {
 
-    // --- Aufgabe 1: Definiere ein Produkt-Record ---
-    // Ein Record ist eine moderne, kurze Art, eine reine Datenklasse zu erstellen.
-
+    /**
+     * Ein Record, der ein Produkt mit Namen und Preis darstellt.
+     * Records sind eine kompakte Möglichkeit, unveränderliche Datenklassen zu erstellen.
+     *
+     * @param name  Der Name des Produkts.
+     * @param preis Der Preis des Produkts.
+     */
     public record Produkt(String name, double preis) {
 
     }
+
 
     public static void main(String[] args) {
         List<Produkt> produktkatalog = List.of(
@@ -36,24 +40,21 @@ public class Produktsuche {
                 new Produkt("High-End PC", 2499.00)
         );
 
-        // --- Aufgabe 2: Finde das erste teure Produkt ---
-        // Benutze die Stream-API, um das ERSTE Produkt im Katalog zu finden,
-        // dessen Preis GRÖSSER als 1000.00 ist.
-        // Das Ergebnis von .findFirst() ist immer ein Optional!
+        // Erzeugung eines Streams aus dem Produktkatalog, um die Suche durchzuführen.
         Optional<Produkt> gefundenesProdukt = produktkatalog.stream()
-                .final(Produkt -> Produkt.preis() > 1000.00)
-                .findFirst()
+                // Filtert den Stream und behält nur Produkte, deren Preis über 1000.00 liegt.
+                .filter(Produkt -> Produkt.preis() > 1000.00)
+                // Findet das erste Element im gefilterten Stream und gibt es als Optional zurück.
+                .findFirst();
 
-                ;
 
-
-        // --- Aufgabe 3: Verarbeite das Ergebnis sicher mit Optional ---
-        // Benutze eine Methode von Optional, um Folgendes zu tun:
-        // WENN ein Produkt gefunden wurde, gib aus: "Gefunden: [Produktname] für [Preis] Euro."
-        // WENN KEIN Produkt gefunden wurde, gib aus: "Kein Produkt über 1000 Euro gefunden."
-        // TODO: Implementiere hier die sichere Verarbeitung des 'gefundenesProdukt'-Optionals.
-        // Tipp: ifPresentOrElse(...) ist hierfür perfekt geeignet.
-
+        // Überprüfung, ob ein Produkt gefunden wurde, und entsprechende Ausgabe.
+        // ifPresentOrElse ist eine Methode von Optional, die den Code kompakter macht.
+        gefundenesProdukt.ifPresentOrElse(
+                // Dieser Block wird ausgeführt, wenn ein Produkt vorhanden ist.
+                produkt -> System.out.println(String.format("Gefunden: %s für %.2f.", produkt.name(), produkt.preis())),
+                // Dieser Block wird ausgeführt, wenn das Optional leer ist (kein Produkt gefunden).
+                () -> System.out.println("Kein Produkt über 1000 Euro gefunden.")
+        );
     }
 }
-*/
