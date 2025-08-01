@@ -138,6 +138,9 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 - **Übung 2: Analyse von Kundenbestellungen (`Stream` & `Optional`)**
   - [Analyse-Logik (`BestellAnalyse.java`)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_optional_vertiefung/BestellAnalyse.java)
   - [Datenmodell (`Bestellung.java` als Record)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_optional_vertiefung/Bestellung.java)
+- **Übung 3 (Wiederholung): Mitarbeiter-Suche (`Stream` & `Optional`)**
+  - [Analyse-Logik (`HRAnalyse.java`)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_optional_wiederholung/HRAnalyse.java)
+  - [Datenmodell (`Mitarbeiter.java` als Record)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_optional_wiederholung/Mitarbeiter.java)
 
 *(Weitere Übungen werden hier hinzugefügt)*
 
