@@ -21,11 +21,13 @@ _Hier ist der letzte abgeschlossene Stand unserer Arbeit._
 ---
 **2. Aktueller Stand der Roadmap:**
 
+
 - **Phase 1: Fundamente auffrischen & Java 8+ vertiefen**
   - [x] Meilenstein 1: Java-Grundlagen & Syntax-Wiederholung
   - [x] Meilenstein 1.5: Java's Kern-Konzepte & Schlüsselwörter (Fundament-Bootcamp)
   - [x] Meilenstein 2: Kern-APIs (Collections, I/O)
   - [x] Meilenstein 3: Java 8+ Features
+  - [x] Abschluss: Gesamt-Quiz & Integratives Portfolio-Projekt
 - **Phase 2: Build-Tools, Testing & Datenbanken**
   - [ ] Meilenstein: Maven/Gradle
   - [ ] Meilenstein: JUnit 5 & Mockito
@@ -55,9 +57,8 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Plan-Anpassung:** Aufgrund des Feedbacks des Schülers wurde eine zusätzliche Wiederholungs-Übung eingeschoben, um die Anwendung von `Stream` und `Optional` weiter zu festigen.
-- **Startpunkt:** Durchführung der **praktischen Wiederholungs-Übung 6: "Mitarbeiter-Suche"**.
-- **Danach:** Das zusammenfassende Gesamt-Quiz über alle bisherigen Meilensteine und das integrative Portfolio-Projekt für Phase 1.
+- **Start von Phase 2 unserer Roadmap.**
+- **Startpunkt:** Beginn mit dem ersten Thema des Meilensteins "Build-Tools, Testing & Datenbanken": **"Einführung in Maven"**.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
