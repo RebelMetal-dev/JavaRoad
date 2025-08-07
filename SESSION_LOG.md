@@ -4,7 +4,7 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 
 ---
 
-### **Sitzung vom: 05.08.2025**
+### **Sitzung vom: 08.08.2025**
 
 _Hier ist der letzte abgeschlossene Stand unserer Arbeit._
 
@@ -61,9 +61,10 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Plan-Anpassung:** Wir führen ein neues, fokussiertes **"SQL-Bootcamp"** als Praxis-Vertiefung für Meilenstein 2 ein.
-- **Ziel:** SQL-Kenntnisse durch 2-3 praktische Übungen in einer einfachen Testumgebung (reines JDBC, H2-Datenbank) zu meistern, **bevor** wir die Komplexität von Spring einführen.
-- **Startpunkt (für die nächste Session):** Beginn mit der **ersten Übung des SQL-Bootcamps**.
+**5. Nächste unmittelbare Aufgabe:**
+- **Fortsetzung des "SQL-Bootcamps".**
+- **Aktueller Stand:** Übung 1 ("CRUD & einfache SELECTs") wurde abgeschlossen, das `.sql`-Skript wurde auf GitHub gesichert **und in der `README.md`-Chronik verlinkt.**
+- **Startpunkt (für die nächste Session):** Beginn mit der **zweiten SQL-Bootcamp-Übung: "Daten verknüpfen mit JOINs"**.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 

@@ -98,7 +98,7 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 - [x] Meilenstein: JUnit 5 & Mockito
 - [x] Meilenstein: Grundlagen der Integrationstests
 - [x] Meilenstein: SQL-Grundlagen & JDBC
-- **[ ] SQL-Bootcamp: Praktische Übungen mit JDBC & H2**
+- [x] **SQL-Bootcamp:** Praxis-Training für SQL mit DBeaver & H2
 
 </td>
 </tr>
@@ -145,6 +145,10 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 - **Übung 4 (Wiederholung): Mitarbeiter-Suche (`Stream` & `Optional`)**
   - [Analyse-Logik (`HRAnalyse.java`)](./src/main/java/de/rebelmetal/javaroad/uebungen/streams_optional_wiederholung/HRAnalyse.java)
   - [Datenmodell (`Mitarbeiter.java` als Record)] (./src/main/java/de/rebelmetal/javaroad/uebungen/streams_optional_wiederholung/Mitarbeiter.java)
+
+### Phase 2: Build-Tools, Testing & Datenbanken
+- **SQL-Bootcamp - Übung 1: CRUD & einfache SELECTs**
+  - [SQL-Skript (`01_crud_und_select.sql`)](./sql-uebungen/01_crud_und_select.sql)
 
 *(Weitere Übungen werden hier hinzugefügt)*
 
