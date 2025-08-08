@@ -149,6 +149,8 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 ### Phase 2: Build-Tools, Testing & Datenbanken
 - **SQL-Bootcamp - Übung 1: CRUD & einfache SELECTs**
   - [SQL-Skript (`01_crud_und_select.sql`)](./sql-uebungen/01_crud_und_select.sql)
+- **SQL-Bootcamp - Übung 2: Daten verknüpfen mit JOINs**
+  - [SQL-Skript (`02_joins.sql`)](./sql-uebungen/02_joins.sql)
 
 *(Weitere Übungen werden hier hinzugefügt)*
 
