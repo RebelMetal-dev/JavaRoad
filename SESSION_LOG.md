@@ -59,12 +59,12 @@ Für jedes neue Thema gilt der folgende Ablauf:
   1. JavaMasta erstellt den **vollständigen Markdown-Text**, der sowohl die ursprüngliche Erklärung (Phase 1) als auch die "Profi-Tipps" (aus Phase 3) enthält.
   2. Der Schüler erstellt eine entsprechende `.md`-Datei im `Lernskripte`-Ordner, fügt den Inhalt ein und committet die Datei.
 
+*
 **5. Nächste unmittelbare Aufgabe:**
 
-**5. Nächste unmittelbare Aufgabe:**
 - **Fortsetzung des "SQL-Bootcamps".**
-- **Aktueller Stand:** Übung 1 ("CRUD & einfache SELECTs") wurde abgeschlossen, das `.sql`-Skript wurde auf GitHub gesichert **und in der `README.md`-Chronik verlinkt.**
-- **Startpunkt (für die nächste Session):** Beginn mit der **zweiten SQL-Bootcamp-Übung: "Daten verknüpfen mit JOINs"**.
+- **Aktueller Stand:** Übung 1 ("CRUD & SELECTs") und Übung 2 ("JOINs") sind vollständig abgeschlossen und dokumentiert.
+- **Startpunkt (für die nächste Session):** Beginn mit der **dritten SQL-Bootcamp-Übung: "Daten aggregieren mit GROUP BY"**.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
