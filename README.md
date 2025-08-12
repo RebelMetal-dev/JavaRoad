@@ -151,6 +151,8 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
   - [SQL-Skript (`01_crud_und_select.sql`)](./sql-uebungen/01_crud_und_select.sql)
 - **SQL-Bootcamp - Übung 2: Daten verknüpfen mit JOINs**
   - [SQL-Skript (`02_joins.sql`)](./sql-uebungen/02_joins.sql)
+- **SQL-Bootcamp - Übung 3: Daten aggregieren mit GROUP BY**
+  - [SQL-Skript (`03_aggregationen.sql`)](./sql-uebungen/03_aggregationen.sql)
 
 *(Weitere Übungen werden hier hinzugefügt)*
 
