@@ -89,7 +89,7 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 </details>
 
 <details>
-<summary><b> [ ] Phase 2: Build-Tools, Testing & Datenbanken</b></summary>
+<summary><b> [x] Phase 2: Build-Tools, Testing & Datenbanken</b></summary>
 <table>
 <tr>
 <td>
