@@ -105,6 +105,21 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 </table>
 </details>
 
+<details>
+<summary><b> [ ] Phase 3: Spring Framework & APIs</b></summary>
+<table>
+<tr>
+<td>
+
+- [x] Meilenstein: Spring Core (IoC, DI)
+- [x] Meilenstein: Spring Boot & REST-APIs
+- [x] Meilenstein: Spring Data JPA
+
+</td>
+</tr>
+</table>
+</details>
+
 *(Weitere Phasen folgen)*
 
 ---
