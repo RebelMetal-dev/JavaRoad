@@ -36,9 +36,9 @@ _Hier ist der letzte abgeschlossene Stand unserer Arbeit._
   - [x] Meilenstein: SQL-Grundlagen & JDBC
   - [x] SQL-Bootcamp: Praxis-Training für SQL mit DBeaver & H2
 - **Phase 3: Spring Framework & APIs** <-- **WIR SIND HIER**
-  - [ ] Meilenstein: Spring Core (IoC, DI)
-  - [ ] Meilenstein: Spring Boot & REST-APIs
-  - [ ] Meilenstein: Spring Data JPA
+    - [x] Meilenstein: Spring Core (IoC, DI)
+    - [x] Meilenstein: Spring Boot & REST-APIs
+    - [x] Meilenstein: Spring Data JPA
 - **Phase 4: Fortgeschrittene Themen & Best Practices**
   - [ ] Meilenstein: Git-Grundlagen, Clean Code, Design Patterns, Docker
 - **Phase 5: Bewerbungsphase & Portfolio-Projekte**
@@ -63,8 +63,9 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Start von Phase 3 unserer Roadmap.**
-- **Startpunkt:** Beginn mit dem ersten Thema des Meilensteins "Spring Framework & APIs": **"Einführung in Spring Core: Dependency Injection & IoC"**.
+- **Theorie von Phase 3 abgeschlossen.**
+- **Startpunkt:** Beginn mit der **Phase 5 ("Praktische Übungen")** für den Meilenstein "Spring Framework & APIs".
+- **Ziel:** Das Wissen über Spring Core, Spring Boot und Spring Data JPA in kleinen bis mittleren, praxisnahen Übungen anwenden.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
