@@ -1,0 +1,2 @@
+PoE2 Build: NecroWitch [Witch]
+Stats: {DEXTERITY=40, INTELLIGENCE=150, STRENGTH=10}

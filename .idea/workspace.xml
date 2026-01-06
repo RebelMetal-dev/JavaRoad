@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebaca399-ead3-4a7c-ab14-ff17b8511505" name="Changes" comment="" />
+    <list default="true" id="ebaca399-ead3-4a7c-ab14-ff17b8511505" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/rebelmetal/javaroad/portfolio/poe2manager/Attribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/rebelmetal/javaroad/portfolio/poe2manager/BuildService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/rebelmetal/javaroad/portfolio/poe2manager/PoECharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/rebelmetal/javaroad/portfolio/poe2manager/PoEManagerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,6 +54,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.PoEManagerApp.executor": "Run",
     "Application.TaskmasterApplication.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -60,7 +68,20 @@
     "settings.editor.selected.configurable": "advanced.settings"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.PoEManagerApp">
+    <configuration name="PoEManagerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.rebelmetal.javaroad.portfolio.poe2manager.PoEManagerApp" />
+      <module name="javaRoad" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.rebelmetal.javaroad.portfolio.poe2manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TaskmasterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javaroad.taskmaster.TaskmasterApplication" />
       <module name="taskmaster" />
@@ -87,6 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PoEManagerApp" />
         <item itemvalue="Application.TaskmasterApplication" />
       </list>
     </recent_temporary>
