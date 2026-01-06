@@ -106,7 +106,7 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 </details>
 
 <details>
-<summary><b> [ ] Phase 3: Spring Framework & APIs</b></summary>
+<summary><b> [x] Phase 3: Spring Framework & APIs</b></summary>
 <table>
 <tr>
 <td>
@@ -114,6 +114,23 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 - [x] Meilenstein: Spring Core (IoC, DI)
 - [x] Meilenstein: Spring Boot & REST-APIs
 - [x] Meilenstein: Spring Data JPA
+
+</td>
+</tr>
+</table>
+</details>
+
+
+<details>
+<summary><b> [] Phase 4: Fortgeschrittene Themen & Best Practices</b></summary>
+<table>
+<tr>
+<td>
+
+- [ ] Meilenstein: Git-Grundlagen (Branching, Merging)
+- [ ] Meilenstein: Clean Code & Refactoring (Fokus: API-Struktur)
+- [ ] Meilenstein: Design Patterns
+- [ ] Meilenstein: Docker Basics
 
 </td>
 </tr>
