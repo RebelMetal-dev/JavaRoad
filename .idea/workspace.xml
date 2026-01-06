@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebaca399-ead3-4a7c-ab14-ff17b8511505" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/resources/Poe2ApiApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/models/PoEManagerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/models/PoEManagerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/service/BuildService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/services/BuildService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio-apps/poe2-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio-apps/poe2-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/java/de/rebelmetal/javaroad/portfolio/poe2api/BuildController.java" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/java/de/rebelmetal/javaroad/portfolio/poe2api/BuildController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/java/de/rebelmetal/javaroad/portfolio/poe2api/Poe2ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/java/de/rebelmetal/javaroad/portfolio/poe2api/Poe2ApiApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +57,7 @@
     "Application.de.rebelmetal.javaroad.core.models.PoEManagerApp.executor": "Run",
     "Maven.core [install].executor": "Run",
     "Maven.javaRoad [clean].executor": "Run",
+    "Maven.javaRoad [install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
