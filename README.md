@@ -141,8 +141,34 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
         * **Datenstrukturen:** Verwendung von `HashMap` zur flexiblen Verwaltung von Charakter-Stats.
         * **Robustheit:** Implementierung von Exception-Handling für sicheren Datei-Zugriff.
 
+### Phase 3: Spring Boot & Multi-Modul Architektur (Aktueller Fokus)
+- **[Game Build API (Multi-Modul Project)](portfolio-apps/poe2-api/)**
+    - **Beschreibung:** Eine moderne REST-API, die als zentraler Hub für verschiedene Spiele dient. Dieses Projekt markiert den Übergang von lokalen Konsolen-Anwendungen zu einer professionellen, verteilten Architektur.
+    - **Highlights:**
+        - **Separation of Concerns:** Strikte Trennung von Geschäftslogik (`core`) und Web-Interface (`api`).
+        - **Cross-Game Support:** Native Unterstützung für **Path of Exile 2** durch ein flexibles Datenmodell.
+        - **Spring Boot & Maven:** Nutzung von Dependency Injection und Multi-Modul-Builds.
+    - **Status:** Funktionaler Prototyp mit JSON-Endpunkten.
+
 *(Weitere Portfolio-Projekte für zukünftige Phasen folgen hier)*
 
+---
+## 🧭 Projekt-Struktur & Architektur
+
+Um die Wartbarkeit zu erhöhen, ist das Projekt in logische Module unterteilt:
+
+```text
+JavaRoad (Root)
+├── core/                       # Das "Gehirn": Modelle & Logik
+│   └── src/main/java/.../core/
+│       ├── models/             # GameCharacter (PoE2/WWM)
+│       └── services/           # BuildService (Datenverarbeitung)
+├── portfolio-apps/
+│   └── poe2-api/               # Das "Gesicht": Spring Boot REST API
+│       └── src/main/java/.../  # BuildController (JSON Endpoints)
+└── SESSION_LOG.md              # Chronologische Dokumentation des Lernfortschritts
+
+```
 ---
 
 ## 📚 Detaillierte Lern- und Übungs-Chronik
@@ -178,6 +204,7 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
   - [SQL-Skript (`03_aggregationen.sql`)](./sql-uebungen/03_aggregationen.sql)
 
 *(Weitere Übungen werden hier hinzugefügt)*
+
 
 ---
 

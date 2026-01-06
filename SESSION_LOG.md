@@ -4,22 +4,21 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 
 ---
 
-### **Sitzung vom: 12.08.2025**
+### **Sitzung vom: 06.01.2026**
 
-_Hier ist der letzte abgeschlossene Stand unserer Arbeit._
+_Status: Phase 3 (Spring & APIs) erfolgreich abgeschlossen. Übergang zu Phase 4._
 
 ---
 **1. Letztes abgeschlossenes Thema:**
 
-- **MEILENSTEIN 1 ABGESCHLOSSEN: Java-Grundlagen & OOP-Wiederholung.**
-- **MEILENSTEIN 2 ABGESCHLOSSEN: Kern-APIs (Collections, I/O).**
-- **Meilenstein 3, Theorie-Phase ABGESCHLOSSEN: Java 8+ Features.**
-- **Prozess-Finalisierung:** Alle Projekt-Workflows (`GEMINI.md`, etc.) wurden finalisiert.
-- **Bootcamp (M1.5):** Alle praktischen Übungen zu Meilenstein 1.5 sind abgeschlossen.
-- **README.md Finalisierung:** Die Einleitung und die Roadmap-Struktur wurden finalisiert.
-- **Strategie-Finalisierung:** Der übergeordnete Lernpfad wurde in zwei Projekte aufgeteilt: `JavaRoad` (Ziel: Top-Tier Junior) und ein geplantes Folgeprojekt `JavaRoad-DeepDive` (Ziel: Mid-Level-Fähigkeiten).
----
+- **PHASE 3 ABGESCHLOSSEN: Spring Framework & APIs.**
+    - [x] Spring Core (IoC, DI) verstanden und angewendet.
+    - [x] Spring Boot REST-API erfolgreich implementiert.
+    - [x] Multi-Modul-Architektur (`core` & `api`) physisch aufgebaut und Maven-Build-Prozess (via `mvnw`) etabliert.
+- **WWM-Vorbereitung:** Die Infrastruktur für die Integration von **Where Winds Meet** ist im API-Design bereits berücksichtigt.
+- **Dokumentation:** Die `README.md` wurde auf den aktuellen Stand der Architektur gebracht.
 
+---
 
 **2. Aktueller Stand der Roadmap:**
 
@@ -39,10 +38,12 @@ _Hier ist der letzte abgeschlossene Stand unserer Arbeit._
     - [x] Meilenstein: Spring Core (IoC, DI)
     - [x] Meilenstein: Spring Boot & REST-APIs
     - [x] Meilenstein: Spring Data JPA
-- **Phase 4: Fortgeschrittene Themen & Best Practices**
-  - [ ] Meilenstein: Git-Grundlagen, Clean Code, Design Patterns, Docker
-- **Phase 5: Bewerbungsphase & Portfolio-Projekte**
-  - [ ] Meilenstein: Portfolio ausbauen, Lebenslauf optimieren, Interview-Vorbereitung
+- **Phase 4: Fortgeschrittene Themen & Best Practices** <-- **WIR SIND HIER**
+    - [ ] Meilenstein: Git-Grundlagen (Branching, Merging)
+    - [ ] Meilenstein: Clean Code & Refactoring (Fokus: API-Struktur)
+    - [ ] Meilenstein: Design Patterns
+    - [ ] Meilenstein: Docker Basics
+- **Phase 5: Bewerbungsphase & Portfolio-Projekte** [ ]
 
 **3. Unser beschlossenes Vorgehen (Die 3-Phasen-Lernstrategie & Anki):**
 
@@ -63,9 +64,9 @@ Für jedes neue Thema gilt der folgende Ablauf:
 
 **5. Nächste unmittelbare Aufgabe:**
 
-- **Theorie von Phase 3 abgeschlossen.**
-- **Startpunkt:** Beginn mit der **Phase 5 ("Praktische Übungen")** für den Meilenstein "Spring Framework & APIs".
-- **Ziel:** Das Wissen über Spring Core, Spring Boot und Spring Data JPA in kleinen bis mittleren, praxisnahen Übungen anwenden.
+- **Thema: Clean Code & Git-Workflows am praktischen Beispiel WWM.**
+- **Ziel:** Wir nutzen die Integration von **Where Winds Meet**, um saubere Design Patterns (wie das Strategy- oder Factory-Pattern) anzuwenden.
+- **Task:** Erstellung eines dedizierten Branches für das WWM-Feature, um professionelle Git-Workflows zu üben.
 
 **6. Prozess für Plan-Anpassungen (NEU - Das "Agile Roadmap"-Prinzip):**
 
@@ -85,4 +86,4 @@ Für jedes neue Thema gilt der folgende Ablauf:
 - **Phase 6 ("Portfolio-Projekt"):**
   - Im Anschluss folgt eine größere, zusammenhängende Aufgabe, die die geübten Konzepte kombiniert und für das GitHub-Portfolio bestimmt ist.
 
----]()
+---]
