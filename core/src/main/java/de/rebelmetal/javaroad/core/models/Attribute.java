@@ -1,4 +1,4 @@
-package de.rebelmetal.javaroad.portfolio.poe2manager;
+package de.rebelmetal.javaroad.core.models;
 
 public enum Attribute {STRENGTH, DEXTERITY, INTELLIGENCE
 }
