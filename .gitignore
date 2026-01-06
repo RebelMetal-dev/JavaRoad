@@ -36,3 +36,8 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Custom Project Rules ###
+# Ignoriert alle Build-Dateien im Ordner, außer die .gitkeep (falls vorhanden)
+builds/*
+# Die NecroWitch.txt bleibt trotzdem auf GitHub, da sie bereits "tracked" ist.
