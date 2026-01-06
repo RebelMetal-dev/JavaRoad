@@ -1,6 +1,6 @@
 package de.rebelmetal.javaroad.core.models;
-import de.rebelmetal.javaroad.core.models.PoECharacter;
-import de.rebelmetal.javaroad.core.models.Attribute;
+
+
 import de.rebelmetal.javaroad.core.services.BuildService;
 
 public class PoEManagerApp {

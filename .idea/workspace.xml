@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebaca399-ead3-4a7c-ab14-ff17b8511505" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/service/BuildService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/java/de/rebelmetal/javaroad/portfolio/poe2api/BuildController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/resources/Poe2ApiApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/models/PoEManagerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/models/PoEManagerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/service/BuildService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/services/BuildService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio-apps/poe2-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio-apps/poe2-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/rebelmetal/javaroad/portfolio/poe2manager/Attribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/models/Attribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/rebelmetal/javaroad/portfolio/poe2manager/PoECharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/models/PoECharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/rebelmetal/javaroad/portfolio/poe2manager/PoEManagerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/de/rebelmetal/javaroad/core/models/PoEManagerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/java/de/rebelmetal/javaroad/portfolio/poe2api/BuildController.java" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/java/de/rebelmetal/javaroad/portfolio/poe2api/BuildController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/java/de/rebelmetal/javaroad/portfolio/poe2api/Poe2ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio-apps/poe2-api/src/main/java/de/rebelmetal/javaroad/portfolio/poe2api/Poe2ApiApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +62,8 @@
     "Application.TaskmasterApplication.executor": "Run",
     "Application.de.rebelmetal.javaroad.core.models.PoEManagerApp (1).executor": "Run",
     "Application.de.rebelmetal.javaroad.core.models.PoEManagerApp.executor": "Run",
+    "Maven.core [install].executor": "Run",
+    "Maven.javaRoad [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -84,7 +84,7 @@
       <recent name="C:\Users\bred-\CBredJavaProjekte\JavaRoad\src\main\java\de\rebelmetal\javaroad\portfolio" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.de.rebelmetal.javaroad.core.models.PoEManagerApp">
+  <component name="RunManager" selected="Application.Poe2ApiApplication">
     <configuration name="PoEManagerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.rebelmetal.javaroad.portfolio.poe2manager.PoEManagerApp" />
       <module name="javaRoad" />
@@ -163,10 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Poe2ApiApplication" />
         <item itemvalue="Application.de.rebelmetal.javaroad.core.models.PoEManagerApp" />
         <item itemvalue="Application.de.rebelmetal.javaroad.core.models.PoEManagerApp (1)" />
         <item itemvalue="Application.PoEManagerApp" />
-        <item itemvalue="Application.Poe2ApiApplication" />
         <item itemvalue="Application.TaskmasterApplication" />
       </list>
     </recent_temporary>
