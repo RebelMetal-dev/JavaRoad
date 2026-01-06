@@ -1,0 +1,13 @@
+package de.rebelmetal.javaroad.portfolio.poe2api;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Poe2ApiApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
