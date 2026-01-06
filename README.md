@@ -133,6 +133,15 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
   - **Beschreibung:** Eine Kommandozeilen-Anwendung zur Verwaltung eines Buchbestands. Das Projekt demonstriert eine saubere 3-Schichten-Architektur (Daten, Logik, Präsentation) und eine professionelle Git-Historie.
   - **Demonstrierte Fähigkeiten:** OOP (`record`), Collections (`Set`, `List`), Java 8+ Features (`Stream`, `Optional`, `Comparator`), Clean Code, Javadoc, Git Best Practices.
 
+### Phase 2: Fortgeschrittene Datenstrukturen & Dateisysteme
+- **[PoE2 Build-Manager: JSON Edition](src/main/java/de/rebelmetal/javaroad/poe2manager/)**
+    - **Beschreibung:** Ein abgeschlossenes Tool zur Verwaltung von Path of Exile 2 Charakter-Builds. Das Projekt nutzt das lokale Dateisystem zur Speicherung statt einer Datenbank.
+    - **Status:** ✅ Abgeschlossen
+    - **Highlights:** * Mapping von PoE2-Attributen (Str, Dex, Int) und Skill-Slots.
+        * Automatisches Speichern und Laden von `.json` Dateien via Jackson/Gson.
+        * Fehlerbehandlung beim Datei-Zugriff (IO-Exceptions).
+    - **Fähigkeiten:** `java.nio.file`, JSON-Serialisierung, tiefe Objekt-Verschachtelung.
+
 *(Weitere Portfolio-Projekte für zukünftige Phasen folgen hier)*
 
 ---

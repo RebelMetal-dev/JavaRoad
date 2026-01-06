@@ -1,4 +1,4 @@
-# JavaRoad - Session Log
+[# JavaRoad - Session Log
 
 Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwischen JavaMasta und seinem Schüler.
 
@@ -85,4 +85,4 @@ Für jedes neue Thema gilt der folgende Ablauf:
 - **Phase 6 ("Portfolio-Projekt"):**
   - Im Anschluss folgt eine größere, zusammenhängende Aufgabe, die die geübten Konzepte kombiniert und für das GitHub-Portfolio bestimmt ist.
 
----
+---]()

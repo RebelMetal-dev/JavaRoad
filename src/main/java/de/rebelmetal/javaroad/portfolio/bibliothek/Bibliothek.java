@@ -1,4 +1,4 @@
-package de.rebelmetal.javaroad.portfolioprojekt.bibliothek;
+package de.rebelmetal.javaroad.portfolio.bibliothek;
 
 import java.util.*;
 
