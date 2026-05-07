@@ -7,7 +7,7 @@ public class BibliotheksApp {
 
     public static void main(String[] args) {
 
-        Bibliothek bibliothek1 = new Bibliothek(new HashSet<>());
+        Bibliothek bibliothek1 = new Bibliothek();
 
         bibliothek1.buchHinzufuegen(new Buch("978-3-608-98800-0", "Herr der Ringe","Tolkien, John R. R."));
         bibliothek1.buchHinzufuegen(new Buch("978-3-86647-325-6", "Das Kaptital","Marx, Karl"));

@@ -1,17 +1,17 @@
 package de.rebelmetal.javaroad.portfolio.bibliothek;
 
 /**
- * Repräsentiert ein Buch mit einer eindeutigen ISBN,
- * dem Titel und dem Autor.
- * <p>
- * Als 'record' implementiert für automatische Unveränderlichkeit,
- * equals(), hashCode() und toString().
+ * Represents a book with a unique ISBN,
+ * the title, and the author.
+ *
+ * Implemented as a {@code record} to ensure immutability,
+ * equals(), hashCode(), and toString().
  *
  * @author Christoph Breddin
  * @version 1.0
- * @param bestellNr die eindeutige ISBN
- * @param kundenName der Titel des Buches
- * @param betrag der Name des Autors
+ * @param isbn the unique ISBN
+ * @param titel the title of the book
+ * @param autor the name of the author
  */
 
 public record Buch(String isbn, String titel, String autor) {
