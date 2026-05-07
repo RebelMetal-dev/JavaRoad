@@ -113,7 +113,7 @@ JavaRoad/ (Root — Maven Multi-Module)
 │
 ├── core/                          ← Domain models & business logic
 │   └── src/main/java/.../core/
-│       ├── models/                PoECharacter (mutable, legacy), Attribute (enum)
+│       ├── models/                PoECharacter (Record, immutable), Attribute (enum)
 │       └── services/              BuildService (@Service, in-memory list)
 │
 ├── portfolio-apps/
@@ -124,7 +124,20 @@ JavaRoad/ (Root — Maven Multi-Module)
 │           └── Poe2ApiApplication @SpringBootApplication (scanBasePackages set)
 │
 ├── taskmaster/                    ← Spring Boot + JPA (Phase 3 — work in progress)
-│   └── model/Task.java            JPA entity — @Data antipattern still present (TODO)
+│   └── model/Task.java            JPA entity — @Getter @Setter @NoArgsConstructor ✅
+│
+├── design-principles/             ← Phase 3.5 — SOLID + GoF Design Patterns (planned)
+│   └── src/main/java/.../
+│       ├── solid/
+│       │   ├── srp/               Single Responsibility — bad example + refactored
+│       │   ├── ocp/               Open/Closed Principle
+│       │   ├── lsp/               Liskov Substitution Principle
+│       │   ├── isp/               Interface Segregation Principle
+│       │   └── dip/               Dependency Inversion Principle
+│       └── patterns/
+│           ├── creational/        Factory Method, Builder, Singleton
+│           ├── structural/        Adapter, Decorator, Facade
+│           └── behavioral/        Strategy, Observer, Command, Template Method
 │
 ├── src/main/java/.../
 │   ├── portfolio/bibliothek/      Phase 1 portfolio project (Record, Set, Stream, Optional)
@@ -155,13 +168,29 @@ JavaRoad/ (Root — Maven Multi-Module)
 - Known bugs fixed: constructor parameter ignored, @param copy-paste errors,
   unused imports, copy-paste label errors, Shakespeare typo
 - BuildController refactored: seed data moved to DataInitializer (CommandLineRunner)
+- Task.java: @Data replaced with @Getter @Setter @NoArgsConstructor (commit c87300c)
 
 ### Open / Next Steps 🔲
-- [ ] Step 4: Fix `@Data` antipattern on `Task.java` JPA entity (Taskmaster)
-- [ ] Add unit tests (JUnit 5 + Mockito) for BuildService and Bibliothek
-- [ ] Refactor PoECharacter — discuss Record vs mutable class trade-off
+
+**Phase 3 (remaining):**
+- [ ] Refactor PoECharacter — convert to Record + implement Wither Pattern (next up)
 - [ ] Implement TaskController REST endpoints in Taskmaster
-- [ ] Phase 4: Git branching strategy, Design Patterns, Docker basics
+- [ ] Add unit tests (JUnit 5 + Mockito) for BuildService and Bibliothek
+
+**Phase 3.5 — SOLID Principles & Design Patterns (new — planned):**
+- [ ] Create `design-principles/` Maven module
+- [ ] SOLID: S — Single Responsibility Principle (exercise + real-world example)
+- [ ] SOLID: O — Open/Closed Principle
+- [ ] SOLID: L — Liskov Substitution Principle
+- [ ] SOLID: I — Interface Segregation Principle
+- [ ] SOLID: D — Dependency Inversion Principle
+- [ ] GoF Creational: Factory Method, Builder, Singleton
+- [ ] GoF Structural: Adapter, Decorator, Facade
+- [ ] GoF Behavioral: Strategy, Observer, Command, Template Method
+
+**Phase 4:**
+- [ ] Git branching strategy (feature branches, PRs)
+- [ ] Docker basics
 - [ ] Java 21 features: Sealed Classes, Pattern Matching for switch, Virtual Threads
 
 ---
@@ -170,10 +199,10 @@ JavaRoad/ (Root — Maven Multi-Module)
 
 | File | Issue | Priority |
 |---|---|---|
-| `taskmaster/model/Task.java` | `@Data` on JPA entity — equals/hashCode broken before persist | High |
-| `core/models/PoECharacter.java` | Mutable class with getters — discuss Record refactoring | Medium |
+| `taskmaster/model/Task.java` | `@Data` on JPA entity — equals/hashCode broken before persist | Done ✅ |
+| `core/models/PoECharacter.java` | Mutable class — convert to Record + Wither Pattern | High (next) |
 | `BuildController.java` | TODO resolved — DataInitializer created | Done ✅ |
-| `Task.java` | `@Entity // ?` comment — uncertainty about annotation | High |
+| `Task.java` | `@Entity // ?` comment — uncertainty about annotation | Done ✅ |
 
 ---
 
@@ -184,6 +213,13 @@ When Christoph presents this project, he should be able to explain:
 - **Records vs. Classes:** "I used records for immutable data models like Buch and
   Bestellung because they provide automatic equals/hashCode/toString and make
   immutability the default — the compiler enforces it."
+- **Wither Pattern:** "Because records are immutable, I implemented wither methods
+  (e.g. withLevel()) that return a new instance with one field updated. This keeps
+  the domain model immutable while still allowing state transitions in the service layer."
+- **@Data antipattern on JPA entities:** "I replaced @Data with explicit @Getter and
+  @Setter on Task.java because @Data generates equals/hashCode based on all fields —
+  including id, which is null before JPA assigns it. Two unsaved tasks would appear
+  equal, breaking Set and HashMap behaviour."
 - **Optional:** "Instead of returning null and risking NullPointerException, I return
   Optional<Buch> to make the possibility of 'no result' explicit in the API contract."
 - **CommandLineRunner vs Constructor:** "I separated seed data from dependency
@@ -193,3 +229,37 @@ When Christoph presents this project, he should be able to explain:
   the web layer (poe2-api) to enforce Separation of Concerns at the build level."
 - **Conventional Commits:** "Every commit answers what changed, why the old code was
   problematic, and what the new behaviour is."
+- **SOLID Principles (Phase 3.5):** Each principle has a dedicated exercise with a
+  deliberate violation and the corrected version, demonstrating architectural awareness
+  beyond just getting code to compile.
+
+---
+
+## 11. Phase 3.5 Learning Plan — SOLID & Design Patterns
+
+### Why this matters for interviews
+Junior developers know syntax. Architects know *why* code is structured a certain way.
+Every pattern exercise must include: the business context, the violation, the fix, and
+a one-sentence interview answer.
+
+### SOLID Principles — Suggested Business Contexts
+
+| Principle | Analogy | Exercise idea |
+|---|---|---|
+| SRP | A Crew Chief who also does accounting = chaos | OrderProcessor that handles validation + persistence + email → split into 3 classes |
+| OCP | Adding a new act without rewriting the stage plan | PaymentService with if/else per type → extract interface, add new type without touching old code |
+| LSP | A "Stagehand" who can't actually lift anything | Rectangle/Square classic — or Employee/ContractWorker with broken getSalary() |
+| ISP | A rider that demands things the venue can't provide | Fat interface AudioVisualEquipment → split into AudioEquipment + VisualEquipment |
+| DIP | Booking an act through a fixed venue contract vs. an agent | BuildService depending on concrete ArrayList → inject via interface |
+
+### GoF Patterns — Priority Order for Junior Interviews
+
+| Pattern | Type | One-liner |
+|---|---|---|
+| Strategy | Behavioral | Swap algorithms at runtime without changing the caller |
+| Factory Method | Creational | Let subclasses decide which object to create |
+| Builder | Creational | Construct complex objects step by step |
+| Observer | Behavioral | Notify multiple objects when one changes state |
+| Singleton | Creational | Ensure only one instance exists (and know its drawbacks) |
+| Decorator | Structural | Add behaviour to objects without subclassing |
+| Facade | Structural | Provide a simple interface to a complex subsystem |

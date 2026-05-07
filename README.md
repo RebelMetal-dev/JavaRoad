@@ -112,25 +112,56 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 <td>
 
 - [x] Meilenstein: Spring Core (IoC, DI)
-- [x] Meilenstein: Spring Boot & REST-APIs
-- [x] Meilenstein: Spring Data JPA
+- [x] Meilenstein: Spring Boot & REST-APIs — inkl. CommandLineRunner-Refactoring (DataInitializer)
+- [x] Meilenstein: Spring Data JPA — Taskmaster-Scaffold, @Data-Antipattern behoben
+- [x] Golden Standard vollständig umgesetzt: Javadoc & Kommentare auf Englisch
+- [ ] PoECharacter → Record + Wither Pattern *(in Arbeit)*
+- [ ] TaskController REST-Endpoints (GET, POST, DELETE)
+- [ ] Unit Tests: JUnit 5 + Mockito für BuildService & Bibliothek
 
 </td>
 </tr>
 </table>
 </details>
 
-
 <details>
-<summary><b> [] Phase 4: Fortgeschrittene Themen & Best Practices</b></summary>
+<summary><b> [] Phase 3.5: SOLID-Prinzipien & GoF Design Patterns</b></summary>
 <table>
 <tr>
 <td>
 
-- [ ] Meilenstein: Git-Grundlagen (Branching, Merging)
-- [ ] Meilenstein: Clean Code & Refactoring (Fokus: API-Struktur)
-- [ ] Meilenstein: Design Patterns
+*Jedes Prinzip und Pattern enthält: eine bewusste Verletzung, die korrigierte Lösung, einen JUnit-Test und einen Interview-Einzeiler.*
+
+**SOLID-Prinzipien:**
+- [ ] S — Single Responsibility Principle
+- [ ] O — Open/Closed Principle
+- [ ] L — Liskov Substitution Principle
+- [ ] I — Interface Segregation Principle
+- [ ] D — Dependency Inversion Principle
+
+**GoF Design Patterns (Priorität für Junior-Interviews):**
+- [ ] Strategy (Behavioral)
+- [ ] Factory Method (Creational)
+- [ ] Builder (Creational)
+- [ ] Observer (Behavioral)
+- [ ] Singleton (Creational)
+- [ ] Decorator (Structural)
+- [ ] Facade (Structural)
+
+</td>
+</tr>
+</table>
+</details>
+
+<details>
+<summary><b> [] Phase 4: Fortgeschrittene Themen</b></summary>
+<table>
+<tr>
+<td>
+
+- [ ] Meilenstein: Git-Branching-Strategie (Feature Branches, Pull Requests)
 - [ ] Meilenstein: Docker Basics
+- [ ] Meilenstein: Java 21 Features (Sealed Classes, Pattern Matching, Virtual Threads)
 
 </td>
 </tr>
@@ -158,16 +189,23 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
         * **Datenstrukturen:** Verwendung von `HashMap` zur flexiblen Verwaltung von Charakter-Stats.
         * **Robustheit:** Implementierung von Exception-Handling für sicheren Datei-Zugriff.
 
-### Phase 3: Spring Boot & Multi-Modul Architektur (Aktueller Fokus)
+### Phase 3: Spring Boot & Multi-Modul Architektur
 - **[Game Build API (Multi-Modul Project)](portfolio-apps/poe2-api/)**
-    - **Beschreibung:** Eine moderne REST-API, die als zentraler Hub für verschiedene Spiele dient. Dieses Projekt markiert den Übergang von lokalen Konsolen-Anwendungen zu einer professionellen, verteilten Architektur.
+    - **Beschreibung:** Eine moderne REST-API für PoE2-Charakter-Builds. Markiert den Übergang von lokalen Konsolen-Anwendungen zu professioneller verteilter Architektur.
     - **Highlights:**
-        - **Separation of Concerns:** Strikte Trennung von Geschäftslogik (`core`) und Web-Interface (`api`).
-        - **Cross-Game Support:** Native Unterstützung für **Path of Exile 2** durch ein flexibles Datenmodell.
-        - **Spring Boot & Maven:** Nutzung von Dependency Injection und Multi-Modul-Builds.
-    - **Status:** Funktionaler Prototyp mit JSON-Endpunkten.
+        - **Separation of Concerns:** Strikte Trennung von Geschäftslogik (`core`) und Web-Interface (`poe2-api`).
+        - **Spring Boot Lifecycle:** Seed-Daten sauber über `CommandLineRunner` (DataInitializer) statt im Konstruktor.
+        - **Multi-Modul Maven:** Dependency Injection über Modulgrenzen hinweg.
+    - **Status:** Funktionaler Prototyp — `GET /builds` liefert JSON.
 
-*(Weitere Portfolio-Projekte für zukünftige Phasen folgen hier)*
+- **[Taskmaster — Spring Data JPA](taskmaster/)**
+    - **Beschreibung:** Spring Boot Anwendung mit echter Datenbankpersistenz via JPA & H2.
+    - **Highlights:**
+        - **JPA-Entity korrekt:** `@Getter @Setter @NoArgsConstructor` statt `@Data` — verhindert broken `equals()`/`hashCode()` vor dem ersten Persist.
+        - **`@PrePersist`:** `createdAt` wird automatisch beim Speichern gesetzt.
+    - **Status:** Entity & Repository vorhanden — Controller folgt.
+
+*(Weitere Portfolio-Projekte für Phase 3.5 und Phase 4 folgen)*
 
 ---
 ## 🧭 Projekt-Struktur & Architektur
@@ -175,16 +213,25 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 Um die Wartbarkeit zu erhöhen, ist das Projekt in logische Module unterteilt:
 
 ```text
-JavaRoad (Root)
-├── core/                       # Das "Gehirn": Modelle & Logik
+JavaRoad (Root — Maven Multi-Module)
+├── core/                         # Domain-Modelle & Business-Logik
 │   └── src/main/java/.../core/
-│       ├── models/             # GameCharacter (PoE2/WWM)
-│       └── services/           # BuildService (Datenverarbeitung)
+│       ├── models/               # PoECharacter (Record), Attribute (Enum)
+│       └── services/             # BuildService (@Service)
 ├── portfolio-apps/
-│   └── poe2-api/               # Das "Gesicht": Spring Boot REST API
-│       └── src/main/java/.../  # BuildController (JSON Endpoints)
-└── SESSION_LOG.md              # Chronologische Dokumentation des Lernfortschritts
-
+│   └── poe2-api/                 # Spring Boot REST API
+│       └── poe2api/              # BuildController, DataInitializer, Application
+├── taskmaster/                   # Spring Data JPA — Entity, Repository
+│   └── model/Task.java           # JPA Entity (@Getter @Setter @NoArgsConstructor)
+├── design-principles/            # Phase 3.5 — SOLID & GoF Patterns (geplant)
+│   └── solid/ + patterns/
+├── src/main/java/.../
+│   ├── portfolio/bibliothek/     # Phase 1 Portfolio-Projekt
+│   ├── portfolio/poe2manager/    # Phase 2 Portfolio-Projekt
+│   ├── bootcamp/                 # Grundlagen-Übungen
+│   └── uebungen/                 # Stream / Optional / Collections Übungen
+├── sql-uebungen/                 # SQL-Praxis (CRUD, JOINs, Aggregationen)
+└── SESSION_LOG.md                # Chronologische Dokumentation des Lernfortschritts
 ```
 ---
 
