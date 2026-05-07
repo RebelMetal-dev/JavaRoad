@@ -263,3 +263,26 @@ a one-sentence interview answer.
 | Singleton | Creational | Ensure only one instance exists (and know its drawbacks) |
 | Decorator | Structural | Add behaviour to objects without subclassing |
 | Facade | Structural | Provide a simple interface to a complex subsystem |
+
+### Mentor Notes (from Gemini)
+
+**Singleton:** Always document the dangers alongside the pattern — a Singleton is
+a hidden global state and makes unit testing very hard (you can't inject a mock).
+Interview answer must include: "I know Singleton, and I know when NOT to use it."
+
+**Strategy + Java 21:** The Strategy pattern is the perfect bridge to Java 21
+Pattern Matching for switch. Once Strategy is implemented classically, show how
+sealed classes + pattern matching can replace the interface hierarchy. This is a
+genuine portfolio highlight that demonstrates Java 21 awareness.
+
+### Phase 3.5 Exercise Methodology (agreed with Gemini)
+
+Every SOLID principle and GoF pattern follows this exact sequence — no shortcuts:
+
+1. **Show the violation first** — write a class that massively breaks the principle
+2. **Write a unit test against the bad code** — make the problem visible and provable
+3. **Refactor to the clean solution** — the test now passes with the new design
+4. **Document the interview one-liner** in Javadoc on the refactored class
+
+This approach (test-driven refactoring) proves understanding at three levels:
+what the violation looks like, why it breaks, and how the pattern fixes it.
