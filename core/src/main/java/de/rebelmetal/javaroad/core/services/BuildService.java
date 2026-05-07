@@ -23,7 +23,7 @@ public class BuildService {
      */
     public void saveBuild(PoECharacter character) {
         savedBuilds.add(character);
-        System.out.println("Saving build: " + character.getName());
+        System.out.println("Saving build: " + character.name());
     }
 
     /**
