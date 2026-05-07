@@ -22,9 +22,6 @@ public class BuildController {
     // Spring automatically injects the @Service bean from the core module
     public BuildController(BuildService buildService) {
         this.buildService = buildService;
-
-        // TODO: move seed data to a dedicated DataInitializer (CommandLineRunner)
-        this.buildService.saveBuild(new PoECharacter("RebelExile", "Mercenary", 45, "Explosive Shot"));
     }
 
     @GetMapping("/builds")
