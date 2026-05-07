@@ -12,41 +12,44 @@ public class HRAnalyse {
                 new Mitarbeiter(104, "Chris", "Sales", 85000),
                 new Mitarbeiter(105, "Sarah", "IT", 68000)
         );
-        // Schwellenwert für das Gehalt und die gesuchte Abteilung.
+
+        // Salary threshold and target department for filtering.
         double mindestBetragFuerFilter = 90000.00;
         String gesuchteAbteilung = "IT";
 
-        // --- Stream-Beispiel 1: Suche nach einem qualifizierten IT-Mitarbeiter ---
+        // --- Stream Example 1: Search for a qualified IT employee ---
 
-        // Findet den ersten Mitarbeiter, der die Kriterien erfüllt.
-        // Das Ergebnis ist ein Optional, das entweder den Mitarbeiter oder "empty" enthält.
+        // Finds the first employee matching both criteria.
+        // The result is an Optional containing either the employee or empty.
         Optional<Mitarbeiter> gefundenerMitarbeiter = mitarbeiterListe.stream()
-                // Filtert Mitarbeiter der IT-Abteilung.
+                // Filter for employees in the target department.
                 .filter(mitarbeiter -> mitarbeiter.abteilung().equals(gesuchteAbteilung))
-                // Filtert nur Mitarbeiter, die das Mindestgehalt überschreiten.
+                // Filter for employees who exceed the minimum salary.
                 .filter(mitarbeiter -> mitarbeiter.gehalt() > mindestBetragFuerFilter)
-                // Sucht den ersten passenden Mitarbeiter und gibt ein Optional zurück.
+                // Return the first match wrapped in an Optional.
                 .findFirst();
 
-        // Verwendet ifPresentOrElse, um den Code für beide Fälle (gefunden / nicht gefunden) kompakt zu halten.
+        // ifPresentOrElse keeps the code for both cases (found / not found) compact.
         gefundenerMitarbeiter.ifPresentOrElse(
-                mitarbeiter -> System.out.println(String.format("Top-Mitarbeiter gefunden: Bestellung %s (ID: %d )", mitarbeiter.name(), mitarbeiter.id())),
-                () -> System.out.println("Kein IT-Mitarbeiter mit Gehalt > 90.000 gefunden."));
+                mitarbeiter -> System.out.println(String.format(
+                        "Top employee found: %s (ID: %d)", mitarbeiter.name(), mitarbeiter.id()
+                )),
+                () -> System.out.println("No IT employee with salary > 90,000 found.")
+        );
 
-
-        // --- Test-Stream-Beispiel 2: Suche in einer nicht vorhandenen Abteilung ---
+        // --- Stream Example 2: Search in a non-existent department ---
 
         Optional<Mitarbeiter> gefundenerTestMitarbeiter = mitarbeiterListe.stream()
                 .filter(mitarbeiter -> mitarbeiter.abteilung().equals("Finance"))
                 .filter(mitarbeiter -> mitarbeiter.gehalt() > mindestBetragFuerFilter)
                 .findFirst();
 
-
-        // Nutzt ifPresentOrElse für die saubere Behandlung beider Fälle, ohne if-else-Block und Null-Checks
+        // ifPresentOrElse for clean handling of both cases without null checks.
         gefundenerTestMitarbeiter.ifPresentOrElse(
-                mitarbeiter -> System.out.println(String.format("Mitarbeiter gefunden: Name: %s (ID: %d )", mitarbeiter.name(), mitarbeiter.id())),
-                () -> System.out.println("Keinen Finance-Mitarbeiter gefunden"));
-
-
+                mitarbeiter -> System.out.println(String.format(
+                        "Employee found: %s (ID: %d)", mitarbeiter.name(), mitarbeiter.id()
+                )),
+                () -> System.out.println("No Finance employee found.")
+        );
     }
 }

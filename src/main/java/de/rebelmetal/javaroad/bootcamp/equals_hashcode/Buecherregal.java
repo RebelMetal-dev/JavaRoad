@@ -1,7 +1,6 @@
 package de.rebelmetal.javaroad.bootcamp.equals_hashcode;
 
 
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class Buecherregal {
@@ -18,6 +17,6 @@ public class Buecherregal {
         einzigartigeBuecher.add(buch3);
 
 
-        System.out.println("Anzahl der einzigartigen Bücher im Regal: " + einzigartigeBuecher.size());
+        System.out.println("Number of unique books on the shelf: " + einzigartigeBuecher.size());
     }
 }
