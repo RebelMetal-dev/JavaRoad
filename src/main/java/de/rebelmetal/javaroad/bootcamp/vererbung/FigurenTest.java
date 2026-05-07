@@ -6,29 +6,26 @@ import java.util.List;
 public class FigurenTest {
 
     public static void main(String[] args) {
-        // Erzeugt Instanzen von Kreis und Rechteck mit spezifischen Eigenschaften.
-        Kreis meinKreis = new Kreis("gelb", 13.7);
-        Rechteck meinRechteck = new Rechteck ("rot", 15,8.7);
+        // Create instances of Kreis and Rechteck with specific properties.
+        Kreis meinKreis = new Kreis("yellow", 13.7);
+        Rechteck meinRechteck = new Rechteck("red", 15, 8.7);
 
-        // Gibt die Details des Kreises direkt aus.
-        // Beachte: Direkter Zugriff auf 'farbe' setzt voraus, dass dieses Feld in 'Figur' zugänglich ist.
+        // Print the details of the circle directly.
+        // Note: direct access to 'farbe' requires the field to be accessible in Figur (protected).
         System.out.println(meinKreis.farbe + "\n" + meinKreis.berechneFlaeche() + "\n" + meinKreis.berechneUmfang());
-        System.out.println(); // Leerzeile zur besseren Trennung der Ausgaben.
+        System.out.println();
         System.out.println(meinRechteck.farbe + "\n" + meinRechteck.berechneFlaeche() + "\n" + meinRechteck.berechneUmfang());
         System.out.println();
 
-        // Erstellt eine Liste vom Typ 'Figur', um verschiedene Formen polymorph zu speichern.
+        // Create a List<Figur> to store different shapes polymorphically.
         List<Figur> figurenListe = new ArrayList<>();
         figurenListe.add(meinKreis);
         figurenListe.add(meinRechteck);
 
-        // Iteriert durch die Liste und gibt die Fläche jeder Figur aus.
-        // Dies demonstriert die polymorphe Eigenschaft der 'berechneFlaeche()'-Methode.
+        // Iterate through the list and print the area of each shape.
+        // This demonstrates the polymorphic behavior of berechneFlaeche().
         for (Figur figur : figurenListe) {
-            System.out.println("Fläche: " + figur.berechneFlaeche());
+            System.out.println("Area: " + figur.berechneFlaeche());
         }
-
-
-
     }
 }

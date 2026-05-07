@@ -1,59 +1,58 @@
 package de.rebelmetal.javaroad.bootcamp.vererbung;
 
 /**
- * Abstrakte Basisklasse für alle geometrischen Figuren.
+ * Abstract base class for all geometric shapes.
  *
- * Definiert die gemeinsamen Eigenschaften und Verträge, die jede Figur erfüllen muss.
- * Eine Figur kann nicht direkt instanziiert werden.
+ * Defines the shared properties and contracts that every concrete shape must fulfill.
+ * A Figur cannot be instantiated directly.
  *
  * @author Christoph Breddin
  * @version 1.0
  */
-
 public abstract class Figur {
-    // Die Farbe der Figur. 'protected', damit Subklassen direkt darauf zugreifen können.
+
+    // The color of the shape. 'protected' so subclasses can access it directly.
     protected String farbe;
 
     /**
-     * Standardkonstruktor für Figur-Objekte.
-     * Initialisiert eine Figur ohne spezifische Farbe.
+     * Default constructor for Figur objects.
+     * Initializes a shape without a specific color.
      */
     public Figur() {
-        // Standardinitialisierung, keine Parameter.
+        // Default initialization, no parameters required.
     }
 
     /**
-     * Konstruktor für Figur-Objekte mit definierter Farbe.
+     * Constructor for Figur objects with a defined color.
      *
-     * @param farbe Die Farbe der Figur.
+     * @param farbe the color of the shape.
      */
     public Figur(String farbe) {
-        this.farbe = farbe; // Weist die übergebene Farbe der Instanzvariablen zu.
+        this.farbe = farbe;
     }
 
     /**
-     * Gibt die Farbe der Figur zurück.
+     * Returns the color of this shape.
      *
-     * @return Die Farbe der Figur.
+     * @return the color of this shape.
      */
-    public String getFarbe(){
-        return this.farbe; // Korrekte Rückgabe der Instanzvariablen
+    public String getFarbe() {
+        return this.farbe;
     }
 
     /**
-     * Abstrakte Methode zur Berechnung der Fläche der Figur.
-     * Muss von allen konkreten Subklassen implementiert werden.
+     * Abstract method for calculating the area of this shape.
+     * Must be implemented by all concrete subclasses.
      *
-     * @return Die berechnete Fläche der Figur.
+     * @return the calculated area.
      */
     public abstract double berechneFlaeche();
 
-
     /**
-     * Abstrakte Methode zur Berechnung des Umfangs der Figur.
-     * Muss von allen konkreten Subklassen implementiert werden.
+     * Abstract method for calculating the perimeter of this shape.
+     * Must be implemented by all concrete subclasses.
      *
-     * @return Der berechnete Umfang der Figur.
+     * @return the calculated perimeter.
      */
     public abstract double berechneUmfang();
 }

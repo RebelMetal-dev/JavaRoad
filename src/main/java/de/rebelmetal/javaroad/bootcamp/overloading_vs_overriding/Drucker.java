@@ -1,54 +1,49 @@
 package de.rebelmetal.javaroad.bootcamp.overloading_vs_overriding;
 
-
-
 /**
- * Eine Basisklasse, die verschiedene Arten von Daten drucken kann.
+ * A base class that can print different types of data.
  *
- * Diese Klasse demonstriert das Konzept der Methoden-Überladung (Overloading),
- * indem sie mehrere `drucken`-Methoden mit unterschiedlichen Parameterlisten anbietet.
+ * This class demonstrates the concept of method overloading by providing
+ * multiple {@code print} methods with different parameter lists.
  *
  * @author Christoph Breddin
  * @version 1.0
  */
-
 public class Drucker {
 
-
     /**
-     * Druckt einen Text mit Standardpräfix.
+     * Prints a text string with a standard prefix.
      *
-     * @param text Der auszugebende String.
+     * @param text the string to print.
      */
     public void drucken(String text) {
-        System.out.println("Standard-Druck: " + text);
+        System.out.println("Standard print: " + text);
     }
 
     /**
-     * Druckt einen Text mehrfach auf die Konsole.
-     * Ignoriert negative Werte für 'anzahl' und gibt stattdessen eine Fehlermeldung aus.
+     * Prints a text string multiple times.
+     * Ignores negative values for {@code anzahl} and prints an error message instead.
      *
-     * @param text  Der auszugebende String.
-     * @param anzahl Die Wiederholungsanzahl. Muss null oder positiv sein.
+     * @param text   the string to print.
+     * @param anzahl the number of repetitions. Must be zero or positive.
      */
     public void drucken(String text, int anzahl) {
-        // Prüft, ob die angegebene Anzahl negativ ist.
+        // Reject negative repetition counts before entering the loop.
         if (anzahl < 0) {
-            System.out.println("Fehler: Die Anzahl für den Druck kann nicht negativ sein.");
-            return; // Beendet die Methode, wenn die Anzahl ungültig ist.
+            System.out.println("Error: repetition count cannot be negative.");
+            return;
         }
-            // Iteriert 'anzahl' Mal, um den Text entsprechend oft auszugeben.
-            for (int i = 0; i < anzahl; i++) {
-                System.out.println(text);
-            }
+        for (int i = 0; i < anzahl; i++) {
+            System.out.println(text);
         }
+    }
 
     /**
-     * Druckt eine Ganzzahl mit Präfix.
+     * Prints an integer with a descriptive prefix.
      *
-     * @param zahl Die auszugebende Ganzzahl.
+     * @param zahl the integer to print.
      */
     public void drucken(int zahl) {
-        System.out.println("Zahl wird gedruckt: " + zahl);
+        System.out.println("Printing number: " + zahl);
     }
 }

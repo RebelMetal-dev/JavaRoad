@@ -1,61 +1,58 @@
 package de.rebelmetal.javaroad.bootcamp.vererbung;
 
 /**
- * Repräsentiert eine konkrete geometrische Figur: ein Rechteck.
- * Erbt von der abstrakten Klasse Figur und implementiert deren Verträge.
+ * Represents a concrete geometric shape: a rectangle.
+ * Inherits from the abstract class {@link Figur} and implements its contracts.
  */
 public class Rechteck extends Figur {
+
     private final double laenge;
     private final double breite;
 
-
     /**
-     * Konstruktor für ein neues Rechteck-Objekt.
-     * Initialisiert ein neues, unveränderliches Rechteck mit einer bestimmten Farbe, Länge und Breite.
-     * Nach der Erstellung sind die Dimensionen unveränderlich.
+     * Creates a new Rechteck object.
+     * Dimensions are immutable after construction.
      *
-     * @param farbe Die Farbe des Rechtecks als String (z.B. "rot", "blau").
-     * @param laenge Die Länge des Rechtecks. Muss ein positiver Wert sein.
-     * @param breite Die Breite des Rechtecks. Muss ein positiver Wert sein.
+     * @param farbe  the color of the rectangle (e.g. "red", "blue").
+     * @param laenge the length of the rectangle. Must be a positive value.
+     * @param breite the width of the rectangle. Must be a positive value.
      */
-    public Rechteck (String farbe, double laenge, double breite){
-        super(); // Ruft den Konstruktor der Superklasse auf, um die Figur zu initialisieren.
+    public Rechteck(String farbe, double laenge, double breite) {
+        super(); // Calls the parent class constructor.
         this.farbe = farbe;
-        this.laenge = laenge; // Initialisiert die feste Länge.
-        this.breite = breite; // Initialisiert die feste Breite.
+        this.laenge = laenge;
+        this.breite = breite;
     }
 
     /**
-     * Berechnet die Fläche des Rechteck basierend auf seiner Länge und Breite
-     * Formel: Länge * Breite
+     * Calculates the area of this rectangle.
+     * Formula: length * width
      *
-     * @return Die berechnete Fläche
+     * @return the calculated area.
      */
     @Override
-    public double berechneFlaeche(){
+    public double berechneFlaeche() {
         return laenge * breite;
     }
 
     /**
-     * Berechnet den Umfang des Rechteck basierend auf seiner Länge und Breite
-     * Formel: 2*(Länge + Breite)
+     * Calculates the perimeter of this rectangle.
+     * Formula: 2 * (length + width)
      *
-     * @return Den berechneten Umfang
+     * @return the calculated perimeter.
      */
     @Override
-    public double berechneUmfang(){
-        return 2*(laenge + breite);
+    public double berechneUmfang() {
+        return 2 * (laenge + breite);
     }
 
     /**
-     * Stellt dieses Rechteck-Objekt als String dar, inklusive Fläche und Umfang.
+     * Returns a string representation of this rectangle, including area and perimeter.
      *
-     * @return Eine formatierte Zeichenkette mit "Rechteck", Fläche und Umfang.
+     * @return a formatted string with shape type, area, and perimeter.
      */
     @Override
     public String toString() {
-        // Formatiert die Ausgabe, um Fläche und Umfang klar darzustellen, jeweils in einer neuen Zeile.
-        return "Rechteck \n" + "Fläche = " + berechneFlaeche() + "\nUmfang = " + berechneUmfang();
+        return "Rectangle\nArea = " + berechneFlaeche() + "\nPerimeter = " + berechneUmfang();
     }
-
 }

@@ -1,31 +1,27 @@
 package de.rebelmetal.javaroad.bootcamp.overloading_vs_overriding;
 
-import java.util.Scanner;
-
 /**
- * Testklasse zur Demonstration der Funktionalität der Drucker und FarbDrucker Klassen.
- * Diese Klasse zeigt die Nutzung von Methodenüberladung und Polymorphie im Kontext des Druckens.
+ * Test class demonstrating the functionality of {@link Drucker} and {@link FarbDrucker}.
+ * Shows method overloading and runtime polymorphism in a printing context.
  */
-
 public class DruckerTest {
 
     public static void main(String[] args) {
 
-        // Erstellt eine Instanz des Standard-Druckers.
+        // Creates an instance of the standard printer.
         Drucker meinDrucker = new Drucker();
-        meinDrucker.drucken("ene menen popel");   // Demonstriert den Standarddruck.
-        meinDrucker.drucken("LEtz Fetz", -1); // Testet die Fehlerbehandlung bei negativer Anzahl.
-        meinDrucker.drucken(33);                 // Druckt eine Ganzzahl.
+        meinDrucker.drucken("ene menen popel");   // Standard print.
+        meinDrucker.drucken("LEtz Fetz", -1);     // Tests error handling for negative count.
+        meinDrucker.drucken(33);                  // Prints an integer.
 
-        // Erstellt eine Instanz des Farb-Druckers mit einem spezifischen Farbcode.
-        FarbDrucker meinFarbDrucker = new FarbDrucker("Ansi-Gelb");
-        // Demonstriert das überladene Druckverhalten des Farb-Druckers.
+        // Creates an instance of the color printer with a specific color code.
+        FarbDrucker meinFarbDrucker = new FarbDrucker("Ansi-Yellow");
+        // Demonstrates the overridden print behavior of the color printer.
         meinFarbDrucker.drucken("Veni Vidi Vici");
 
-        // Demonstriert Polymorphie: Ein FarbDrucker-Objekt wird als Drucker behandelt.
-        // Die 'drucken'-Methode des FarbDruckers wird trotzdem korrekt aufgerufen (Laufzeit-Polymorphie).
-        Drucker polyDrucker = new FarbDrucker("Ansi-Rot");
+        // Demonstrates polymorphism: a FarbDrucker object is treated as a Drucker.
+        // The FarbDrucker's drucken() method is still called correctly (runtime polymorphism).
+        Drucker polyDrucker = new FarbDrucker("Ansi-Red");
         polyDrucker.drucken("Veni Vidi Vici");
-
     }
 }

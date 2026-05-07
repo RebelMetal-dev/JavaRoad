@@ -1,102 +1,89 @@
 package de.rebelmetal.javaroad.bootcamp.statics;
 
 /**
- * Interaktive Übung zum Verständnis von `static` vs. Instanz-Mitgliedern.
+ * Interactive exercise for understanding {@code static} vs. instance members.
  *
- * Diese Klasse simuliert eine Autofabrik und ein einzelnes Auto, um den
- * Unterschied zwischen klassen-spezifischen (static) und objekt-spezifischen
- * (Instanz) Eigenschaften und Fähigkeiten zu demonstrieren.
+ * Simulates a car factory and a single car to demonstrate the difference
+ * between class-level (static) and object-level (instance) properties and behavior.
  *
  * @author Christoph Breddin
  * @version 1.0
  */
 public class Autofabrik {
 
-    // --- 1. Instanzfeld (gehört zum OBJEKT) ---
+    // --- 1. Instance field (belongs to the OBJECT) ---
     /**
-     * Die Farbe dieses spezifischen Autos. Jedes Auto-Objekt (jede Instanz)
-     * bekommt seine eigene, unabhängige Kopie dieses Feldes.
+     * The color of this specific car. Each car object (each instance)
+     * gets its own independent copy of this field.
      */
     private String farbe;
 
-
-    // --- 2. Statisches Feld (gehört zur KLASSE) ---
+    // --- 2. Static field (belongs to the CLASS) ---
     /**
-     * Zählt die Gesamtzahl aller jemals in dieser Fabrik produzierten Autos.
-     * Dieses Feld existiert nur EINMAL und wird von allen Objekten geteilt.
+     * Counts the total number of cars ever produced in this factory.
+     * This field exists only ONCE and is shared across all instances.
      */
     public static int produzierteAutosCounter = 0;
 
-
-    // --- 3. Der Konstruktor (verbindet beide Welten) ---
+    // --- 3. Constructor (connects both worlds) ---
     /**
-     * Der Konstruktor, um ein neues Auto-Objekt (eine Instanz) zu erstellen.
-     * Er wird jedes Mal aufgerufen, wenn 'new Autofabrik()' verwendet wird.
+     * Creates a new car object (an instance).
+     * Called every time {@code new Autofabrik()} is used.
      *
-     * @param farbe Die Farbe für DIESES SPEZIFISCHE neue Auto.
+     * @param farbe the color for THIS specific new car.
      */
     public Autofabrik(String farbe) {
-        // --- Zugriff auf das Instanzfeld ---
-        // 'this.farbe' bezieht sich auf das Feld des gerade entstehenden Objekts.
-        // Wir setzen die individuelle Eigenschaft.
+        // 'this.farbe' refers to the field of the object being created.
+        // We set the individual property of this instance.
         this.farbe = farbe;
 
-        // --- Zugriff auf das statische Feld ---
-        // Wir erhöhen den EINEN, GEMEINSAMEN Zähler der Klasse.
+        // Increment the ONE shared class-level counter.
         produzierteAutosCounter++;
 
-        System.out.println("Ein neues Auto wurde produziert! Farbe: " + this.farbe +
-                ". Gesamtproduktion: " + produzierteAutosCounter);
+        System.out.println("New car produced! Color: " + this.farbe +
+                ". Total production: " + produzierteAutosCounter);
     }
 
-    // --- 4. Instanzmethode (Fähigkeit eines OBJEKTS) ---
+    // --- 4. Instance method (behavior of an OBJECT) ---
     /**
-     * Gibt die individuelle Farbe DIESES Autos zurück.
-     * Diese Methode braucht ein konkretes Objekt, um aufgerufen zu werden.
+     * Returns the individual color of THIS car.
+     * Requires a concrete object to be called on.
      *
-     * @return Die Farbe des Autos.
+     * @return the color of this car.
      */
     public String getFarbe() {
-        // Greift auf das Instanzfeld 'this.farbe' zu.
         return this.farbe;
     }
 
-    // --- 5. Statische Methode (Fähigkeit der KLASSE) ---
+    // --- 5. Static method (behavior of the CLASS) ---
     /**
-     * Gibt eine allgemeine Information über die Fabrik zurück.
-     * Diese Methode kann ohne ein Objekt aufgerufen werden.
+     * Prints general factory status information.
+     * Can be called without creating an object.
      */
     public static void zeigeFabrikStatus() {
-        System.out.println("--- Fabrik-Status ---");
-        System.out.println("Gesamt produzierte Autos: " + produzierteAutosCounter);
+        System.out.println("--- Factory Status ---");
+        System.out.println("Total cars produced: " + produzierteAutosCounter);
 
-        // Der folgende Code würde einen FEHLER erzeugen, weil eine statische Methode
-        // nicht weiß, von welchem Auto sie die Farbe nehmen soll. Es gibt kein 'this'.
-        //System.out.println("Die Farbe des zuletzt produzierten Autos war: " + this.farbe);
+        // The following line would cause a compile error: a static method has no 'this'
+        // and therefore cannot access instance fields like 'farbe'.
+        // System.out.println("Color of last car: " + this.farbe);
     }
 
-
     public static void main(String[] args) {
-        System.out.println("--- Produktionsstart ---");
-        // Aufruf der statischen Methode über den Klassennamen
+        System.out.println("--- Production Start ---");
         Autofabrik.zeigeFabrikStatus();
         System.out.println("------------------------\n");
 
-        // --- Wir bauen zwei Autos ---
-        System.out.println("Produziere erstes Auto...");
-        Autofabrik auto1 = new Autofabrik("Rot");
+        System.out.println("Producing first car...");
+        Autofabrik auto1 = new Autofabrik("Red");
 
-        System.out.println("\nProduziere zweites Auto...");
-        Autofabrik auto2 = new Autofabrik("Blau");
+        System.out.println("\nProducing second car...");
+        Autofabrik auto2 = new Autofabrik("Blue");
 
-        System.out.println("\n--- Produktionsende ---");
-
-        // Erneuter Aufruf der statischen Methode
+        System.out.println("\n--- Production End ---");
         Autofabrik.zeigeFabrikStatus();
 
-        // --- Bestandsaufnahme der einzelnen Autos ---
-        // Aufruf der Instanzmethoden auf den jeweiligen Objekten
-        System.out.println("Farbe von Auto 1: " + auto1.getFarbe());
-        System.out.println("Farbe von Auto 2: " + auto2.getFarbe());
+        System.out.println("Color of car 1: " + auto1.getFarbe());
+        System.out.println("Color of car 2: " + auto2.getFarbe());
     }
 }

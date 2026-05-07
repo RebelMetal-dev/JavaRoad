@@ -1,62 +1,57 @@
 package de.rebelmetal.javaroad.uebungen.streams_lambdas;
+
 import java.util.List;
 
-
 /**
- * Praktische Übung 1 zu den Java 8+ Features: Streams & Lambdas.
+ * Practice exercise 1 for Java 8+ Features: Streams & Lambdas.
  *
- * Ziel: Demonstriert die grundlegende Anwendung von Stream-Operationen
- *       zur Filterung und Transformation von Daten in einer Collection.
+ * Goal: demonstrates the basic use of Stream operations to filter
+ *       and transform data in a collection.
  *
- * Aufgaben:
- * 1. Filtere eine Liste von Städten, um nur die zu finden, die mit 'B' beginnen.
- * 2. Transformiere eine Liste von Städten in eine Liste ihrer Namenslängen (Integer).
- * 3. Kombiniere Filterung und Transformation: Finde Städte mit mehr als 6 Buchstaben
- *    und wandle ihre Namen in Großbuchstaben um.
+ * Tasks:
+ * 1. Filter a list of cities to find only those starting with 'B'.
+ * 2. Transform a list of cities into a list of their name lengths (Integer).
+ * 3. Combine filtering and transformation: find cities with more than 6 characters
+ *    and convert their names to uppercase.
  *
  * @author Christoph Breddin
  * @version 1.0
  */
-
 public class Datenverarbeitung {
 
     /**
-     * Der Einstiegspunkt der Anwendung.
-     * Demonstriert die Stream-Operationen anhand einer festen Liste von Städten.
-     *
+     * Application entry point.
+     * Demonstrates Stream operations on a fixed list of cities.
      */
-
     public static void main(String[] args) {
 
-        // -- SETUP: Erstellen unserer Beispieldaten --
+        // SETUP: create our sample data.
         List<String> staedte = List.of("Berlin", "München", "Hamburg", "Köln", "Frankfurt", "Bremen");
 
-        // -- AUFGABE 1: Filtern --
-        // Wir erstellen einen Stream aus der Liste, filtern alle Elemente heraus,
-        // die nicht mit "B" beginnen, und sammeln das Ergebnis in einer neuen Liste.
+        // TASK 1: Filtering
+        // Stream the list, filter out all elements that do not start with "B",
+        // and collect the result into a new list.
         List<String> bStaedte = staedte.stream()
                 .filter(stadt -> stadt.startsWith("B"))
-                .toList(); // .toList() ist eine moderne, kurze Alternative zu .collect(Collectors.toList())
-        System.out.println("Städte, die mit 'B' beginnen: " + bStaedte);
+                .toList(); // .toList() is a concise modern alternative to .collect(Collectors.toList())
+        System.out.println("Cities starting with 'B': " + bStaedte);
 
-
-        // -- AUFGABE 2: Transformieren (Mapping) --
-        // Wir erstellen einen Stream, wandeln jeden Stadt-String in seine Länge (einen Integer) um
-        // und sammeln diese Längen in einer neuen Liste von Integers.
+        // TASK 2: Transformation (Mapping)
+        // Stream the list, map each city string to its character count (an Integer),
+        // and collect those counts into a new list.
         List<Integer> namenLaengen = staedte.stream()
                 .map(String::length)
                 .toList();
-        System.out.println("Längen der Stadtnamen: " + namenLaengen);
+        System.out.println("City name lengths: " + namenLaengen);
 
-
-        // -- AUFGABE 3: Filtern und Transformieren kombiniert --
-        // Wir verketten die Operationen: Zuerst filtern wir die langen Namen,
-        // DANN wandeln wir die verbleibenden Elemente in Großbuchstaben um
-        // und sammeln das Endergebnis in einer neuen Liste.
+        // TASK 3: Combined Filtering and Transformation
+        // Chain the operations: first filter for long names,
+        // THEN convert the remaining elements to uppercase,
+        // and collect the final result into a new list.
         List<String> langeStaedteGross = staedte.stream()
                 .filter(stadt -> stadt.length() > 6)
                 .map(String::toUpperCase)
                 .toList();
-        System.out.println("Lange Städtenamen in Großbuchstaben: " + langeStaedteGross);
+        System.out.println("Long city names in uppercase: " + langeStaedteGross);
     }
 }

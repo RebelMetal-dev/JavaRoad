@@ -1,36 +1,34 @@
 package de.rebelmetal.javaroad.bootcamp.overloading_vs_overriding;
 
 /**
- * Ein spezialisierter Drucker, der in Farbe druckt.
+ * A specialized printer that prints in color.
  *
- * Diese Klasse erbt von Drucker und demonstriert das Konzept der
- * Methoden-Überschreibung (Overriding), indem sie das Verhalten
- * der `drucken(String text)`-Methode spezialisiert.
+ * Inherits from {@link Drucker} and demonstrates method overriding by
+ * specializing the behavior of the {@code drucken(String)} method.
  */
 public class FarbDrucker extends Drucker {
-        // Der unveränderliche Farbcode, der für den Druck verwendet wird.
-        private final String farbCode;
 
-        /**
-         * Erstellt einen neuen FarbDrucker mit dem angegebenen Farbcode.
-         * Der Farbcode wird nach der Erstellung nicht mehr verändert.
-         *
-         * @param farbCode Der String-Farbcode (z.B. Hex-Code oder Name) für diesen Drucker.
-         */
-        public FarbDrucker(String farbCode) {// Ruft implizit den Standardkonstruktor der Superklasse 'Drucker' auf.
-                // Ruft implizit den Standardkonstruktor der Superklasse 'Drucker' auf.
-                this.farbCode = farbCode;
-        }
+    // The immutable color code used for all print operations of this instance.
+    private final String farbCode;
 
-        /**
-         * Überschreibt die Standard-drucken-Methode, um den Text
-         * mit dem Farbcodes dieses FarbDrucker-Objekts auszugeben.
-         *
-         * @param text Der auf der Konsole auszugebende String.
-         */
-        @Override
-        public void drucken(String text) {
-                System.out.println("Farb-Druck ( " + farbCode + " ): " + text);
-        }
+    /**
+     * Creates a new FarbDrucker with the given color code.
+     * The color code cannot be changed after construction.
+     *
+     * @param farbCode the color code string (e.g. hex code or color name) for this printer.
+     */
+    public FarbDrucker(String farbCode) {
+        // Implicitly calls the default constructor of the parent class Drucker.
+        this.farbCode = farbCode;
+    }
 
+    /**
+     * Overrides the standard print method to include this printer's color code in the output.
+     *
+     * @param text the string to print to the console.
+     */
+    @Override
+    public void drucken(String text) {
+        System.out.println("Color print (" + farbCode + "): " + text);
+    }
 }

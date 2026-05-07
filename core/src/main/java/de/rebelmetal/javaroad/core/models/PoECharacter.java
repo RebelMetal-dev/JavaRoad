@@ -6,25 +6,27 @@ import java.util.Map;
 public class PoECharacter {
     private String name;
     private String characterClass;
-    private int level;             // NEU
-    private String buildType;      // NEU
+    private int level;
+    private String buildType;
     private Map<Attribute, Integer> stats;
 
-    // Den Konstruktor von 2 auf 4 Parameter erweitern
+    /**
+     * Creates a new PoE character with base stats of 10 for all attributes.
+     */
     public PoECharacter(String name, String characterClass, int level, String buildType) {
         this.name = name;
         this.characterClass = characterClass;
-        this.level = level;        // NEU: Wert zuweisen
-        this.buildType = buildType;// NEU: Wert zuweisen
+        this.level = level;
+        this.buildType = buildType;
         this.stats = new HashMap<>();
 
-        // Startwerte setzen
+        // Initialize all attributes with a base value of 10
         stats.put(Attribute.STRENGTH, 10);
         stats.put(Attribute.DEXTERITY, 10);
         stats.put(Attribute.INTELLIGENCE, 10);
     }
 
-    // GETTER (Extrem wichtig! Ohne diese zeigt der Browser später nichts an)
+    // Getters are required for Jackson serialization (JSON response mapping)
     public String getName() { return name; }
     public String getCharacterClass() { return characterClass; }
     public int getLevel() { return level; }

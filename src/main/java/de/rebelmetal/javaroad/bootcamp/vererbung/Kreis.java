@@ -1,32 +1,30 @@
 package de.rebelmetal.javaroad.bootcamp.vererbung;
 
 /**
- * Repräsentiert eine konkrete geometrische Figur: einen Kreis.
- * Erbt von der abstrakten Klasse Figur und implementiert deren Verträge.
+ * Represents a concrete geometric shape: a circle.
+ * Inherits from the abstract class {@link Figur} and implements its contracts.
  */
-
 public class Kreis extends Figur {
 
     private final double radius;
 
     /**
-     * Konstruktor für ein neues Kreis-Objekt.
-     * Initialisiert einen Keis mit einer bestimmten Farbe und Radius.
+     * Creates a new Kreis object.
      *
-     * @param farbe Die Farbe des Kreises als String (z.B. "rot", "blau").
-     * @param radius Die Länge des Kreises. Muss ein positiver Wert sein.
+     * @param farbe  the color of the circle (e.g. "red", "blue").
+     * @param radius the radius of the circle. Must be a positive value.
      */
-
     public Kreis(String farbe, double radius) {
-        super(); // Ruft den Konstruktor der übergeordneten Klasse auf.
+        super(); // Calls the parent class constructor.
         this.farbe = farbe;
         this.radius = radius;
     }
 
     /**
-     * Berechnet die Fläche des Kreises basierend auf seinem Radius.
-     * Formel: PI*r^2
-     * @return Die berechnete Fläche
+     * Calculates the area of this circle.
+     * Formula: PI * r²
+     *
+     * @return the calculated area.
      */
     @Override
     public double berechneFlaeche() {
@@ -34,23 +32,23 @@ public class Kreis extends Figur {
     }
 
     /**
-     * Berechnet den Umfang des Kreises basierend auf seinem Radius
-     * Formel: 2*PI*r
-     * @return Den berechneten Umfang
+     * Calculates the perimeter (circumference) of this circle.
+     * Formula: 2 * PI * r
+     *
+     * @return the calculated perimeter.
      */
     @Override
     public double berechneUmfang() {
-        return 2*Math.PI * radius;
+        return 2 * Math.PI * radius;
     }
 
     /**
-     * Stellt dieses Kreis-Objekt als String dar, inklusive Fläche und Umfang.
+     * Returns a string representation of this circle, including area and perimeter.
      *
-     * @return Eine formatierte Zeichenkette mit "Kreis", Fläche und Umfang.
+     * @return a formatted string with shape type, area, and perimeter.
      */
     @Override
     public String toString() {
-        // Formatiert die Ausgabe, um Fläche und Umfang klar darzustellen, jeweils in einer neuen Zeile.
-        return "Kreis \n" + "Fläche = " + berechneFlaeche() + "\nUmfang = " + berechneUmfang();
+        return "Circle\nArea = " + berechneFlaeche() + "\nPerimeter = " + berechneUmfang();
     }
 }

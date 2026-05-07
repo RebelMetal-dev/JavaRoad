@@ -1,20 +1,18 @@
 package de.rebelmetal.javaroad.uebungen.streams_optional_vertiefung;
 
 import java.util.List;
-import java.util.Optional; // Notwendig für die Verwendung von Optional-Typen
+import java.util.Optional;
 
 /**
- * Diese Klasse demonstriert die Verwendung von Java Streams und Optional für die Analyse
- * einer Liste von Kundenbestellungen. Sie zeigt, wie man Daten filtern, transformieren
- * und aggregieren kann, um spezifische Geschäftsfragen zu beantworten.
+ * Demonstrates using Java Streams and Optional to analyze a list of customer orders.
+ * Shows how to filter, transform, and aggregate data to answer specific business questions.
  * <p>
- * Konkrete Anwendungsfälle sind die Berechnung des Gesamtumsatzes über einem Schwellenwert
- * und das Auffinden der ersten passenden Bestellung basierend auf mehreren Kriterien.
+ * Concrete use cases: calculating total revenue above a threshold, and finding the
+ * first matching order based on multiple criteria.
  *
  * @author Christoph Breddin
  * @version 1.0
  */
-
 public class BestellAnalyse {
 
     public static void main(String[] args) {
@@ -27,49 +25,46 @@ public class BestellAnalyse {
                 new Bestellung(105, "Anna", 150.25)
         );
 
-        // Der Schwellenwert wird in einer Variablen definiert, um Änderungen zu zentralisieren
-        // und "magische Zahlen" im Code zu vermeiden.
+        // Threshold defined as a variable to avoid magic numbers and centralize changes.
         double mindestBetragFuerFilter = 1000.00;
 
-        // Berechnet den Gesamtumsatz nur für Bestellungen über dem Mindestbetrag.
-        // Der Stream wird gefiltert, um nur relevante Bestellungen zu berücksichtigen,
-        // und dann auf die Beträge gemappt, um diese direkt zu summieren.
+        // Calculates total revenue for orders above the threshold.
+        // The stream is filtered to keep only relevant orders,
+        // then mapped to amounts for direct summation.
         double gesamtUmsatzUeberTausend = bestellungen.stream()
-                .filter(umsatz -> umsatz.betrag() > mindestBetragFuerFilter)
+                .filter(bestellung -> bestellung.betrag() > mindestBetragFuerFilter)
                 .mapToDouble(Bestellung::betrag)
                 .sum();
 
-       /* System.out.println("Gesamtumsatz aller Bestellungen über " + mindestBetragFuerFilter + ": " + gesamtUmsatzUeberTausend);
-        System.out.println("Gesamtumsatz aller Bestellungen über " + String.format("%.2f", mindestBetragFuerFilter) + ": " + String.format("%.2f", gesamtUmsatzUeberTausend));
-        */
+        // Formats the output for consistent display of currency amounts.
+        System.out.println(String.format(
+                "Total revenue for orders above %.2f: %.2f",
+                mindestBetragFuerFilter,
+                gesamtUmsatzUeberTausend
+        ));
 
-        // Formatiert die Ausgabe, um eine konsistente Anzeige von Währungsbeträgen zu gewährleisten.
-        System.out.println(String.format("Gesamtumsatz aller Bestellungen über %.2f: %.2f", mindestBetragFuerFilter, gesamtUmsatzUeberTausend));
-
-        // Suchkriterien für die erste passende Bestellung.
+        // Search criteria for the first matching order.
         String gesuchterKundenName = "Anna";
         double gesuchterBetragFuerFilter = 100.00;
 
-        // Sucht nach der ersten Bestellung, die beide Kriterien erfüllt.
-        // `findFirst()` liefert ein Optional, um die Möglichkeit auszudrücken,
-        // dass kein passendes Element gefunden wird, und um NullPointerExceptions zu vermeiden.
+        // Searches for the first order matching both criteria.
+        // findFirst() returns an Optional to express that no result may be found,
+        // avoiding NullPointerExceptions.
         Optional<Bestellung> gefundeneBestellungVonKunden = bestellungen.stream()
                 .filter(bestellung -> bestellung.kundenName().equals(gesuchterKundenName))
                 .filter(bestellung -> bestellung.betrag() > gesuchterBetragFuerFilter)
                 .findFirst();
 
-
-        // Nutzt `ifPresentOrElse` zur direkten Behandlung beider Fälle (gefunden/nicht gefunden).
-        // Dies ist prägnanter und sicherer als manuelle if-else-Prüfungen.
+        // ifPresentOrElse handles both cases (found / not found) concisely and safely.
         gefundeneBestellungVonKunden.ifPresentOrElse(
-                // Dieser Block wird nur ausgeführt, wenn eine Bestellung gefunden wurde,
-                // und erlaubt direkten Zugriff auf das 'bestellung'-Objekt.
-                bestellung -> System.out.println(String.format("Gefunden: Bestellung %d mit einem Betrag von %.2f.", bestellung.bestellNr(), bestellung.betrag())),
-                // Dieser Block wird ausgeführt, wenn keine passende Bestellung gefunden wurde,
-                // und bietet eine alternative Nachricht ohne Objektbezug.
-                () -> System.out.println("Keine passende Bestellung für " + gesuchterKundenName + " gefunden.")
+                // This block runs only when an order was found — gives direct access to it.
+                bestellung -> System.out.println(String.format(
+                        "Found: order %d with an amount of %.2f.",
+                        bestellung.bestellNr(),
+                        bestellung.betrag()
+                )),
+                // This block runs when no matching order was found.
+                () -> System.out.println("No matching order found for " + gesuchterKundenName + ".")
         );
-
-
     }
 }

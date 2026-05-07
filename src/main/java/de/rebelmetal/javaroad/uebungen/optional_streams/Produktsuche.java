@@ -3,33 +3,30 @@ package de.rebelmetal.javaroad.uebungen.optional_streams;
 import java.util.*;
 
 /**
- * Praktische Übung 2 zu den Java 8+ Features: Streams & Optional.
+ * Practice exercise 2 for Java 8+ Features: Streams & Optional.
  *
- * Ziel: Demonstriert die Suche nach einem Element in einem Stream und die
- *       sichere Verarbeitung des Ergebnisses mit Optional.
+ * Goal: demonstrates searching for an element in a Stream and safely
+ *       handling the result using Optional.
  *
- * Aufgaben:
- * 1. Definiere ein Produkt-Record für die Datenhaltung.
- * 2. Benutze die Stream-API, um das erste Produkt zu finden, das teurer als 1000 Euro ist.
- * 3. Verarbeite das Ergebnis (ein Optional<Produkt>) sicher und gib entweder
- *    die Produktdetails oder eine "Nicht gefunden"-Meldung aus.
+ * Tasks:
+ * 1. Define a product record for data storage.
+ * 2. Use the Stream API to find the first product priced above 1000 euros.
+ * 3. Handle the result (an Optional&lt;Produkt&gt;) safely — print either the
+ *    product details or a "not found" message.
  *
  * @author Christoph Breddin
- * @version 1.0 */
-
+ * @version 1.0
+ */
 public class Produktsuche {
 
     /**
-     * Ein Record, der ein Produkt mit Namen und Preis darstellt.
-     * Records sind eine kompakte Möglichkeit, unveränderliche Datenklassen zu erstellen.
+     * A record representing a product with a name and a price.
+     * Records are a concise way to create immutable data classes.
      *
-     * @param name  Der Name des Produkts.
-     * @param preis Der Preis des Produkts.
+     * @param name  the name of the product.
+     * @param preis the price of the product.
      */
-    public record Produkt(String name, double preis) {
-
-    }
-
+    public record Produkt(String name, double preis) {}
 
     public static void main(String[] args) {
         List<Produkt> produktkatalog = List.of(
@@ -40,21 +37,19 @@ public class Produktsuche {
                 new Produkt("High-End PC", 2499.00)
         );
 
-        // Erzeugung eines Streams aus dem Produktkatalog, um die Suche durchzuführen.
+        // Create a stream from the catalog to perform the search.
         Optional<Produkt> gefundenesProdukt = produktkatalog.stream()
-                // Filtert den Stream und behält nur Produkte, deren Preis über 1000.00 liegt.
-                .filter(Produkt -> Produkt.preis() > 1000.00)
-                // Findet das erste Element im gefilterten Stream und gibt es als Optional zurück.
+                // Keep only products whose price exceeds 1000.00.
+                .filter(produkt -> produkt.preis() > 1000.00)
+                // Return the first matching element wrapped in an Optional.
                 .findFirst();
 
-
-        // Überprüfung, ob ein Produkt gefunden wurde, und entsprechende Ausgabe.
-        // ifPresentOrElse ist eine Methode von Optional, die den Code kompakter macht.
+        // ifPresentOrElse handles both cases (found / not found) in one concise expression.
         gefundenesProdukt.ifPresentOrElse(
-                // Dieser Block wird ausgeführt, wenn ein Produkt vorhanden ist.
-                produkt -> System.out.println(String.format("Gefunden: %s für %.2f.", produkt.name(), produkt.preis())),
-                // Dieser Block wird ausgeführt, wenn das Optional leer ist (kein Produkt gefunden).
-                () -> System.out.println("Kein Produkt über 1000 Euro gefunden.")
+                // Executed when a product is present.
+                produkt -> System.out.println(String.format("Found: %s for %.2f.", produkt.name(), produkt.preis())),
+                // Executed when the Optional is empty.
+                () -> System.out.println("No product over 1000 euros found.")
         );
     }
 }
