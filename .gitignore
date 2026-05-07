@@ -40,4 +40,4 @@ build/
 ### Custom Project Rules ###
 # Ignoriert alle Build-Dateien im Ordner, außer die .gitkeep (falls vorhanden)
 builds/*
-# Die NecroWitch.txt bleibt trotzdem auf GitHub, da sie bereits "tracked" ist.
+# Die NecroWitch.txt bleibt trotzdem auf GitHub, da sie bereits "tracked" ist..idea/workspace.xml
