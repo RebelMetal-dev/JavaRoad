@@ -35,12 +35,4 @@ public class TaskService {
      */
     public Task createTask(Task task) {
         return taskRepository.save(task);
-    }
-
-    /**
-     * Deletes the task with the given id from the database.
-     */
-    public void deleteTask(Long id) {
-        taskRepository.deleteById(id);
-    }
-}
+    }

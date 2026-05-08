@@ -30,15 +30,4 @@ public class TaskController {
      * Creates and persists a new task. Accepts a Task entity in the request body.
      */
     @PostMapping
-    public Task createTask(@RequestBody Task task) {
-        return taskService.createTask(task);
-    }
-
-    /**
-     * Deletes the task with the given id. Returns 200 OK on success.
-     */
-    @DeleteMapping("/{id}")
-    public void deleteTask(@PathVariable Long id) {
-        taskService.deleteTask(id);
-    }
-}
+    public Task createTask(@Re
