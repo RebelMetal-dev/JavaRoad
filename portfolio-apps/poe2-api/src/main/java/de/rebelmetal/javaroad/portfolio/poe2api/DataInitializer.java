@@ -16,7 +16,7 @@ public class DataInitializer {
 
     @Bean
     CommandLineRunner initData(BuildService buildService) {
-        return args -> buildService.saveBuild (PoECharacter.of ( "RebelExile", "Mercenary", 45, "Explosice Shot")
+        return args -> buildService.saveBuild (PoECharacter.of ( "RebelExile", "Mercenary", 45, "Explosive Shot")
         );
     }
 }
