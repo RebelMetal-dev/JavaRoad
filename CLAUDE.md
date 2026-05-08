@@ -154,7 +154,7 @@ JavaRoad/ (Root — Maven Multi-Module)
 
 ---
 
-## 8. Current Status (Last Updated: 2026-05-07)
+## 8. Current Status (Last Updated: 2026-05-08)
 
 ### Completed ✅
 - Phase 1: Java fundamentals, OOP, Collections, File I/O
@@ -169,13 +169,20 @@ JavaRoad/ (Root — Maven Multi-Module)
   unused imports, copy-paste label errors, Shakespeare typo
 - BuildController refactored: seed data moved to DataInitializer (CommandLineRunner)
 - Task.java: @Data replaced with @Getter @Setter @NoArgsConstructor (commit c87300c)
+- PoECharacter: refactored from mutable class to immutable Record + Wither Pattern
+  (withStat(), withLevel(), static factory method PoECharacter.of())
+- Taskmaster: full CRUD REST API implemented (GET, POST, DELETE)
+  TaskDto Record created — DTO pattern with Information Hiding (createdAt excluded)
+  TaskService mapping Entity → DTO via Stream, Golden Standard Javadoc on all files
+- Taskmaster: live-tested with Postman — all endpoints verified (200 OK)
+- Lernskripte: spring_taskmaster_architecture.svg, spring_request_flow_interaktiv.html,
+  http_status_codes_referenz.html (interactive, filterable)
 
 ### Open / Next Steps 🔲
 
 **Phase 3 (remaining):**
-- [ ] Refactor PoECharacter — convert to Record + implement Wither Pattern (next up)
-- [ ] Implement TaskController REST endpoints in Taskmaster
-- [ ] Add unit tests (JUnit 5 + Mockito) for BuildService and Bibliothek
+- [ ] Add unit tests (JUnit 5 + Mockito) for TaskService, BuildService, Bibliothek
+      Note: unit tests will also be written as part of Phase 3.5 methodology
 
 **Phase 3.5 — SOLID Principles & Design Patterns (new — planned):**
 - [ ] Create `design-principles/` Maven module
@@ -200,7 +207,7 @@ JavaRoad/ (Root — Maven Multi-Module)
 | File | Issue | Priority |
 |---|---|---|
 | `taskmaster/model/Task.java` | `@Data` on JPA entity — equals/hashCode broken before persist | Done ✅ |
-| `core/models/PoECharacter.java` | Mutable class — convert to Record + Wither Pattern | High (next) |
+| `core/models/PoECharacter.java` | Mutable class — convert to Record + Wither Pattern | Done ✅ |
 | `BuildController.java` | TODO resolved — DataInitializer created | Done ✅ |
 | `Task.java` | `@Entity // ?` comment — uncertainty about annotation | Done ✅ |
 
