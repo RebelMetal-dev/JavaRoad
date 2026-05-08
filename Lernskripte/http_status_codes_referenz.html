@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTTP Status Codes — Referenz</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f1117; color: #e2e8f0; margin: 0; padding: 24px; max-width: 750px; }
+  h1 { font-size: 20px; font-weight: 500; margin: 0 0 4px; }
+  .subtitle { font-size: 13px; color: #64748b; margin: 0 0 20px; }
+  .sc-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .sc-filter button { font-size: 13px; padding: 6px 14px; border-radius: 20px; cursor: pointer; border: 1px solid #334155; background: #1e293b; color: #94a3b8; transition: all 0.15s; }
+  .sc-filter button.active, .sc-filter button:hover { background: #334155; color: #e2e8f0; }
+  .sc-group { margin-bottom: 1.5rem; }
+  .sc-group-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: #475569; margin-bottom: 8px; }
+  .sc-card { display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px; border-radius: 8px; border: 1px solid #1e293b; margin-bottom: 6px; background: #1e293b; }
+  .sc-code { font-family: 'Courier New', monospace; font-size: 15px; font-weight: 500; min-width: 42px; }
+  .sc-name { font-size: 13px; font-weight: 500; color: #e2e8f0; }
+  .sc-desc { font-size: 12px; color: #94a3b8; margin-top: 2px; line-height: 1.5; }
+  .sc-spring { font-size: 12px; color: #475569; margin-top: 4px; font-style: italic; }
+  .sc-badge { font-size: 10px; padding: 2px 7px; border-radius: 20px; margin-left: auto; white-space: nowrap; align-self: center; flex-shrink: 0; font-weight: 500; }
+  .imp-high { background: #3f1515; color: #f87171; }
+  .imp-mid  { background: #3f2a00; color: #fbbf24; }
+  .imp-low  { background: #1a2e10; color: #86efac; }
+  .c2 { color: #34d399; }
+  .c3 { color: #60a5fa; }
+  .c4 { color: #fbbf24; }
+  .c5 { color: #f87171; }
+</style>
+</head>
+<body>
+<h1>HTTP Status Codes — Referenz</h1>
+<p class="subtitle">Alle wichtigen Codes mit Spring Boot Kontext. Filtere nach Kategorie.</p>
+
+<div class="sc-filter" id="filters">
+  <button class="active" onclick="filter('all', this)">Alle</button>
+  <button onclick="filter('2', this)">2xx Erfolg</button>
+  <button onclick="filter('3', this)">3xx Weiterleitung</button>
+  <button onclick="filter('4', this)">4xx Client-Fehler</button>
+  <button onclick="filter('5', this)">5xx Server-Fehler</button>
+</div>
+
+<div id="cards"></div>
+
+<script>
+const codes = [
+  { code: '200', name: 'OK', group: '2', desc: 'Request erfolgreich. Standard-Antwort fuer GET, PUT, DELETE — alles hat funktioniert.', imp: 'high', spring: 'Standard bei @GetMapping, @DeleteMapping' },
+  { code: '201', name: 'Created', group: '2', desc: 'Ressource wurde erfolgreich erstellt. Eigentlich die korrekte Antwort auf POST — wir geben aktuell 200 zurueck.', imp: 'high', spring: 'Ideal fuer @PostMapping mit @ResponseStatus(201)' },
+  { code: '204', name: 'No Content', group: '2', desc: 'Erfolgreich, aber kein Body in der Antwort. Typisch fuer DELETE wenn nichts zurueckgegeben wird.', imp: 'mid', spring: 'void-Methoden in Spring geben 200, nicht 204' },
+  { code: '301', name: 'Moved Permanently', group: '3', desc: 'URL hat sich dauerhaft geaendert. Browser und Suchmaschinen merken sich die neue URL.', imp: 'low', spring: 'Selten in REST APIs' },
+  { code: '302', name: 'Found (Redirect)', group: '3', desc: 'Temporaere Weiterleitung. Browser folgt der neuen URL, merkt sie sich aber nicht dauerhaft.', imp: 'low', spring: 'Selten in REST APIs' },
+  { code: '304', name: 'Not Modified', group: '3', desc: 'Ressource hat sich nicht geaendert — Browser kann den Cache verwenden. Spart Bandbreite.', imp: 'low', spring: 'Caching-Szenario' },
+  { code: '400', name: 'Bad Request', group: '4', desc: 'Der Client hat einen ungueltigen Request geschickt — z.B. kaputtes JSON, fehlende Pflichtfelder.', imp: 'high', spring: 'Wenn @RequestBody nicht geparst werden kann' },
+  { code: '401', name: 'Unauthorized', group: '4', desc: 'Nicht authentifiziert. Der Client muss sich erst einloggen (Token, Basic Auth...).', imp: 'high', spring: 'Spring Security — kein gueltiger Token' },
+  { code: '403', name: 'Forbidden', group: '4', desc: 'Authentifiziert, aber keine Berechtigung. Du bist eingeloggt, aber darfst das nicht.', imp: 'high', spring: 'Spring Security — falsche Rolle/Berechtigung' },
+  { code: '404', name: 'Not Found', group: '4', desc: 'Ressource existiert nicht. URL falsch, oder Datensatz mit dieser id nicht vorhanden.', imp: 'high', spring: 'Wenn @PathVariable id nicht in DB — ohne eigene Behandlung 500!' },
+  { code: '405', name: 'Method Not Allowed', group: '4', desc: 'HTTP-Methode falsch. Z.B. GET auf einen Endpoint der nur POST kennt.', imp: 'mid', spring: 'Spring gibt das automatisch zurueck' },
+  { code: '409', name: 'Conflict', group: '4', desc: 'Konflikt mit aktuellem Zustand — z.B. Duplikat bei unique constraint, optimistic locking.', imp: 'mid', spring: 'Bei DataIntegrityViolationException' },
+  { code: '422', name: 'Unprocessable Entity', group: '4', desc: 'JSON ist syntaktisch korrekt, aber fachlich ungueltig — z.B. negativer Preis, Datum in der Vergangenheit.', imp: 'mid', spring: 'Bei @Valid / Bean Validation Fehlern' },
+  { code: '500', name: 'Internal Server Error', group: '5', desc: 'Unbehandelte Exception im Server. Darf in Produktion nie mit Stack Trace beim Client ankommen.', imp: 'high', spring: 'Jede unbehandelte Exception in Spring' },
+  { code: '502', name: 'Bad Gateway', group: '5', desc: 'Ein vorgelagerter Server (Proxy, Load Balancer) hat eine ungueltige Antwort erhalten.', imp: 'low', spring: 'Infrastruktur-Problem, nicht Spring' },
+  { code: '503', name: 'Service Unavailable', group: '5', desc: 'Server ueberlastet oder im Wartungsmodus. Oft temporaer — Client soll es spaeter nochmal versuchen.', imp: 'mid', spring: 'Deployment, Health Checks, Circuit Breaker' },
+];
+
+function render(f) {
+  const filtered = f === 'all' ? codes : codes.filter(c => c.group === f);
+  const groups = { '2': '2xx — Erfolg', '3': '3xx — Weiterleitung', '4': '4xx — Client-Fehler', '5': '5xx — Server-Fehler' };
+  const byGroup = {};
+  filtered.forEach(c => { if (!byGroup[c.group]) byGroup[c.group] = []; byGroup[c.group].push(c); });
+  let html = '';
+  Object.keys(byGroup).sort().forEach(g => {
+    html += `<div class="sc-group"><div class="sc-group-title">${groups[g]}</div>`;
+    byGroup[g].forEach(c => {
+      const colorClass = g === '2' ? 'c2' : g === '3' ? 'c3' : g === '4' ? 'c4' : 'c5';
+      const badgeClass = c.imp === 'high' ? 'imp-high' : c.imp === 'mid' ? 'imp-mid' : 'imp-low';
+      const badgeText = c.imp === 'high' ? 'wichtig' : c.imp === 'mid' ? 'haeufig' : 'selten';
+      html += `<div class="sc-card">
+        <span class="sc-code ${colorClass}">${c.code}</span>
+        <div style="flex:1">
+          <div class="sc-name">${c.name}</div>
+          <div class="sc-desc">${c.desc}</div>
+          <div class="sc-spring">${c.spring}</div>
+        </div>
+        <span class="sc-badge ${badgeClass}">${badgeText}</span>
+      </div>`;
+    });
+    html += '</div>';
+  });
+  document.getElementById('cards').innerHTML = html;
+}
+
+function filter(val, btn) {
+  document.querySelectorAll('.sc-filter button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render(val);
+}
+
+render('all');
+</script>
+</body>
+</html>
