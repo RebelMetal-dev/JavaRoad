@@ -1,6 +1,7 @@
 package com.javaroad.taskmaster.service;
 
 
+import com.javaroad.taskmaster.dto.TaskDto;
 import com.javaroad.taskmaster.model.Task;
 import com.javaroad.taskmaster.repository.TaskRepository;
 import org.springframework.stereotype.Service;
@@ -15,14 +16,30 @@ public class TaskService {
         this.taskRepository = taskRepository;
     }
 
-    public List<Task> getAllTasks() {
-        return taskRepository.findAll();
+    /**
+     * Returns all tasks from the database mapped to TaskDto.
+     */
+    public List<TaskDto> getAllTasks() {
+        return taskRepository.findAll()
+                .stream()
+                .map(task -> new TaskDto(
+                        task.getId(),
+                        task.getDescription(),
+                        task.isCompleted()
+                ))
+                .toList();
     }
 
-    public Task createTask (Task task) {
+    /**
+     * Saves a new task to the database and returns the persisted entity.
+     */
+    public Task createTask(Task task) {
         return taskRepository.save(task);
     }
 
+    /**
+     * Deletes the task with the given id from the database.
+     */
     public void deleteTask(Long id) {
         taskRepository.deleteById(id);
     }
