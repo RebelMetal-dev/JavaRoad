@@ -115,9 +115,10 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
 - [x] Meilenstein: Spring Boot & REST-APIs — inkl. CommandLineRunner-Refactoring (DataInitializer)
 - [x] Meilenstein: Spring Data JPA — Taskmaster-Scaffold, @Data-Antipattern behoben
 - [x] Golden Standard vollständig umgesetzt: Javadoc & Kommentare auf Englisch
-- [ ] PoECharacter → Record + Wither Pattern *(in Arbeit)*
-- [ ] TaskController REST-Endpoints (GET, POST, DELETE)
-- [ ] Unit Tests: JUnit 5 + Mockito für BuildService & Bibliothek
+- [x] PoECharacter → Record + Wither Pattern (withStat, withLevel, static factory of())
+- [x] TaskController REST-Endpoints (GET, POST, DELETE) — Postman-verifiziert
+- [x] DTO-Pattern: TaskDto Record, Entity→DTO Mapping via Stream, Information Hiding
+- [ ] Unit Tests: JUnit 5 + Mockito für TaskService, BuildService & Bibliothek
 
 </td>
 </tr>
