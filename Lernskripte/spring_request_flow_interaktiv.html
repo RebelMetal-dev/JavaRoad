@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spring Boot Request Flow — Interaktiv</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f1117; color: #e2e8f0; margin: 0; padding: 24px; }
+  h1 { font-size: 20px; font-weight: 500; color: #e2e8f0; margin: 0 0 6px; }
+  .subtitle { font-size: 13px; color: #64748b; margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; max-width: 700px; }
+  .layer { border-radius: 12px; border: 1.5px solid; padding: 14px 18px; transition: all 0.3s; opacity: 0.3; }
+  .layer.active { opacity: 1; transform: scale(1.03); box-shadow: 0 0 20px rgba(255,255,255,0.08); }
+  .layer.done { opacity: 0.6; }
+  .layer-title { font-size: 14px; font-weight: 500; margin: 0 0 4px; }
+  .layer-code { font-family: 'Courier New', monospace; font-size: 12px; color: #94a3b8; margin: 4px 0 0; }
+  .step-box { border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; background: #1e293b; border: 1px solid #334155; min-height: 90px; max-width: 700px; }
+  .step-num { font-size: 11px; font-weight: 500; color: #64748b; margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .step-title { font-size: 16px; font-weight: 500; margin: 0 0 8px; color: #e2e8f0; }
+  .step-explain { font-size: 13px; color: #94a3b8; line-height: 1.7; margin: 0; }
+  .step-code { font-family: 'Courier New', monospace; font-size: 12px; background: #0f1117; border: 1px solid #334155; border-radius: 8px; padding: 10px 14px; margin-top: 10px; color: #e2e8f0; white-space: pre; }
+  .btn-row { display: flex; gap: 10px; align-items: center; max-width: 700px; }
+  button { background: #1e293b; border: 1px solid #334155; color: #e2e8f0; padding: 8px 18px; border-radius: 8px; cursor: pointer; font-size: 13px; transition: background 0.2s; }
+  button:hover:not(:disabled) { background: #334155; }
+  button:disabled { opacity: 0.3; cursor: default; }
+  .progress { font-size: 12px; color: #64748b; margin-left: auto; }
+  .badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 6px; margin-left: 8px; font-weight: 500; vertical-align: middle; }
+  .badge-request { background: #1e3a5f; color: #60a5fa; }
+  .badge-return { background: #14532d; color: #4ade80; }
+  .legend { margin-top: 20px; font-size: 12px; color: #475569; max-width: 700px; border-top: 1px solid #1e293b; padding-top: 12px; }
+</style>
+</head>
+<body>
+
+<h1>Spring Boot — Request Flow Interaktiv</h1>
+<p class="subtitle">GET /tasks — von Browser bis Datenbank und zurück. Klick dich durch alle 11 Schritte.</p>
+
+<div class="grid">
+  <div class="layer" id="l-browser" style="border-color: #378ADD;">
+    <div class="layer-title" style="color: #60a5fa;">Browser / Postman</div>
+    <div class="layer-code">GET /tasks</div>
+  </div>
+  <div class="layer" id="l-controller" style="border-color: #7F77DD;">
+    <div class="layer-title" style="color: #a78bfa;">TaskController</div>
+    <div class="layer-code">@RestController</div>
+  </div>
+  <div class="layer" id="l-service" style="border-color: #BA7517;">
+    <div class="layer-title" style="color: #fbbf24;">TaskService</div>
+    <div class="layer-code">@Service + Mapping</div>
+  </div>
+  <div class="layer" id="l-repository" style="border-color: #1D9E75;">
+    <div class="layer-title" style="color: #34d399;">TaskRepository</div>
+    <div class="layer-code">JpaRepository</div>
+  </div>
+  <div class="layer" id="l-jpa" style="border-color: #D85A30;">
+    <div class="layer-title" style="color: #fb923c;">JPA / Hibernate</div>
+    <div class="layer-code">Entity Mapping</div>
+  </div>
+  <div class="layer" id="l-db" style="border-color: #E24B4A;">
+    <div class="layer-title" style="color: #f87171;">H2 Datenbank</div>
+    <div class="layer-code">Tabelle TASKS</div>
+  </div>
+</div>
+
+<div class="step-box" id="step-box">
+  <div class="step-num" id="step-num">Schritt 0 von 11</div>
+  <div class="step-title" id="step-title">Druecke "Naechster Schritt" um zu starten</div>
+  <div class="step-explain" id="step-explain">Wir verfolgen eine GET /tasks Anfrage komplett von Anfang bis Ende — und dann den Rueckweg.</div>
+</div>
+
+<div class="btn-row">
+  <button onclick="prev()" id="btn-prev" disabled>Zurueck</button>
+  <button onclick="next()" id="btn-next">Naechster Schritt</button>
+  <button onclick="reset()">Reset</button>
+  <span class="progress" id="progress">0 / 11</span>
+</div>
+
+<div class="legend">
+  <span style="color: #60a5fa;">Blau = Anfrage-Richtung</span> &nbsp;|&nbsp;
+  <span style="color: #4ade80;">Gruen = Rueckgabe-Richtung</span> &nbsp;|&nbsp;
+  Schritt 9 (Mapping) ist der wichtigste!
+</div>
+
+<script>
+const steps = [
+  {
+    layer: 'browser', dir: 'request',
+    num: '1 — Anfrage',
+    title: 'Browser schickt HTTP Request',
+    explain: 'Du tippst localhost:8080/tasks in den Browser. Der Browser sendet ein HTTP GET-Paket ueber das Netzwerk an deinen Computer — Port 8080, wo Spring Boot lauscht.',
+    code: 'GET http://localhost:8080/tasks'
+  },
+  {
+    layer: 'controller', dir: 'request',
+    num: '2 — Routing',
+    title: 'Spring empfaengt und routet zum Controller',
+    explain: 'Spring Boot hat einen eingebauten Dispatcher — der schaut: welche Methode ist fuer GET /tasks zustaendig? Er findet @GetMapping in TaskController und ruft getAllTasks() auf.',
+    code: '@GetMapping\npublic List<TaskDto> getAllTasks() { ... }'
+  },
+  {
+    layer: 'service', dir: 'request',
+    num: '3 — Service-Aufruf',
+    title: 'Controller delegiert an TaskService',
+    explain: 'Der Controller macht selbst keine Arbeit — er ruft nur taskService.getAllTasks() auf. Das ist Separation of Concerns: Controller nimmt an, Service denkt.',
+    code: 'return taskService.getAllTasks();'
+  },
+  {
+    layer: 'repository', dir: 'request',
+    num: '4 — Repository-Aufruf',
+    title: 'Service fragt das Repository',
+    explain: 'Der Service ruft taskRepository.findAll() auf. Das Repository ist eine Schnittstelle — Spring Data generiert die Implementierung automatisch. Du schreibst keinen SQL-Code.',
+    code: 'List<Task> tasks = taskRepository.findAll();'
+  },
+  {
+    layer: 'jpa', dir: 'request',
+    num: '5 — JPA uebersetzt',
+    title: 'JPA / Hibernate uebersetzt zu SQL',
+    explain: 'Hibernate (die JPA-Implementierung) nimmt findAll() und uebersetzt es in echtes SQL. Du siehst das in der Konsole wenn show-sql: true gesetzt ist.',
+    code: 'SELECT * FROM TASKS'
+  },
+  {
+    layer: 'db', dir: 'request',
+    num: '6 — Datenbank',
+    title: 'H2 fuehrt die Abfrage aus',
+    explain: 'Die H2-Datenbank sucht in der Tabelle TASKS nach allen Zeilen und gibt die Rohdaten zurueck: ID, DESCRIPTION, COMPLETED, CREATED_AT.',
+    code: 'ID | DESCRIPTION | COMPLETED | CREATED_AT\n1  | Lernen      | false     | 2026-05-08\n2  | Committen   | true      | 2026-05-08'
+  },
+  {
+    layer: 'jpa', dir: 'return',
+    num: '7 — Rueckweg: JPA baut Objekte',
+    title: 'JPA wandelt Zeilen in Task-Objekte',
+    explain: 'Hibernate nimmt die DB-Zeilen und baut daraus Java-Objekte. Pro Zeile ein Task-Objekt. Dafuer braucht JPA zwingend einen No-Arg-Konstruktor und Setter — deshalb kann die Entity kein Record sein!',
+    code: 'new Task() -> setId(1L) -> setDescription("Lernen") -> ...'
+  },
+  {
+    layer: 'repository', dir: 'return',
+    num: '8 — Rueckweg: Repository gibt Entities zurueck',
+    title: 'Repository liefert List<Task> an Service',
+    explain: 'Das Repository gibt die fertigen Task-Objekte (Entities) an den Service zurueck. Diese Objekte enthalten ALLE Felder — auch createdAt, das der Browser nicht sehen soll.',
+    code: 'List<Task> entities // enthaelt: id, description, completed, createdAt'
+  },
+  {
+    layer: 'service', dir: 'return',
+    num: '9 — MAPPING! Der entscheidende Schritt',
+    title: 'Service mappt Entity -> DTO (SRP in Aktion!)',
+    explain: 'Hier passiert das Wichtigste: Der Service filtert heraus was nach aussen darf. createdAt bleibt intern. Der Stream wandelt jede Task-Entity in ein TaskDto-Record um — nur 3 Felder statt 4. Das ist Single Responsibility Principle!',
+    code: 'tasks.stream()\n  .map(t -> new TaskDto(\n      t.getId(),\n      t.getDescription(),\n      t.isCompleted()\n  ))\n  .toList()'
+  },
+  {
+    layer: 'controller', dir: 'return',
+    num: '10 — Controller gibt DTO weiter',
+    title: 'Controller bekommt List<TaskDto>',
+    explain: 'Der Controller bekommt die saubere DTO-Liste zurueck und gibt sie einfach weiter. Er weiss nichts ueber die Datenbankstruktur — er kennt nur TaskDto.',
+    code: 'return taskService.getAllTasks(); // gibt List<TaskDto> zurueck'
+  },
+  {
+    layer: 'browser', dir: 'return',
+    num: '11 — JSON im Browser',
+    title: 'Jackson wandelt in JSON um — Browser empfaengt',
+    explain: 'Spring Boot hat Jackson eingebaut — das wandelt die List<TaskDto> automatisch in JSON um. createdAt ist NICHT im JSON! Das ist Information Hiding — der Browser sieht nur was er sehen soll.',
+    code: '[\n  {"id":1,"description":"Lernen","completed":false},\n  {"id":2,"description":"Committen","completed":true}\n]'
+  }
+];
+
+let current = -1;
+const layers = ['browser','controller','service','repository','jpa','db'];
+
+function highlight(layerId, done) {
+  layers.forEach(l => {
+    const el = document.getElementById('l-' + l);
+    el.classList.remove('active', 'done');
+    if (l === layerId) el.classList.add('active');
+    else if (done.includes(l)) el.classList.add('done');
+  });
+}
+
+function showStep(i) {
+  const s = steps[i];
+  document.getElementById('step-num').textContent = 'Schritt ' + s.num;
+  document.getElementById('step-title').innerHTML = s.title +
+    ' <span class="badge ' + (s.dir === 'request' ? 'badge-request' : 'badge-return') + '">' +
+    (s.dir === 'request' ? 'Anfrage' : 'Rueckgabe') + '</span>';
+  document.getElementById('step-explain').textContent = s.explain;
+  let codeEl = document.getElementById('step-code');
+  if (!codeEl) {
+    codeEl = document.createElement('div');
+    codeEl.id = 'step-code';
+    codeEl.className = 'step-code';
+    document.getElementById('step-box').appendChild(codeEl);
+  }
+  codeEl.textContent = s.code;
+  const done = steps.slice(0, i).map(x => x.layer);
+  highlight(s.layer, done);
+  document.getElementById('progress').textContent = (i + 1) + ' / ' + steps.length;
+  document.getElementById('btn-prev').disabled = i === 0;
+  document.getElementById('btn-next').disabled = i === steps.length - 1;
+}
+
+function next() { if (current < steps.length - 1) { current++; showStep(current); } }
+function prev() { if (current > 0) { current--; showStep(current); } }
+function reset() {
+  current = -1;
+  layers.forEach(l => { document.getElementById('l-'+l).classList.remove('active','done'); });
+  document.getElementById('step-num').textContent = 'Schritt 0 von 11';
+  document.getElementById('step-title').textContent = 'Druecke "Naechster Schritt" um zu starten';
+  document.getElementById('step-explain').textContent = 'Wir verfolgen eine GET /tasks Anfrage komplett von Anfang bis Ende — und dann den Rueckweg.';
+  const c = document.getElementById('step-code'); if (c) c.remove();
+  document.getElementById('progress').textContent = '0 / 11';
+  document.getElementById('btn-prev').disabled = true;
+  document.getElementById('btn-next').disabled = false;
+}
+</script>
+</body>
+</html>
