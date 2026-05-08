@@ -200,13 +200,28 @@ Um professionelle Standards zu garantieren, wird der gesamte Prozess – und ins
     - **Status:** Funktionaler Prototyp — `GET /builds` liefert JSON.
 
 - **[Taskmaster — Spring Data JPA](taskmaster/)**
-    - **Beschreibung:** Spring Boot Anwendung mit echter Datenbankpersistenz via JPA & H2.
+    - **Beschreibung:** Spring Boot REST API mit echter Datenbankpersistenz via JPA & H2. Vollständiger CRUD-Stack mit DTO-Pattern — live getestet mit Postman.
     - **Highlights:**
+        - **DTO-Pattern & Information Hiding:** `TaskDto` (Record) entkoppelt die API von der DB-Struktur. `createdAt` bleibt intern — der Browser sieht nur was er sehen darf.
+        - **Entity→DTO Mapping:** Stream-basiertes Mapping im Service — SRP in Aktion.
         - **JPA-Entity korrekt:** `@Getter @Setter @NoArgsConstructor` statt `@Data` — verhindert broken `equals()`/`hashCode()` vor dem ersten Persist.
         - **`@PrePersist`:** `createdAt` wird automatisch beim Speichern gesetzt.
-    - **Status:** Entity & Repository vorhanden — Controller folgt.
+    - **Endpoints:** `GET /tasks` · `POST /tasks` · `DELETE /tasks/{id}`
+    - **Status:** Vollständig implementiert & Postman-verifiziert ✅
 
 *(Weitere Portfolio-Projekte für Phase 3.5 und Phase 4 folgen)*
+
+---
+
+## 📚 Interaktive Lernskripte
+
+*Begleitend zum Code entstehen interaktive Lernmaterialien — direkt im Browser nutzbar, kein Setup nötig.*
+
+| Skript | Beschreibung |
+|--------|-------------|
+| [🔵 Spring Boot Request Flow](https://rebelmetal-dev.github.io/JavaRoad/Lernskripte/spring_request_flow_interaktiv.html) | 11-Schritt interaktiver Walkthrough: GET /tasks von Browser bis Datenbank und zurück |
+| [🟠 HTTP Status Codes Referenz](https://rebelmetal-dev.github.io/JavaRoad/Lernskripte/http_status_codes_referenz.html) | Filterbare Referenz aller wichtigen HTTP Codes mit Spring Boot Kontext |
+| [🟣 Taskmaster Architektur](https://rebelmetal-dev.github.io/JavaRoad/Lernskripte/spring_taskmaster_architecture.svg) | Vollständiger Programmablauf als Architekturdiagramm |
 
 ---
 ## 🧭 Projekt-Struktur & Architektur
