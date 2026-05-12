@@ -4,6 +4,50 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 
 ---
 
+### **Sitzung vom: 12.05.2026**
+
+_Status: Phase 3 vollständig abgeschlossen. Architektur bereinigt. Bereit für Phase 3.5._
+
+---
+
+**1. Abgeschlossene Themen dieser Session:**
+
+- **Unit Tests — Phase 3 Final:**
+  - `BuildServiceTest` (3 Tests): leere Liste, einzelner Save, mehrere Saves
+  - `BibliothekTest` (4 Tests): ISBN gefunden, ISBN nicht gefunden (Optional.empty()),
+    alphabetische Sortierung, Duplikat-Schutz via HashSet
+  - Alle Tests grün: `mvn test` auf Root-Ebene — core (7) + poe2-api (1) = BUILD SUCCESS
+
+- **Architektur-Bereinigung:**
+  - Root-`src/`-Verzeichnis vollständig per `git rm -rf src/` entfernt (war Duplikat nach Migration)
+  - `core` als Modul in Root-`pom.xml` eingetragen (vor `poe2-api` — Maven Build-Reihenfolge)
+  - Doppelten `core`-Dependency-Eintrag in `poe2-api/pom.xml` entfernt
+  - Korrupten Git-Index repariert (`.git/index.lock` entfernt, Index neu aufgebaut)
+  - `BuildService` (Phase 2, File I/O) umbenannt in `BuildFileService` zur Klarheit
+
+- **Konzepte erklärt:**
+  - `.m2`-Verzeichnis: lokaler Maven-Cache (Lager-Analogie)
+  - JAR-Datei: kompiliertes Java-Archiv (Flightcase-Analogie)
+  - Maven Build-Reihenfolge: Abhängigkeiten müssen vor dem Konsumenten gebaut sein
+  - `mvn install` vs. `mvn test`: install legt JAR ins `.m2`, test kompiliert nur lokal
+
+**2. Commits dieser Session:**
+
+- `test(core): add BuildServiceTest and BibliothekTest`
+- `refactor(core): migrate portfolio, bootcamp and uebungen into core module`
+- `chore(root): remove duplicate src/ and register core module in root pom`
+- `test(bibliothek): complete unit test coverage for Bibliothek`
+- `fix(poe2-api): remove duplicate core dependency declaration`
+
+**3. Nächster Schritt:**
+
+- **Phase 3.5 starten: SOLID Principles & Design Patterns**
+- Erstes Thema: SRP — Single Responsibility Principle
+- Vorgehen: violation first → unit test → refactor → interview one-liner
+- Neues Maven-Modul `design-principles/` anlegen
+
+---
+
 ### **Sitzung vom: 06.01.2026**
 
 _Status: Phase 3 (Spring & APIs) erfolgreich abgeschlossen. Übergang zu Phase 4._

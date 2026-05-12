@@ -139,11 +139,6 @@ JavaRoad/ (Root — Maven Multi-Module)
 │           ├── structural/        Adapter, Decorator, Facade
 │           └── behavioral/        Strategy, Observer, Command, Template Method
 │
-├── src/main/java/.../
-│   ├── portfolio/bibliothek/      Phase 1 portfolio project (Record, Set, Stream, Optional)
-│   ├── portfolio/poe2manager/     Phase 2 portfolio project (File I/O, HashMap, Enum)
-│   ├── bootcamp/                  Foundational exercises (static, inheritance, overloading)
-│   └── uebungen/                  Stream / Optional / Collections exercises
 │
 ├── sql-uebungen/                  SQL practice scripts (CRUD, JOINs, Aggregations)
 ├── Lernskripte/                   Theory scripts (Markdown + PDF) — do not modify
@@ -154,7 +149,7 @@ JavaRoad/ (Root — Maven Multi-Module)
 
 ---
 
-## 8. Current Status (Last Updated: 2026-05-08)
+## 8. Current Status (Last Updated: 2026-05-12)
 
 ### Completed ✅
 - Phase 1: Java fundamentals, OOP, Collections, File I/O
@@ -177,12 +172,18 @@ JavaRoad/ (Root — Maven Multi-Module)
 - Taskmaster: live-tested with Postman — all endpoints verified (200 OK)
 - Lernskripte: spring_taskmaster_architecture.svg, spring_request_flow_interaktiv.html,
   http_status_codes_referenz.html (interactive, filterable)
+- **Phase 3 COMPLETE ✅ — Unit Tests (JUnit 5 + Mockito):**
+  - BuildServiceTest: 3 tests (empty list, single save, multiple saves)
+  - BibliothekTest: 4 tests (ISBN found, ISBN not found, sorted list, duplicate prevention)
+  - TaskServiceTest: existing tests with Mockito (commit 7d4290c)
+  - Full Maven build GREEN across all modules: core (7 tests) + poe2-api (1 test)
+- **Architecture cleanup (2026-05-12):**
+  - All source code migrated from root src/ to core module — root src/ deleted
+  - core registered in root pom.xml modules list (before poe2-api — build order fixed)
+  - BuildService renamed to BuildFileService (Phase 2 file I/O class)
+  - Duplicate core dependency removed from poe2-api/pom.xml
 
 ### Open / Next Steps 🔲
-
-**Phase 3 (remaining):**
-- [ ] Add unit tests (JUnit 5 + Mockito) for TaskService, BuildService, Bibliothek
-      Note: unit tests will also be written as part of Phase 3.5 methodology
 
 **Phase 3.5 — SOLID Principles & Design Patterns (new — planned):**
 - [ ] Create `design-principles/` Maven module
