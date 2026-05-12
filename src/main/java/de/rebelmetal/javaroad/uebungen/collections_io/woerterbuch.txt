@@ -1,6 +1,0 @@
---- Mein Deutsch-Englisch - Wörterbuch ---
-DE: Auto -> EN: car
-DE: Arbeit -> EN: work
-DE: Haus -> EN: house
-DE: Katze -> EN: cat
-DE: Geld -> EN: money
