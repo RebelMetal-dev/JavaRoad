@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebaca399-ead3-4a7c-ab14-ff17b8511505" name="Changes" comment="feat(taskmaster): implement TaskService and TaskController with CRUD endpoints&#10;&#10;No prior implementation existed for task persistence or REST access.&#10;Completing the full Spring layer chain requires both Service and Controller.&#10;New behaviour: GET /tasks returns all tasks from H2, POST /tasks persists a&#10;new task via JPA, DELETE /tasks/{id} removes a task by id. Full chain&#10;Controller -&gt; Service -&gt; Repository -&gt; Database is now functional." />
+    <list default="true" id="ebaca399-ead3-4a7c-ab14-ff17b8511505" name="Changes" comment="test(taskmaster): add unit tests for TaskService with JUnit 5 and Mockito&#10;&#10;Why: TaskService had no tests — correctness could only be verified manually&#10;via Postman, which is slow, error-prone and not repeatable in CI&#10;Trigger: any change to mapping logic or repository delegation would go&#10;undetected until manual re-testing&#10;New behaviour: three isolated unit tests cover getAllTasks (DTO mapping),&#10;createTask (save delegation) and deleteTask (deleteById delegation) —&#10;TaskRepository is mocked, no database required, tests run in milliseconds">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,10 +37,10 @@
     &quot;accountId&quot;: &quot;5a206dab-9ac8-4768-aa99-da495ede3ba5&quot;
   }
 }</component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -57,6 +60,8 @@
     "Application.TaskmasterApplication.executor": "Run",
     "Application.de.rebelmetal.javaroad.core.models.PoEManagerApp (1).executor": "Run",
     "Application.de.rebelmetal.javaroad.core.models.PoEManagerApp.executor": "Run",
+    "JUnit.TaskServiceTest.executor": "Run",
+    "JUnit.TaskServiceTest.shouldReturnAllTasks.executor": "Run",
     "Maven.core [install].executor": "Run",
     "Maven.javaRoad [clean].executor": "Run",
     "Maven.javaRoad [install].executor": "Run",
@@ -87,20 +92,7 @@
       <recent name="C:\Users\bred-\CBredJavaProjekte\JavaRoad\src\main\java\de\rebelmetal\javaroad\portfolio" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TaskmasterApplication">
-    <configuration name="PoEManagerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="de.rebelmetal.javaroad.portfolio.poe2manager.PoEManagerApp" />
-      <module name="javaRoad" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.rebelmetal.javaroad.portfolio.poe2manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TaskServiceTest">
     <configuration name="Poe2ApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.rebelmetal.javaroad.portfolio.poe2api.Poe2ApiApplication" />
       <module name="poe2-api" />
@@ -127,7 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="de.rebelmetal.javaroad.core.models.PoEManagerApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="de.rebelmetal.javaroad.core.models.PoEManagerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.rebelmetal.javaroad.core.models.PoEManagerApp" />
       <module name="core" />
       <extension name="coverage">
@@ -140,15 +132,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="de.rebelmetal.javaroad.core.models.PoEManagerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="de.rebelmetal.javaroad.core.models.PoEManagerApp" />
-      <module name="core" />
+    <configuration name="TaskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taskmaster" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.rebelmetal.javaroad.core.models.*" />
+          <option name="PATTERN" value="com.javaroad.taskmaster.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.javaroad.taskmaster.service" />
+      <option name="MAIN_CLASS_NAME" value="com.javaroad.taskmaster.service.TaskServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskServiceTest.shouldReturnAllTasks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taskmaster" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javaroad.taskmaster.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.javaroad.taskmaster.service" />
+      <option name="MAIN_CLASS_NAME" value="com.javaroad.taskmaster.service.TaskServiceTest" />
+      <option name="METHOD_NAME" value="shouldReturnAllTasks" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TaskServiceTest" />
+        <item itemvalue="JUnit.TaskServiceTest.shouldReturnAllTasks" />
         <item itemvalue="Application.TaskmasterApplication" />
         <item itemvalue="Application.Poe2ApiApplication" />
         <item itemvalue="Application.de.rebelmetal.javaroad.core.models.PoEManagerApp" />
-        <item itemvalue="Application.de.rebelmetal.javaroad.core.models.PoEManagerApp (1)" />
-        <item itemvalue="Application.PoEManagerApp" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +215,8 @@
       <workItem from="1778145398200" duration="121000" />
       <workItem from="1778145554824" duration="3469000" />
       <workItem from="1778149571994" duration="10931000" />
-      <workItem from="1778240081611" duration="10065000" />
+      <workItem from="1778240081611" duration="12253000" />
+      <workItem from="1778585062036" duration="6921000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;docs: add CLAUDE.md with project context and mentor guidelines&#10;&#10;Establishes single source of truth for AI-assisted sessions.&#10;Contains Golden Standard, mentor protocol, architecture overview,&#10;current status, known technical debt, and interview talking points.&quot;">
       <option name="closed" value="true" />
@@ -239,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778256935930</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test(taskmaster): add unit tests for TaskService with JUnit 5 and Mockito&#10;&#10;Why: TaskService had no tests — correctness could only be verified manually&#10;via Postman, which is slow, error-prone and not repeatable in CI&#10;Trigger: any change to mapping logic or repository delegation would go&#10;undetected until manual re-testing&#10;New behaviour: three isolated unit tests cover getAllTasks (DTO mapping),&#10;createTask (save delegation) and deleteTask (deleteById delegation) —&#10;TaskRepository is mocked, no database required, tests run in milliseconds">
+      <option name="closed" value="true" />
+      <created>1778590328532</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778590328532</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +269,8 @@
     <MESSAGE value="docs: update README and CLAUDE.md with Phase 3.5 roadmap and session progress&#10;&#10;- README: Phase 3 completions marked, Phase 3.5 (SOLID + GoF Patterns) added&#10;  as new planned module, architecture diagram updated, Taskmaster portfolio&#10;  entry added&#10;- CLAUDE.md: Task.java fix marked done, PoECharacter set as next task,&#10;  Phase 3.5 learning plan with SOLID analogies and GoF priority table added,&#10;  interview talking points expanded with Wither Pattern and @Data antipattern" />
     <MESSAGE value="refactor: migrate PoECharacter to Record and decouple initialization&#10;&#10;Why the old code was problematic:&#10;The PoECharacter was a mutable class, making it risky to use in collections like HashMaps. Additionally, seed data was being initialized directly in the controller's constructor, which violated Spring's dependency injection principles and made unit testing difficult.&#10;&#10;Trigger scenario:&#10;Any update to character stats could potentially corrupt data structures, and starting the application or running tests would trigger hardcoded business logic during the bean instantiation phase.&#10;&#10;New behaviour:&#10;PoECharacter is now an immutable Java Record using the wither-pattern for state transitions. Data initialization has been moved to a dedicated DataInitializer using CommandLineRunner, ensuring a clean separation of concerns and a safer, thread-safe data model." />
     <MESSAGE value="feat(taskmaster): implement TaskService and TaskController with CRUD endpoints&#10;&#10;No prior implementation existed for task persistence or REST access.&#10;Completing the full Spring layer chain requires both Service and Controller.&#10;New behaviour: GET /tasks returns all tasks from H2, POST /tasks persists a&#10;new task via JPA, DELETE /tasks/{id} removes a task by id. Full chain&#10;Controller -&gt; Service -&gt; Repository -&gt; Database is now functional." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(taskmaster): implement TaskService and TaskController with CRUD endpoints&#10;&#10;No prior implementation existed for task persistence or REST access.&#10;Completing the full Spring layer chain requires both Service and Controller.&#10;New behaviour: GET /tasks returns all tasks from H2, POST /tasks persists a&#10;new task via JPA, DELETE /tasks/{id} removes a task by id. Full chain&#10;Controller -&gt; Service -&gt; Repository -&gt; Database is now functional." />
+    <MESSAGE value="test(taskmaster): add unit tests for TaskService with JUnit 5 and Mockito&#10;&#10;Why: TaskService had no tests — correctness could only be verified manually&#10;via Postman, which is slow, error-prone and not repeatable in CI&#10;Trigger: any change to mapping logic or repository delegation would go&#10;undetected until manual re-testing&#10;New behaviour: three isolated unit tests cover getAllTasks (DTO mapping),&#10;createTask (save delegation) and deleteTask (deleteById delegation) —&#10;TaskRepository is mocked, no database required, tests run in milliseconds" />
+    <option name="LAST_COMMIT_MESSAGE" value="test(taskmaster): add unit tests for TaskService with JUnit 5 and Mockito&#10;&#10;Why: TaskService had no tests — correctness could only be verified manually&#10;via Postman, which is slow, error-prone and not repeatable in CI&#10;Trigger: any change to mapping logic or repository delegation would go&#10;undetected until manual re-testing&#10;New behaviour: three isolated unit tests cover getAllTasks (DTO mapping),&#10;createTask (save delegation) and deleteTask (deleteById delegation) —&#10;TaskRepository is mocked, no database required, tests run in milliseconds" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -97,7 +97,7 @@ Theorie verstehen → Quiz zur Selbstüberprüfung → Praxis-Übungen umsetzen 
 </details>
 
 <details>
-<summary><b> [x] Phase 3: Spring Framework & APIs</b></summary>
+<summary><b> [x] Phase 3: Spring Framework & APIs ✅ Abgeschlossen</b></summary>
 <table>
 <tr>
 <td>
@@ -109,7 +109,7 @@ Theorie verstehen → Quiz zur Selbstüberprüfung → Praxis-Übungen umsetzen 
 - [x] PoECharacter → Record + Wither Pattern (withStat, withLevel, static factory of())
 - [x] TaskController REST-Endpoints (GET, POST, DELETE) — Postman-verifiziert
 - [x] DTO-Pattern: TaskDto Record, Entity→DTO Mapping via Stream, Information Hiding
-- [ ] Unit Tests: JUnit 5 + Mockito für TaskService, BuildService & Bibliothek
+- [x] Unit Tests: JUnit 5 + Mockito für TaskService — AssertJ + Mockito verify(), alle grün ✅
 
 </td>
 </tr>
@@ -206,13 +206,29 @@ Theorie verstehen → Quiz zur Selbstüberprüfung → Praxis-Übungen umsetzen 
 
 ## 📚 Interaktive Lernskripte
 
-*Begleitend zum Code entstehen interaktive Lernmaterialien — direkt im Browser nutzbar, kein Setup nötig.*
+*Begleitend zum Code entstehen interaktive Lernmaterialien und strukturierte Referenz-Dokumente.*
+
+**Interaktive HTML-Referenzen (direkt im Browser, kein Setup nötig):**
 
 | Skript | Beschreibung |
 |--------|-------------|
 | [🔵 Spring Boot Request Flow](https://rebelmetal-dev.github.io/JavaRoad/Lernskripte/spring_request_flow_interaktiv.html) | 11-Schritt interaktiver Walkthrough: GET /tasks von Browser bis Datenbank und zurück |
 | [🟠 HTTP Status Codes Referenz](https://rebelmetal-dev.github.io/JavaRoad/Lernskripte/http_status_codes_referenz.html) | Filterbare Referenz aller wichtigen HTTP Codes mit Spring Boot Kontext |
 | [🟣 Taskmaster Architektur](https://rebelmetal-dev.github.io/JavaRoad/Lernskripte/spring_taskmaster_architecture.svg) | Vollständiger Programmablauf als Architekturdiagramm |
+
+**Lernskripte Phase 3 (PDF + Markdown):**
+
+| # | Thema | PDF |
+|---|-------|-----|
+| 27 | DTO-Pattern & Information Hiding | [📄 PDF](Lernskripte/Lernskripte_pdf/27_DTO_Pattern_und_Information_Hiding.pdf) |
+| 28 | Records & Wither Pattern | [📄 PDF](Lernskripte/Lernskripte_pdf/28_Records_und_Wither_Pattern.pdf) |
+| 29 | Unit Testing in der Praxis (JUnit 5 + Mockito + AssertJ) | [📄 PDF](Lernskripte/Lernskripte_pdf/29_Unit_Testing_in_der_Praxis.pdf) |
+
+**Master-Sheets (Kompakt-Referenzen):**
+
+| Thema | Beschreibung |
+|-------|-------------|
+| [📋 Unit Testing Master-Sheet](Lernskripte/Lernskripte_pdf/Unit_Testing_MasterSheet_Final.pdf) | Test-Pyramide, Mockito-Vokabular, AAA-Standard, Black Box vs. White Box |
 
 ---
 ## 🧭 Projekt-Struktur & Architektur
