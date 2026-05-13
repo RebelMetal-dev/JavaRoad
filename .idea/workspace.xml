@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebaca399-ead3-4a7c-ab14-ff17b8511505" name="Changes" comment="test(taskmaster): add unit tests for TaskService with JUnit 5 and Mockito&#10;&#10;Why: TaskService had no tests — correctness could only be verified manually&#10;via Postman, which is slow, error-prone and not repeatable in CI&#10;Trigger: any change to mapping logic or repository delegation would go&#10;undetected until manual re-testing&#10;New behaviour: three isolated unit tests cover getAllTasks (DTO mapping),&#10;createTask (save delegation) and deleteTask (deleteById delegation) —&#10;TaskRepository is mocked, no database required, tests run in milliseconds">
+    <list default="true" id="ebaca399-ead3-4a7c-ab14-ff17b8511505" name="Changes" comment="docs: align all mentor files to RebelMetal Golden Standard commit format&#10;&#10;Why the old code was a problem: CLAUDE.md, GEMINI.md and DMM each described&#10;a slightly different commit format, creating ambiguity about which standard to follow.&#10;&#10;Trigger scenario: Any new commit required consulting three inconsistent sources.&#10;&#10;New behaviour: All three files now document the same RebelMetal Golden Standard:&#10;type: subject with a mandatory three-question body.">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,38 +54,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.PoEManagerApp.executor": "Run",
-    "Application.Poe2ApiApplication.executor": "Run",
-    "Application.TaskmasterApplication.executor": "Run",
-    "Application.de.rebelmetal.javaroad.core.models.PoEManagerApp (1).executor": "Run",
-    "Application.de.rebelmetal.javaroad.core.models.PoEManagerApp.executor": "Run",
-    "JUnit.TaskServiceTest.executor": "Run",
-    "JUnit.TaskServiceTest.shouldReturnAllTasks.executor": "Run",
-    "Maven.core [install].executor": "Run",
-    "Maven.javaRoad [clean].executor": "Run",
-    "Maven.javaRoad [install].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/bred-/CBredJavaProjekte/JavaRoad",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.PoEManagerApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Poe2ApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TaskmasterApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.de.rebelmetal.javaroad.core.models.PoEManagerApp (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.de.rebelmetal.javaroad.core.models.PoEManagerApp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TaskServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TaskServiceTest.shouldReturnAllTasks.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.core [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.core [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.javaRoad [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.javaRoad [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.javaRoad [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.poe2-api [test].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bred-/CBredJavaProjekte/JavaRoad&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bred-\CBredJavaProjekte\JavaRoad\core\src\main\java\de\rebelmetal\javaroad\core\models" />
@@ -217,6 +221,7 @@
       <workItem from="1778149571994" duration="10931000" />
       <workItem from="1778240081611" duration="12253000" />
       <workItem from="1778585062036" duration="6921000" />
+      <workItem from="1778679735471" duration="800000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;docs: add CLAUDE.md with project context and mentor guidelines&#10;&#10;Establishes single source of truth for AI-assisted sessions.&#10;Contains Golden Standard, mentor protocol, architecture overview,&#10;current status, known technical debt, and interview talking points.&quot;">
       <option name="closed" value="true" />
@@ -258,7 +263,55 @@
       <option name="project" value="LOCAL" />
       <updated>1778590328532</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="chore(root): remove duplicate src/ and register core module in root pom&#10;&#10;- Root src/ still existed as a copy after migration to core — duplicate&#10;  source files caused confusion and potential build conflicts&#10;- poe2-api compilation failed because core was not registered in the&#10;  root pom.xml modules list, so Maven could not resolve the dependency&#10;- All source code now lives exclusively in core/src/main/java; Maven&#10;  builds core first, then poe2-api in the correct dependency order">
+      <option name="closed" value="true" />
+      <created>1778614154556</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778614154556</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test(bibliothek): complete unit test coverage for Bibliothek&#10;&#10;- Only the happy-path ISBN lookup was covered — boundary cases were absent&#10;- Trigger: missing tests meant Optional.empty() and HashSet deduplication&#10;  logic could break silently without any test catching it&#10;- Added empty Optional check when ISBN does not exist&#10;- Added alphabetical sort verification for findeAlleBuecher&#10;- Added duplicate prevention check via HashSet equals/hashCode on Record">
+      <option name="closed" value="true" />
+      <created>1778614256970</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778614256970</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix(poe2-api): remove duplicate core dependency declaration&#10;&#10;- core was declared twice in pom.xml — without scope and with compile scope&#10;- Trigger: duplicate declarations cause Maven warnings and will break in&#10;  future Maven versions&#10;- Removed the second declaration; compile is the default scope and the&#10;  first entry is sufficient">
+      <option name="closed" value="true" />
+      <created>1778614965542</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1778614965542</updated>
+    </task>
+    <task id="LOCAL-00009" summary="docs: mark Phase 3 complete and log session 2026-05-12&#10;&#10;- CLAUDE.md: Phase 3 unit tests marked done, architecture cleanup documented,&#10;  status date updated to 2026-05-12, root src/ removed from architecture diagram&#10;- SESSION_LOG.md: new entry for 2026-05-12 — tests, cleanup, commits, next steps">
+      <option name="closed" value="true" />
+      <created>1778615086304</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1778615086304</updated>
+    </task>
+    <task id="LOCAL-00010" summary="docs: align all mentor files to RebelMetal Golden Standard commit format&#10;&#10;Why the old code was a problem: CLAUDE.md, GEMINI.md and DMM each described&#10;a slightly different commit format, creating ambiguity about which standard to follow.&#10;&#10;Trigger scenario: Any new commit required consulting three inconsistent sources.&#10;&#10;New behaviour: All three files now document the same RebelMetal Golden Standard:&#10;type: subject with a mandatory three-question body.">
+      <option name="closed" value="true" />
+      <created>1778680420105</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1778680420105</updated>
+    </task>
+    <task id="LOCAL-00011" summary="docs: align all mentor files to RebelMetal Golden Standard commit format&#10;&#10;Why the old code was a problem: CLAUDE.md, GEMINI.md and DMM each described&#10;a slightly different commit format, creating ambiguity about which standard to follow.&#10;&#10;Trigger scenario: Any new commit required consulting three inconsistent sources.&#10;&#10;New behaviour: All three files now document the same RebelMetal Golden Standard:&#10;type: subject with a mandatory three-question body.">
+      <option name="closed" value="true" />
+      <created>1778680528212</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1778680528212</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +323,12 @@
     <MESSAGE value="refactor: migrate PoECharacter to Record and decouple initialization&#10;&#10;Why the old code was problematic:&#10;The PoECharacter was a mutable class, making it risky to use in collections like HashMaps. Additionally, seed data was being initialized directly in the controller's constructor, which violated Spring's dependency injection principles and made unit testing difficult.&#10;&#10;Trigger scenario:&#10;Any update to character stats could potentially corrupt data structures, and starting the application or running tests would trigger hardcoded business logic during the bean instantiation phase.&#10;&#10;New behaviour:&#10;PoECharacter is now an immutable Java Record using the wither-pattern for state transitions. Data initialization has been moved to a dedicated DataInitializer using CommandLineRunner, ensuring a clean separation of concerns and a safer, thread-safe data model." />
     <MESSAGE value="feat(taskmaster): implement TaskService and TaskController with CRUD endpoints&#10;&#10;No prior implementation existed for task persistence or REST access.&#10;Completing the full Spring layer chain requires both Service and Controller.&#10;New behaviour: GET /tasks returns all tasks from H2, POST /tasks persists a&#10;new task via JPA, DELETE /tasks/{id} removes a task by id. Full chain&#10;Controller -&gt; Service -&gt; Repository -&gt; Database is now functional." />
     <MESSAGE value="test(taskmaster): add unit tests for TaskService with JUnit 5 and Mockito&#10;&#10;Why: TaskService had no tests — correctness could only be verified manually&#10;via Postman, which is slow, error-prone and not repeatable in CI&#10;Trigger: any change to mapping logic or repository delegation would go&#10;undetected until manual re-testing&#10;New behaviour: three isolated unit tests cover getAllTasks (DTO mapping),&#10;createTask (save delegation) and deleteTask (deleteById delegation) —&#10;TaskRepository is mocked, no database required, tests run in milliseconds" />
-    <option name="LAST_COMMIT_MESSAGE" value="test(taskmaster): add unit tests for TaskService with JUnit 5 and Mockito&#10;&#10;Why: TaskService had no tests — correctness could only be verified manually&#10;via Postman, which is slow, error-prone and not repeatable in CI&#10;Trigger: any change to mapping logic or repository delegation would go&#10;undetected until manual re-testing&#10;New behaviour: three isolated unit tests cover getAllTasks (DTO mapping),&#10;createTask (save delegation) and deleteTask (deleteById delegation) —&#10;TaskRepository is mocked, no database required, tests run in milliseconds" />
+    <MESSAGE value="chore(root): remove duplicate src/ and register core module in root pom&#10;&#10;- Root src/ still existed as a copy after migration to core — duplicate&#10;  source files caused confusion and potential build conflicts&#10;- poe2-api compilation failed because core was not registered in the&#10;  root pom.xml modules list, so Maven could not resolve the dependency&#10;- All source code now lives exclusively in core/src/main/java; Maven&#10;  builds core first, then poe2-api in the correct dependency order" />
+    <MESSAGE value="test(bibliothek): complete unit test coverage for Bibliothek&#10;&#10;- Only the happy-path ISBN lookup was covered — boundary cases were absent&#10;- Trigger: missing tests meant Optional.empty() and HashSet deduplication&#10;  logic could break silently without any test catching it&#10;- Added empty Optional check when ISBN does not exist&#10;- Added alphabetical sort verification for findeAlleBuecher&#10;- Added duplicate prevention check via HashSet equals/hashCode on Record" />
+    <MESSAGE value="fix(poe2-api): remove duplicate core dependency declaration&#10;&#10;- core was declared twice in pom.xml — without scope and with compile scope&#10;- Trigger: duplicate declarations cause Maven warnings and will break in&#10;  future Maven versions&#10;- Removed the second declaration; compile is the default scope and the&#10;  first entry is sufficient" />
+    <MESSAGE value="docs: mark Phase 3 complete and log session 2026-05-12&#10;&#10;- CLAUDE.md: Phase 3 unit tests marked done, architecture cleanup documented,&#10;  status date updated to 2026-05-12, root src/ removed from architecture diagram&#10;- SESSION_LOG.md: new entry for 2026-05-12 — tests, cleanup, commits, next steps" />
+    <MESSAGE value="docs: align all mentor files to RebelMetal Golden Standard commit format&#10;&#10;Why the old code was a problem: CLAUDE.md, GEMINI.md and DMM each described&#10;a slightly different commit format, creating ambiguity about which standard to follow.&#10;&#10;Trigger scenario: Any new commit required consulting three inconsistent sources.&#10;&#10;New behaviour: All three files now document the same RebelMetal Golden Standard:&#10;type: subject with a mandatory three-question body." />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: align all mentor files to RebelMetal Golden Standard commit format&#10;&#10;Why the old code was a problem: CLAUDE.md, GEMINI.md and DMM each described&#10;a slightly different commit format, creating ambiguity about which standard to follow.&#10;&#10;Trigger scenario: Any new commit required consulting three inconsistent sources.&#10;&#10;New behaviour: All three files now document the same RebelMetal Golden Standard:&#10;type: subject with a mandatory three-question body." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
