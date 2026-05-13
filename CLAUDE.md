@@ -166,7 +166,7 @@ JavaRoad/ (Root — Maven Multi-Module)
 
 ---
 
-## 8. Current Status (Last Updated: 2026-05-12)
+## 8. Current Status (Last Updated: 2026-05-13)
 
 ### Completed ✅
 - Phase 1: Java fundamentals, OOP, Collections, File I/O
@@ -202,10 +202,10 @@ JavaRoad/ (Root — Maven Multi-Module)
 
 ### Open / Next Steps 🔲
 
-**Phase 3.5 — SOLID Principles & Design Patterns (new — planned):**
-- [ ] Create `design-principles/` Maven module
-- [ ] SOLID: S — Single Responsibility Principle (exercise + real-world example)
-- [ ] SOLID: O — Open/Closed Principle
+**Phase 3.5 — SOLID Principles & Design Patterns:**
+- [x] Create `design-principles/` Maven module
+- [x] SOLID: S — Single Responsibility Principle (violation + refactored + tests ✅)
+- [ ] SOLID: O — Open/Closed Principle (violation ✅ — refactored + Strategy Pattern 🔲)
 - [ ] SOLID: L — Liskov Substitution Principle
 - [ ] SOLID: I — Interface Segregation Principle
 - [ ] SOLID: D — Dependency Inversion Principle

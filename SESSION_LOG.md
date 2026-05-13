@@ -4,6 +4,66 @@ Dieses Dokument dient als Gedächtnisprotokoll für die Mentoring-Sessions zwisc
 
 ---
 
+### **Sitzung vom: 13.05.2026**
+
+_Status: Phase 3.5 gestartet. SRP vollständig abgeschlossen. OCP Violation fertig. Bereit für OCP Refactoring (Strategy Pattern)._
+
+---
+
+**1. Abgeschlossene Themen dieser Session:**
+
+- **Projekt-Housekeeping:**
+  - RebelMetal Golden Standard für Commits in CLAUDE.md, GEMINI.md und DMM vereinheitlicht
+  - Format: `type: short subject` + 3-Fragen-Body (Why / Trigger / New behaviour)
+  - `CLAUDE.md` + `CODING_STANDARDS.md` um Pflicht-Regeln ergänzt:
+    - Switch Expressions mit `->` (Java 14+) — alter `case x: break` Stil verboten
+    - `isBlank()` statt `isEmpty()` — fängt Whitespace-only Strings ab
+  - `design-principles` Maven-Modul registriert und committed
+  - `.idea/workspace.xml` aus Git-Tracking entfernt (`git rm --cached`)
+
+- **Phase 3.5 — SRP: Single Responsibility Principle (vollständig ✅):**
+  - Analogie: Crew Chief der gleichzeitig Bühne baut, Buchhaltung macht und Presseaussendungen schreibt
+  - `violation/OrderProcessor`: eine Klasse mit 3 Verantwortlichkeiten (Validierung, Persistence, E-Mail)
+  - `violation/OrderProcessorTest`: 3 Tests grün — beweist die Vermischung
+  - `refactored/OrderValidator`, `OrderRepository`, `OrderMailer`, `OrderProcessor`
+  - Dependency Injection im Konstruktor — Abhängigkeiten von außen injiziert
+  - `refactored/OrderValidatorTest`: 3 Tests grün
+  - `refactored/OrderProcessorTest`: 3 Tests grün
+
+- **Phase 3.5 — OCP: Open/Closed Principle (Violation fertig 🔲):**
+  - Analogie: Setlist mit festem Inhalt vs. Setlist mit freiem Bonus-Slot
+  - `violation/DiscountService`: Switch Expression mit REGULAR (5%) und VIP (20%)
+  - `violation/DiscountServiceTest`: 3 Tests grün — beweist korrekte Berechnung
+  - Problem sichtbar: neuer Rabatttyp = bestehende Klasse aufschneiden
+
+- **Konzepte erklärt:**
+  - `assertThatThrownBy` vs. `assertThatNoException` vs. `assertThat` — wann was
+  - Lambda in Tests: warum AssertJ die Kontrolle über den Aufruf braucht
+  - AAA-Pattern: Arrange / Act / Assert
+  - `assertThrows` (JUnit 5 nativ) vs. AssertJ — Unterschied und warum AssertJ bevorzugt
+  - `isBlank()` vs. `isEmpty()` — Java 11+, Whitespace-Falle
+  - Dependency Injection: Abhängigkeiten reingeben statt selbst erstellen
+  - Switch Expression (`->`) vs. alter Switch (`case x: break`) — Java 14+
+
+**2. Commits dieser Session:**
+
+- `chore: register design-principles as Maven module`
+- `docs: align all mentor files to RebelMetal Golden Standard commit format`
+- `feat: implement SRP exercise with violation and refactored solution`
+- `feat: implement OCP violation exercise with DiscountService`
+- `docs: enforce Java 21 switch expression syntax in Golden Standard`
+
+**3. Nächster Schritt:**
+
+- **OCP Refactoring:** Strategy Pattern einführen
+  - Interface `DiscountStrategy` erstellen
+  - `RegularDiscount`, `VipDiscount`, `BlackFridayDiscount` implementieren
+  - `DiscountService` nutzt Interface — kein `switch` mehr, kein alter Code wird angefasst
+- **INTERVIEW_PREP.md** anlegen mit Fragen/Antworten zu Phase 1–3.5
+- **LSP** (Liskov Substitution Principle) danach
+
+---
+
 ### **Sitzung vom: 12.05.2026**
 
 _Status: Phase 3 vollständig abgeschlossen. Architektur bereinigt. Bereit für Phase 3.5._
