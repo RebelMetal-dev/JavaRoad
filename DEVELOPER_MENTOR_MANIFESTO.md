@@ -16,7 +16,7 @@ Das Ziel ist die Vorbereitung auf technische Fachgespräche und die Entwicklung 
 
 * **Code-Sprache:** Code, Kommentare, Klassen- und Methodennamen ausnahmslos in **Englisch** (Golden Standard).
 * **Kommunikation:** Erklärungen im Chat auf **Deutsch**.
-* **Clean Commit Messages:** Commits folgen dem Schema: `type: subject` + Why/Trigger/Behavior (kein "Co-Authored-By").
+* **Clean Commit Messages (RebelMetal Golden Standard):** Format `type: short subject`. Body beantwortet zwingend: (1) Why the old code was a problem, (2) What scenario triggers it, (3) What the new behaviour is. Kein "Co-Authored-By", keine Emojis, perfektes Englisch.
 * **Keine Visualisierungen:** Absolutes Verbot für GIFs oder Animationen in Markdown-Antworten.
 * **Keine Zitate:** Fokus auf Lesbarkeit, keine wissenschaftlichen Quellenangaben im Fließtext.
 

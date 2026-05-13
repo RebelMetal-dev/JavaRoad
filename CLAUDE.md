@@ -39,7 +39,7 @@ These rules apply to ALL code in this repository, no exceptions:
 | Code comments & Javadoc | **English only** |
 | Class / method / variable names | Domain language OK (Buch, Bibliothek) — new code preferably English |
 | System.out / log messages (portfolio apps) | **English** |
-| Git commit messages | **English**, Conventional Commits format |
+| Git commit messages | **English**, RebelMetal Golden Standard format |
 | Chat explanations | **German** |
 | Records for immutable data models | **Mandatory** where state is fixed |
 | `@Data` on JPA entities | **Forbidden** — use `@Getter @Setter` explicitly |
@@ -82,24 +82,31 @@ Javadoc to English across the project).
 
 ---
 
-## 6. Git Commit Conventions
+## 6. Git Commit Conventions (RebelMetal Golden Standard)
 
-Format: `type(scope): short subject in English`
+Format: `type: short subject`
 
-Followed by a body answering:
-1. **Why** the old code was problematic
-2. **Trigger** — what condition causes the issue
-3. **New behaviour** — what happens now
+The body **must** answer these three questions — no exceptions:
+
+1. **Why the old code was a problem:** Explain the bug, instability, or incompleteness.
+2. **What scenario triggers it:** Describe the condition, input, or event that exposes the problem.
+3. **What the new behaviour is:** Explain how the code now behaves, especially at boundaries or on error.
 
 **Types:** `feat` `fix` `docs` `refactor` `test` `chore` `style`
 
 **Example:**
 ```
-fix(bibliothek): correct constructor and Javadoc copy-paste errors
+fix: prevent unbounded memory use on library search
 
-- Buch: @param names were copied from Bestellung instead of isbn/titel/autor
-- Bibliothek: removed unused Set<Buch> parameter from constructor
-- BibliotheksApp: updated constructor call to match new no-arg constructor
+Why the old code was a problem: The search results buffered the entire database
+response before filtering. A large library or a malformed query could consume
+arbitrary memory, leading to an OutOfMemoryError.
+
+Trigger scenario: Executing a wildcard search on a library with more than
+10,000 book entries.
+
+New behaviour: The response is streamed and limited to the first 500 results,
+making resource usage predictable and providing immediate feedback to the UI.
 ```
 
 No AI co-author footers. No emojis in commit messages.
@@ -235,8 +242,8 @@ When Christoph presents this project, he should be able to explain:
   context is ready. CommandLineRunner runs after complete startup."
 - **Multi-Module Maven:** "I separated domain models and business logic (core) from
   the web layer (poe2-api) to enforce Separation of Concerns at the build level."
-- **Conventional Commits:** "Every commit answers what changed, why the old code was
-  problematic, and what the new behaviour is."
+- **RebelMetal Commit Standard:** "Every commit answers three questions: why the old
+  code was a problem, what scenario triggers it, and what the new behaviour is."
 - **SOLID Principles (Phase 3.5):** Each principle has a dedicated exercise with a
   deliberate violation and the corrected version, demonstrating architectural awareness
   beyond just getting code to compile.

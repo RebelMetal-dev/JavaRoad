@@ -45,13 +45,26 @@ Dieses Dokument fasst alle spezifischen Regeln und Prozesse zusammen, die du, me
     - Sie enthält eine separate **"Detaillierte Lern- und Übungs-Chronik"**, die als Nachweis der praktischen Arbeit dient und **direkte Links zu den abgeschlossenen Übungs-Artefakten** enthält.
 - **Javadoc (Klassen-Header):** JavaMasta liefert für jede Übung den vollständigen Javadoc-Header, der die Aufgabenstellung und den Zweck dokumentiert. Der Schüler trägt seinen Namen beim `@author`-Tag ein.
 - **Javadoc (Methoden):** Der Schüler ist dafür verantwortlich, alle öffentlichen Methoden mit aussagekräftigen Javadoc-Kommentaren (`@param`, `@return` etc.) zu versehen. Diese werden von JavaMasta reviewed.
-- **Commit-Nachrichten:** Sollen klar, prägnant und auf Englisch sein. Sie sollen nicht nur das **WAS**, sondern auch das **WARUM** der Änderung kommunizieren.
-    - **Struktur:** `Typ: Kurze Beschreibung der Änderung`
-    - **Typen:** `Feat:` (neues Feature), `Fix:` (Fehlerbehebung), `Docs:` (Änderung an der Dokumentation), `Style:` (Formatierung), `Refactor:` (Code-Verbesserung ohne Funktionsänderung), `Test:` (Tests hinzufügen/ändern), `Process:` (Änderung am Workflow, z.B. am Log).
-    - **Beispiele für gute Nachrichten:**
-        - `Feat: Add validation to Book's page count to ensure data integrity` (Erklärt, warum die Validierung hinzugefügt wurde).
-        - `Process: Implement 'Agile Roadmap' principle for more flexible learning` (Erklärt, warum der Log geändert wurde).
-        - `Docs: Link completed exercise to provide clear learning path in README` (Erklärt, warum die README geändert wurde).
+- **Commit-Nachrichten:** Verbindlicher Standard: **RebelMetal Golden Standard**. Perfektes Englisch, kein "Co-Authored-By", keine Emojis.
+    - **Format:** `type: short subject`
+    - **Body** beantwortet zwingend drei Fragen:
+        1. **Why the old code was a problem:** Fehler, Instabilität oder Unvollständigkeit des alten Codes.
+        2. **What scenario triggers it:** Bedingung, Input oder Event, das das Problem auslöst.
+        3. **What the new behaviour is:** Wie der Code jetzt reagiert, besonders an Grenzen oder im Fehlerfall.
+    - **Typen:** `feat` `fix` `docs` `refactor` `test` `chore` `style` (immer Kleinbuchstaben)
+    - **Beispiel:**
+        ```
+        feat: add input validation to Book page count
+
+        Why the old code was a problem: No validation existed on the page count
+        field. Any non-positive value was silently accepted and stored.
+
+        Trigger scenario: Saving a Book with pageCount set to 0 or a negative
+        number via the REST API.
+
+        New behaviour: The constructor now throws IllegalArgumentException for
+        page counts below 1, making the invariant explicit and enforceable.
+        ```
 
 ## 6. Agilität & Flexibilität
 - **"Agile Roadmap"-Prinzip:** Unsere Roadmap ist nicht starr. Du, mein Schüler, kannst jederzeit vorschlagen, Themen hinzuzufügen, zu vertiefen oder die Reihenfolge anzupassen.
