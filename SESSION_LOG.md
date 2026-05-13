@@ -59,7 +59,8 @@ _Status: Phase 3.5 gestartet. SRP vollständig abgeschlossen. OCP Violation fert
   - Interface `DiscountStrategy` erstellen
   - `RegularDiscount`, `VipDiscount`, `BlackFridayDiscount` implementieren
   - `DiscountService` nutzt Interface — kein `switch` mehr, kein alter Code wird angefasst
-- **INTERVIEW_PREP.md** anlegen mit Fragen/Antworten zu Phase 1–3.5
+- **INTERVIEW_PREP.md** anlegen mit Fragen/Antworten zu Phase 1–3.5 und fortlaufend ergänzen
+- **README.md** für GitHub aktualisieren — Roadmap, Phase 3.5 Fortschritt, Portfolio-Links
 - **LSP** (Liskov Substitution Principle) danach
 
 ---
