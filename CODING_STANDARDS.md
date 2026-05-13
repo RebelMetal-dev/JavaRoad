@@ -24,6 +24,26 @@ Dieses Dokument dient als persönlicher "Style Guide" und als Referenz für die 
 
     Leerzeichen: Sinnvoller Einsatz um Operatoren (a + b statt a+b) zur Verbesserung der Lesbarkeit.
 
+## 2.5 Moderne Java-Syntax (Java 14+ / Java 21)
+- **Switch:** Immer Switch Expressions mit `->` verwenden — niemals den alten Stil mit `case x:` + `break`.
+  ```java
+  // ALT — verboten
+  switch (type) {
+      case "A":
+          return 1;
+          break;
+  }
+
+  // NEU — Pflicht
+  return switch (type) {
+      case "A" -> 1;
+      default  -> throw new IllegalArgumentException("Unknown: " + type);
+  };
+  ```
+- **String-Validierung:** Immer `isBlank()` statt `isEmpty()` — fängt auch Whitespace ab (Java 11+).
+
+---
+
 3. "Clean Code" Best Practices (Die Philosophie)
 
    Aussagekräftige Namen: Eine Variable verstricheneZeitInTagen ist unendlich besser als zt. Der Code soll sich selbst dokumentieren.

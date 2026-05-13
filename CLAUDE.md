@@ -44,6 +44,7 @@ These rules apply to ALL code in this repository, no exceptions:
 | Records for immutable data models | **Mandatory** where state is fixed |
 | `@Data` on JPA entities | **Forbidden** — use `@Getter @Setter` explicitly |
 | Javadoc on all public methods | **Mandatory** in portfolio packages |
+| `switch` statements | **Always** use switch expressions with `->` (Java 14+) — never old `case x: break` style |
 
 ---
 
@@ -79,6 +80,15 @@ Konstruktor der falsche Ort für Seed-Daten war."
 **Safety rule:** Never modify files without showing the proposed change first and
 receiving explicit confirmation, except for agreed mechanical tasks (e.g. translating
 Javadoc to English across the project).
+
+**Code quality rule (non-negotiable):** Before suggesting ANY code, Claude must
+internally verify against the Golden Standard:
+- Switch: modern expression syntax with `->` — never old `case x: break`
+- String validation: `isBlank()` — never `isEmpty()`
+- JPA entities: `@Getter @Setter` — never `@Data`
+- Immutable models: Records — never mutable classes
+- Java version: always use Java 21 idioms — never suggest deprecated patterns
+If uncertain whether a pattern is modern best practice, say so explicitly.
 
 ---
 
