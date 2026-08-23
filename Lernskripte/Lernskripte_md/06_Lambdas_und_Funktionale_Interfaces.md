@@ -60,7 +60,7 @@ Lambdas benötigen einen "Ziel-Typ". Dieser muss ein Funktionales Interface sein
 
         Comparator<T>: Methode int compare(T o1, T o2). Vergleicht zwei Objekte.
 
-4. Vertiefung (JavaMasta's Profi-Tipps)
+4. Vertiefung (Profi-Tipps)
 Methodenreferenzen
 
 Wenn ein Lambda nur eine einzige, bereits existierende Methode aufruft, kann man die noch kürzere Methodenreferenz-Syntax (::) verwenden. Das ist extrem lesbar und elegant.

@@ -88,7 +88,7 @@ public List<TaskDto> getAllTasks() {
 
 ---
 
-## Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+## Teil 3: Vertiefung (Profi-Tipps)
 
 - **Information Hiding:** Das Weglassen von `createdAt` im DTO ist kein Zufall — es ist eine bewusste Architekturentscheidung. Der Client soll nur das sehen, was er braucht. Dieses Prinzip heißt Information Hiding und ist ein Kernprinzip des Clean Code.
 

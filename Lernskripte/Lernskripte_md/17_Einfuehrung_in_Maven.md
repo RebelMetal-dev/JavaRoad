@@ -63,7 +63,7 @@ Maven erzwingt eine einheitliche Ordnerstruktur, die zum weltweiten Standard gew
 
     target/: Generierte Dateien (.class, .jar).
 
-Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+Teil 3: Vertiefung (Profi-Tipps)
 
     Abhängigkeits-Scopes: Mit <scope>test</scope> deklariert man eine Abhängigkeit (z.B. JUnit), die nur für Tests benötigt und nicht in die finale Anwendung mit verpackt wird. Das hält die Anwendung schlank.
 

@@ -62,7 +62,7 @@ Generated sql
 DELETE FROM BENUTZER WHERE ID = 1;
 
 
-Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+Teil 3: Vertiefung (Profi-Tipps)
 
     JDBC ist "Low-Level": Die direkte Nutzung von JDBC erfordert viel Code (Verbindungen öffnen/schließen, manuelle Verarbeitung von Ergebnissen). In der modernen Entwicklung wird es selten direkt verwendet.
 

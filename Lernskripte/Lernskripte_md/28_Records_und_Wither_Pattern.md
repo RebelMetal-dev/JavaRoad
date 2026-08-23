@@ -102,7 +102,7 @@ PoECharacter character = PoECharacter.of("Storm Caller", "Witch", 1, "Caster")
 
 ---
 
-## Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+## Teil 3: Vertiefung (Profi-Tipps)
 
 - **Warum Records keine JPA-Entities sein können:** JPA (Hibernate) braucht zwingend einen No-Argument-Konstruktor und Setter, um Objekte nach dem Laden aus der Datenbank zu befüllen. Records haben keinen No-Arg-Konstruktor und keine Setter — sie sind für JPA unbrauchbar. Entities müssen klassische mutable Klassen bleiben.
 

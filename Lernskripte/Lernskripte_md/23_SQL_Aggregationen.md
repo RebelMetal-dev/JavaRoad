@@ -41,7 +41,7 @@ Teil 2: Gruppierung mit GROUP BY
         KUNDE;
 
 
-Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+Teil 3: Vertiefung (Profi-Tipps)
 
     Die goldene Regel von GROUP BY: Jede Spalte, die in der SELECT-Liste steht und keine Aggregatfunktion ist (wie SUM, COUNT), MUSS in der GROUP BY-Klausel aufgeführt sein. Ansonsten weiß die Datenbank nicht, welchen der gruppierten Werte sie anzeigen soll.
 

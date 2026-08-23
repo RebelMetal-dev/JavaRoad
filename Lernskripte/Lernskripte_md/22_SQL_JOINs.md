@@ -68,7 +68,7 @@ Um `JOIN`s zu verstehen, benötigen wir mindestens zwei Tabellen, die eine Bezie
 
     Ergebnis: Die Ergebnisliste enthält alle Autoren. Bei Autoren, die (noch) kein Buch im Katalog haben, wird die Spalte P.TITEL mit NULL aufgefüllt.
 
-Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+Teil 3: Vertiefung (Profi-Tipps)
 
     Aliase sind dein Freund: Die Verwendung von kurzen Aliasen für Tabellennamen (z.B. PRODUKTE P) ist absolute Best Practice. Es macht komplexe Abfragen mit vielen JOINs deutlich kürzer und lesbarer.
 

@@ -43,3 +43,6 @@ builds/*
 # Die NecroWitch.txt bleibt trotzdem auf GitHub, da sie bereits "tracked" ist..idea/workspace.xml
 .idea/dataSources.local.xml
 .idea/dataSources/
+
+# IntelliJ: persoenlicher Arbeitsplatz-Zustand, gehoert nicht ins Repository
+.idea/workspace.xml

@@ -69,7 +69,7 @@ Der moderne Weg ist deklarativ ("was" passieren soll) und oft deutlich lesbarer 
 
 ---
 
-## 4. Vertiefung (JavaMasta's Profi-Tipps)
+## 4. Vertiefung (Profi-Tipps)
 
 ### Der `Collector` ist dein bester Freund
 Die `Collectors`-Klasse ist eine Schatztruhe. Man kann damit nicht nur in eine `List` (`Collectors.toList()`) oder `Set` (`Collectors.toSet()`) sammeln, sondern auch Daten gruppieren (`Collectors.groupingBy()`) oder Strings verbinden (`Collectors.joining(", ")`).

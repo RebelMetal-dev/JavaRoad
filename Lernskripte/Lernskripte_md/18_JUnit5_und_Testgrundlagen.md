@@ -65,7 +65,7 @@ rechner.dividiere(10, 0);
 }
 
 
-Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+Teil 3: Vertiefung (Profi-Tipps)
 
     Test-Benennung: Testmethoden sollten lange, beschreibende Namen haben, die den Testfall klar kommunizieren (z.B. add_sollteZweiPositiveZahlenKorrektAddieren).
 

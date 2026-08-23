@@ -61,7 +61,7 @@ Die richtigen Wege sind:
 
         filter(Predicate<T> predicate): Gibt das Optional nur zurück, wenn sein Wert eine Bedingung erfüllt.
 
-3. Vertiefung (JavaMasta's Profi-Tipps)
+3. Vertiefung (Profi-Tipps)
 Optional vs. Leere Collections
 
 Eine Methode, die eine Collection zurückgibt (z.B. List<Buch>), sollte bei keinem Ergebnis eine leere Collection zurückgeben, niemals null oder ein Optional<List<Buch>>. Dies erspart dem Aufrufer null-Prüfungen. Optional ist für singuläre Objekte gedacht.

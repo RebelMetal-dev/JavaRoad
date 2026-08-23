@@ -19,7 +19,7 @@ Dieses Dokument fasst die wichtigsten Konzepte der Meilensteine 2 und 3 zusammen
     - **`Map`:** Eine Sammlung von **Schlüssel-Wert-Paaren**. Jeder Schlüssel ist einzigartig.
         - **Use Case:** Telefonbuch (Name -> Nummer), Konfiguration (Eigenschaft -> Wert).
         - **Implementierung:** `HashMap` (schnell, ungeordnet).
-- **Profi-Tipps (JavaMasta's Vertiefung):**
+- **Profi-Tipps (Vertiefung):**
     - **Modern & Unveränderlich:** Nutze `List.of()`, `Set.of()`, `Map.of()` (seit Java 9) für feste, sichere Collections.
     - **Wichtig:** Für eigene Objekte in `HashSet`/`HashMap` **IMMER** `equals()` und `hashCode()` korrekt überschreiben! `Records` tun dies automatisch.
 
@@ -40,7 +40,7 @@ Dieses Dokument fasst die wichtigsten Konzepte der Meilensteine 2 und 3 zusammen
       // String in eine Datei schreiben (überschreibt)
       Files.writeString(Path.of("status.txt"), "OK");
       ```
-- **Profi-Tipps (JavaMasta's Vertiefung):**
+- **Profi-Tipps (Vertiefung):**
     - **Streaming vs. In-Memory:** `BufferedReader` *streamt* Daten (speichereffizient). `Files.readString()` liest *in den Speicher* (nur für kleine Dateien).
     - **Anhängen:** `Files.writeString(path, text, StandardOpenOption.APPEND);`
 
@@ -53,7 +53,7 @@ Dieses Dokument fasst die wichtigsten Konzepte der Meilensteine 2 und 3 zusammen
 - **Kernidee:** Kurze, anonyme Funktionen, um Verhalten direkt an Methoden zu übergeben. Ersetzen umständliche anonyme innere Klassen.
 - **Voraussetzung:** Ein **Funktionales Interface** (ein Interface mit genau einer abstrakten Methode).
 - **Beispiel:** `(s1, s2) -> Integer.compare(s1.length(), s2.length())`
-- **Profi-Tipps (JavaMasta's Vertiefung):**
+- **Profi-Tipps (Vertiefung):**
     - **Methodenreferenz `::`:** Noch kürzere Syntax, wenn das Lambda nur eine existierende Methode aufruft (z.B. `System.out::println`).
 
 ### Thema 2.2: Die Java Stream API
@@ -63,7 +63,7 @@ Dieses Dokument fasst die wichtigsten Konzepte der Meilensteine 2 und 3 zusammen
     1.  **Quelle:** `.stream()`
     2.  **Zwischenoperationen (lazy):** `filter()`, `map()`, `sorted()`, `distinct()`. Geben einen neuen Stream zurück.
     3.  **Endoperation:** `collect()`, `count()`, `forEach()`. Startet die Verarbeitung und erzeugt ein Ergebnis.
-- **Profi-Tipps (JavaMasta's Vertiefung):**
+- **Profi-Tipps (Vertiefung):**
     - **`flatMap`:** "Bügelt" verschachtelte Streams (z.B. `Stream<List<String>>`) zu einem einzigen, flachen Stream glatt.
     - **Vorsicht bei `parallelStream()`:** Nur für Experten bei rechenintensiven Aufgaben. Standard ist immer `.stream()`.
 
@@ -76,6 +76,6 @@ Dieses Dokument fasst die wichtigsten Konzepte der Meilensteine 2 und 3 zusammen
     - `ifPresent(Consumer)`
     - `orElse(defaultValue)`
     - `map(Function)`
-- **Profi-Tipps (JavaMasta's Vertiefung):**
+- **Profi-Tipps (Vertiefung):**
     - Eine Methode, die eine **Collection** sucht, sollte eine **leere Collection** zurückgeben, kein `Optional<List>`.
     - `orElseGet(Supplier)` ist performanter als `orElse()` bei aufwändiger Erzeugung des Standardwerts.

@@ -54,7 +54,7 @@ Use Case 2: Eine REST-API für Datenobjekte
 
         @PathVariable int id: Nimmt den Wert aus dem {id}-Platzhalter der URL und übergibt ihn als Methodenparameter.
 
-Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+Teil 3: Vertiefung (Profi-Tipps)
 
     @RestController vs. @Controller:
 

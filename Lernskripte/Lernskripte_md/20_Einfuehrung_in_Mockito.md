@@ -49,7 +49,7 @@ service.bestelleProdukt(...); // Aktion, die intern den Notifier aufrufen soll
 verify(mockNotifier, times(1)).sendeFehlerMail(anyString());
 
 
-Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+Teil 3: Vertiefung (Profi-Tipps)
 
     Annotationen (@Mock, @InjectMocks): Dies ist der moderne, saubere Standard, um Mocks zu erstellen und sie automatisch in die zu testende Klasse zu injizieren. Er erfordert die @ExtendWith(MockitoExtension.class) über der Testklasse.
     Generated java

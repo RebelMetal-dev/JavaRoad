@@ -85,7 +85,7 @@ private MockMvc mockMvc;
 }
 
 
-Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+Teil 3: Vertiefung (Profi-Tipps)
 
     Die Test-Pyramide: Ein gesundes Projekt hat viele, schnelle Unit-Tests (Basis), weniger, mittelschnelle Integrationstests (Mitte) und sehr wenige, langsame End-to-End-Tests (Spitze).
 

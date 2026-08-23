@@ -254,7 +254,6 @@ JavaRoad (Root — Maven Multi-Module)
 │   ├── bootcamp/                 # Grundlagen-Übungen
 │   └── uebungen/                 # Stream / Optional / Collections Übungen
 ├── sql-uebungen/                 # SQL-Praxis (CRUD, JOINs, Aggregationen)
-└── SESSION_LOG.md                # Chronologische Dokumentation des Lernfortschritts
 ```
 ---
 

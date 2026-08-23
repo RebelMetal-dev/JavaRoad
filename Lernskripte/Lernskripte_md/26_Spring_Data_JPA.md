@@ -72,7 +72,7 @@ Use Case 3: Eigene Abfragen durch Methodennamen
 
 
 
-Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+Teil 3: Vertiefung (Profi-Tipps)
 
     JPA vs. Hibernate: JPA ist die Spezifikation (das Regelwerk). Hibernate ist die populärste Implementierung dieses Regelwerks. Spring Data JPA benutzt standardmäßig Hibernate "unter der Haube".
 

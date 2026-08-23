@@ -128,7 +128,7 @@ assertThat(result)
 
 ---
 
-## Teil 3: Vertiefung (JavaMasta's Profi-Tipps)
+## Teil 3: Vertiefung (Profi-Tipps)
 
 - **Mock vs. Stub:** In der Praxis werden beide Begriffe oft synonym verwendet. Technisch: ein **Stub** gibt vordefinierte Werte zurück (`when().thenReturn()`). Ein **Mock** prüft zusätzlich ob bestimmte Methoden aufgerufen wurden (`verify()`). Mockito kann beides.
 
